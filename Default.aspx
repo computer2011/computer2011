@@ -1,30 +1,72 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="computer2011.Default" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
+    <link href="Table.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function SetWinHeight(obj) {
+            var win = obj;
+            if (document.getElementById) {
+                if (win && !window.opera) {
+                    if (win.contentDocument && win.contentDocument.body.offsetHeight)
+                        win.height = win.contentDocument.body.offsetHeight;
+                    else if (win.Document && win.Document.body.scrollHeight)
+                        win.height = win.Document.body.scrollHeight;
+                }
+            }
+        }
+
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <h1>2011计科班级网站</h1>
-        <p>测试添加内容</p>
-        <p>项目选择。在设计项目时还要遵循教育性、科学性、实
-用性、开放性、灵活性于一体，一个成功的任务要有发挥创造
-力的空间。结合学生的特点，充分考虑现有知识结构、认知能
-力和兴趣，由浅入深、由表及里、循序渐进地设计任务，通过上
-网搜集、查阅最丰富的Java项目开发资料，分析、摘取经典Java
-程序作为实训项目。</p>
-<p>用pull，后提交</p>
-<p>袁斯斌</p>
-<p>陈靖东</p>
-<p>罗朝俊</p>
-<p>罗朝俊再次</p>
-<p>陈靖东再次</p>
-<p>庞文飞首次</p>
+    <div id="div1">
+        <table style="background-color: #CC99FF" align="center" width="900" cellpadding="0"
+            cellspacing="0">
+            <tr>
+                <td>
+                    <table>
+                        <tr height="30" bgcolor="#99ccff">
+                            <td class="td" onmouseover="this.bgColor='#669999'" onmouseout="this.bgColor='#99ccff'">
+                                <a href="IndexPage.aspx" target="content1">首页</a>
+                            </td>
+                            <td class="td" onmouseover="this.bgColor='#669999'" onmouseout="this.bgColor='#99ccff'">
+                                <a href="Category.aspx" target="content1">相册</a>
+                            </td>
+                            <td class="td" onmouseover="this.bgColor='#669999'" onmouseout="this.bgColor='#99ccff'">
+                                <a href="Category.aspx" target="content1">留言板</a>
+                            </td>
+                            <td class="td" onmouseover="this.bgColor='#669999'" onmouseout="this.bgColor='#99ccff'">
+                                <a href="Category.aspx" target="content1">同学录</a>
+                            </td>
+                            <td class="td" onmouseover="this.bgColor='#669999'" onmouseout="this.bgColor='#99ccff'">
+                                <a href="Category.aspx" target="content1">资源下载</a>
+                            </td>
+                            <td class="td" onmouseover="this.bgColor='#669999'" onmouseout="this.bgColor='#99ccff'">
+                                <a href="KBCX.aspx" target="content1">课表查询</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <iframe id="content1" src="IndexPage.aspx" name="content1" height="100%" onload="Javascript:SetWinHeight(this)"
+                        width="900px" frameborder="0" style="overflow-y: visible" scrolling="no"></iframe>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+            </tr>
+        </table>
     </div>
     </form>
 </body>
