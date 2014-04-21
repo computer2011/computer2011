@@ -9,31 +9,37 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <table class="BiaoGeStyle" cellpadding="0" cellspacing="0">
+        <table class="BiaoGeStyle">
             <tr height="250">
-                <td>
-                    <table width="900" height="250" cellpadding="0" cellspacing="0" >
+                <td bordercolor="blue">
+                    <table width="900" height="250" cellpadding="0" cellspacing="0">
                         <tr>
-                            <td class=td1>
-                                循环图片</td>
-                            <td class=td1>
-                                班级简介</td>
-                            <td class=td1>
-                                登录模块</td>
+                            <td class="td1">
+                                循环图片
+                            </td>
+                            <td class="td1">
+                                班级简介
+                            </td>
+                            <td class="td1">
+                                登录模块
+                            </td>
                         </tr>
                     </table>
                 </td>
             </tr>
             <tr height="270">
                 <td>
-                    <table width="900" height="270" cellpadding="0" cellspacing="0" >
+                    <table width="898" height="270"  cellpadding="0" cellspacing="0">
                         <tr>
-                            <td class=td1>
-                                学校公告</td>
-                            <td class=td1>
-                                班级公告</td>
-                            <td class=td1>
-                                热点新闻</td>
+                            <td class="td1">
+                                学校公告
+                            </td>
+                            <td class="td1">
+                                班级公告
+                            </td>
+                            <td class="td1">
+                                热点新闻
+                            </td>
                         </tr>
                     </table>
                 </td>

@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="KBCX.aspx.cs" Inherits="computer2011.KBCX" %>
 
+<%@ Register Src="UTC_LinkButton.ascx" TagName="UTC_LinkButton" TagPrefix="uc1" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -9,37 +10,177 @@
 <body style="width: 900px">
     <form id="form1" runat="server">
     <div>
-        <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">统计没课时段</asp:LinkButton></div>
+        <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">统计课表</asp:LinkButton></div>
     <div>
-        <asp:Label ID="Label6" runat="server" Visible="False"></asp:Label>
+        <asp:Label ID="Label15" runat="server"></asp:Label>
+    </div>
+    <div id="div1" runat="server" visible="false">
+        <table width="900px" class="tab" border="1">
+            <tr height="20px" bgcolor="#99ccff">
+                <td class="TD">
+                    时间
+                </td>
+                <td class="kbtd">
+                    星期一
+                </td>
+                <td class="kbtd">
+                    星期二
+                </td>
+                <td class="kbtd">
+                    星期三
+                </td>
+                <td class="kbtd">
+                    星期四
+                </td>
+                <td class="kbtd">
+                    星期五
+                </td>
+            </tr>
+            <tr class="TR">
+                <td class="TD">
+                    第1,2节
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton1" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton2" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton3" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton4" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton5" runat="server" />
+                </td>
+            </tr>
+            <tr class="TR">
+                <td class="TD">
+                    第3,4节
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton6" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton7" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton8" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton9" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton10" runat="server" />
+                </td>
+            </tr>
+            <tr class="TR">
+                <td class="TD">
+                    第5节
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton11" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton12" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton13" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton14" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton15" runat="server" />
+                </td>
+            </tr>
+            <tr class="TR">
+                <td class="TD">
+                    第6,7节
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton16" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton17" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton18" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton19" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton20" runat="server" />
+                </td>
+            </tr>
+            <tr class="TR">
+                <td class="TD">
+                    第8,9节
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton21" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton22" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton23" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton24" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton25" runat="server" />
+                </td>
+            </tr>
+            <tr class="TR">
+                <td class="TD">
+                    第10,11节
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton26" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton27" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton28" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton29" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton30" runat="server" />
+                </td>
+            </tr>
+            <tr class="TR">
+                <td class="TD">
+                    第12节
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton31" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton32" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton33" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton34" runat="server" />
+                </td>
+                <td>
+                    <uc1:UTC_LinkButton ID="UTC_LinkButton35" runat="server" />
+                </td>
+            </tr>
+        </table>
     </div>
     <hr style="width: 864px" />
     <div>
-        <asp:Label ID="Label13" runat="server" Text="按时段查询："></asp:Label></div>
-    <div>
-        <asp:Label ID="Label1" runat="server" Text="星期"></asp:Label>
-        <asp:DropDownList ID="DropDownList1" runat="server" Height="16px" Width="65px">
-            <asp:ListItem Value="周一">一</asp:ListItem>
-            <asp:ListItem Value="周二">二</asp:ListItem>
-            <asp:ListItem Value="周三">三</asp:ListItem>
-            <asp:ListItem Value="周四">四</asp:ListItem>
-            <asp:ListItem Value="周五">五</asp:ListItem>
-        </asp:DropDownList>
-        <asp:Label ID="Label2" runat="server" Text="时段"></asp:Label>
-        <asp:DropDownList ID="DropDownList2" runat="server" Height="16px" Width="120px">
-            <asp:ListItem Value="第1,2节">1,2节</asp:ListItem>
-            <asp:ListItem Value="第3,4节">3,4节</asp:ListItem>
-            <asp:ListItem Value="第5节">5节</asp:ListItem>
-            <asp:ListItem Value="第6,7节">6,7节</asp:ListItem>
-            <asp:ListItem Value="第8,9节">8,9节</asp:ListItem>
-            <asp:ListItem Value="第10,11节">10,11节</asp:ListItem>
-            <asp:ListItem Value="第10,11,12节">10,11,12节</asp:ListItem>
-        </asp:DropDownList>
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="查询" />
-    </div>
-    <div>
-        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" ToolTip="点击查看详细信息"></asp:LinkButton>
-    </div>
+        详细信息</div>
     <div style="height: 10px">
     </div>
     <div>
@@ -111,7 +252,8 @@
             <RowStyle BorderStyle="None" Font-Names="微软雅黑" HorizontalAlign="Center" />
         </asp:GridView>
     </div>
-    <div style="height: 10px"></div>
+    <div style="height: 10px">
+    </div>
     </form>
 </body>
 </html>

@@ -24,7 +24,7 @@
 <body>
     <form id="form1" runat="server">
     <div id="div1">
-        <table style="background-color: #CC99FF" align="center" width="900" cellpadding="0"
+        <table style="background-color: #ccccff" align="center" width="900" cellpadding="0"
             cellspacing="0">
             <tr>
                 <td>
@@ -52,9 +52,9 @@
                     </table>
                 </td>
             </tr>
-            <tr>
+            <tr bgcolor="#ffffff" height="10px">
                 <td>
-                </td>
+                    &nbsp;</td>
             </tr>
             <tr>
                 <td>

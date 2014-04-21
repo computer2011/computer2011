@@ -63,6 +63,7 @@
     <Content Include="KBCX.aspx" />
     <Content Include="Student.aspx" />
     <Content Include="Table.css" />
+    <Content Include="UTC_LinkButton.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -101,6 +102,13 @@
     </Compile>
     <Compile Include="Student.aspx.designer.cs">
       <DependentUpon>Student.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UTC_LinkButton.ascx.cs">
+      <DependentUpon>UTC_LinkButton.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UTC_LinkButton.ascx.designer.cs">
+      <DependentUpon>UTC_LinkButton.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace computer2011 {
     public partial class Default : System.Web.UI.Page {
-        public string src = "IndexPage.aspx";
+        
         
         protected void Page_Load(object sender, EventArgs e)
         {

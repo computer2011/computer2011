@@ -2,7 +2,7 @@
 {
     width: 900px;
     height: 800px;
-    
+   
 }
 .td
 {
@@ -11,5 +11,23 @@
 }
 .td1
 {
-    width: 300px;
+    width: 295px;
+  
+}
+.TD
+{
+    width: 81px;
+    background-color: AliceBlue;
+}
+.tab
+{
+    text-align: center;
+}
+.TR
+{
+    height: 50px;
+}
+.kbtd
+{
+    width: 158px;
 }

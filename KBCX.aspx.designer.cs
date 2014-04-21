@@ -31,76 +31,337 @@ namespace computer2011 {
         protected global::System.Web.UI.WebControls.LinkButton LinkButton2;
         
         /// <summary>
-        /// Label6 控件。
+        /// Label15 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label Label15;
         
         /// <summary>
-        /// Label13 控件。
+        /// div1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label13;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div1;
         
         /// <summary>
-        /// Label1 控件。
+        /// UTC_LinkButton1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton1;
         
         /// <summary>
-        /// DropDownList1 控件。
+        /// UTC_LinkButton2 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton2;
         
         /// <summary>
-        /// Label2 控件。
+        /// UTC_LinkButton3 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton3;
         
         /// <summary>
-        /// DropDownList2 控件。
+        /// UTC_LinkButton4 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton4;
         
         /// <summary>
-        /// Button1 控件。
+        /// UTC_LinkButton5 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton5;
         
         /// <summary>
-        /// LinkButton1 控件。
+        /// UTC_LinkButton6 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton6;
+        
+        /// <summary>
+        /// UTC_LinkButton7 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton7;
+        
+        /// <summary>
+        /// UTC_LinkButton8 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton8;
+        
+        /// <summary>
+        /// UTC_LinkButton9 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton9;
+        
+        /// <summary>
+        /// UTC_LinkButton10 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton10;
+        
+        /// <summary>
+        /// UTC_LinkButton11 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton11;
+        
+        /// <summary>
+        /// UTC_LinkButton12 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton12;
+        
+        /// <summary>
+        /// UTC_LinkButton13 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton13;
+        
+        /// <summary>
+        /// UTC_LinkButton14 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton14;
+        
+        /// <summary>
+        /// UTC_LinkButton15 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton15;
+        
+        /// <summary>
+        /// UTC_LinkButton16 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton16;
+        
+        /// <summary>
+        /// UTC_LinkButton17 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton17;
+        
+        /// <summary>
+        /// UTC_LinkButton18 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton18;
+        
+        /// <summary>
+        /// UTC_LinkButton19 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton19;
+        
+        /// <summary>
+        /// UTC_LinkButton20 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton20;
+        
+        /// <summary>
+        /// UTC_LinkButton21 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton21;
+        
+        /// <summary>
+        /// UTC_LinkButton22 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton22;
+        
+        /// <summary>
+        /// UTC_LinkButton23 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton23;
+        
+        /// <summary>
+        /// UTC_LinkButton24 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton24;
+        
+        /// <summary>
+        /// UTC_LinkButton25 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton25;
+        
+        /// <summary>
+        /// UTC_LinkButton26 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton26;
+        
+        /// <summary>
+        /// UTC_LinkButton27 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton27;
+        
+        /// <summary>
+        /// UTC_LinkButton28 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton28;
+        
+        /// <summary>
+        /// UTC_LinkButton29 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton29;
+        
+        /// <summary>
+        /// UTC_LinkButton30 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton30;
+        
+        /// <summary>
+        /// UTC_LinkButton31 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton31;
+        
+        /// <summary>
+        /// UTC_LinkButton32 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton32;
+        
+        /// <summary>
+        /// UTC_LinkButton33 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton33;
+        
+        /// <summary>
+        /// UTC_LinkButton34 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton34;
+        
+        /// <summary>
+        /// UTC_LinkButton35 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::computer2011.UTC_LinkButton UTC_LinkButton35;
         
         /// <summary>
         /// GridView1 控件。
