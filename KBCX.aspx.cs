@@ -195,7 +195,7 @@ namespace computer2011
         {
 
             string count = "0";
-            SqlCommand cmd = new SqlCommand("TJ_KB", cn);
+             cmd = new SqlCommand("TJ_KB", cn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandTimeout = 200;
             cmd.Parameters.Add("@XQ", SqlDbType.NVarChar, 3).Value = XQ;

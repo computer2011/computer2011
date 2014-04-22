@@ -24,33 +24,35 @@
 <body>
     <form id="form1" runat="server">
     <div id="div1">
-        <table style="background-color: #ccccff" align="center" width="1000" cellpadding="0"
+        <table align="center" style="background-color: #ccccff" width="1000" cellpadding="0"
             cellspacing="0">
             <tr height="112px">
-                <td width="1000px" background="Images/页眉.jpg">
+                <td width="1000px" background="Images/yemei.jpg">
                 </td>
             </tr>
             <tr>
-                <td background="Images/导航栏.jpg">
-                    <table >
-                        <tr height="30" bgcolor="#99ccff">
-                            <td class="td" onmouseover="this.bgColor='#669999'" onmouseout="this.bgColor='#99ccff'">
-                                <a href="IndexPage.aspx" target="content1">首页</a>
+                <td background="Images/daohanglang.jpg">
+                    <table width="480px">
+                        <tr height="30">
+                            <td width="10px">
                             </td>
-                            <td class="td" onmouseover="this.bgColor='#669999'" onmouseout="this.bgColor='#99ccff'">
-                                <a href="Category.aspx" target="content1">相册</a>
+                            <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
+                                <a href="IndexPage.aspx" target="content1" style="color: White">首页</a>
                             </td>
-                            <td class="td" onmouseover="this.bgColor='#669999'" onmouseout="this.bgColor='#99ccff'">
-                                <a href="Category.aspx" target="content1">留言板</a>
+                            <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
+                                <a href="#" target="content1" style="color: White">相册</a>
                             </td>
-                            <td class="td" onmouseover="this.bgColor='#669999'" onmouseout="this.bgColor='#99ccff'">
-                                <a href="Category.aspx" target="content1">同学录</a>
+                            <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
+                                <a href="#" target="content1" style="color: White">留言板</a>
                             </td>
-                            <td class="td" onmouseover="this.bgColor='#669999'" onmouseout="this.bgColor='#99ccff'">
-                                <a href="Category.aspx" target="content1">资源下载</a>
+                            <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
+                                <a href="#" target="content1" style="color: White">同学录</a>
                             </td>
-                            <td class="td" onmouseover="this.bgColor='#669999'" onmouseout="this.bgColor='#99ccff'">
-                                <a href="KBCX.aspx" target="content1">课表查询</a>
+                            <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
+                                <a href="#" target="content1" style="color: White">资源下载</a>
+                            </td>
+                            <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
+                                <a href="KBCX.aspx" target="content1" style="color: White">课表查询</a>
                             </td>
                         </tr>
                     </table>

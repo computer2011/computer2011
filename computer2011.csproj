@@ -63,17 +63,17 @@
     <Content Include="bootstrap\js\bootstrap.js" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\jquery-2.1.0.min.js" />
-    <Content Include="Category.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Images\bahe.jpg" />
+    <Content Include="Images\bahelingjiang.jpg" />
+    <Content Include="Images\banjihuodong.jpg" />
+    <Content Include="Images\beijing.jpg" />
+    <Content Include="Images\bowuguan.jpg" />
+    <Content Include="Images\daohanglang.jpg" />
+    <Content Include="Images\login.jpg" />
     <Content Include="Images\logo.jpg" />
-    <Content Include="Images\主页.jpg" />
-    <Content Include="Images\博物馆.jpg" />
-    <Content Include="Images\导航栏.jpg" />
-    <Content Include="Images\拔河.jpg" />
-    <Content Include="Images\拔河领奖.jpg" />
-    <Content Include="Images\班级活动.jpg" />
-    <Content Include="Images\背景.jpg" />
-    <Content Include="Images\页眉.jpg" />
+    <Content Include="Images\yemei.jpg" />
+    <Content Include="Images\zhuye.jpg" />
     <Content Include="IndexPage.aspx" />
     <Content Include="KBCX.aspx" />
     <Content Include="Student.aspx" />
@@ -82,13 +82,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Category.aspx.cs">
-      <DependentUpon>Category.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Category.aspx.designer.cs">
-      <DependentUpon>Category.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

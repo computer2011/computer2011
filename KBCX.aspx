@@ -15,7 +15,7 @@
         <asp:Label ID="Label15" runat="server"></asp:Label>
     </div>
     <div id="div1" runat="server" visible="false">
-        <table width="900px" class="tab" border="1">
+        <table class="table table-hover" width="900px" class="tab" border="1">
             <tr height="20px" bgcolor="#99ccff">
                 <td class="TD">
                     时间
@@ -221,7 +221,8 @@
         <asp:Label ID="Label7" runat="server" Text="学号："></asp:Label><asp:TextBox ID="TextBox2"
             runat="server"></asp:TextBox><asp:Label ID="Label8" runat="server" Text="或姓名"></asp:Label>
         <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="查询" />
+        <asp:Button ID="Button2" CssClass="btn btn-info btn-xs" runat="server" OnClick="Button2_Click"
+            Text="查询" />
     </div>
     <div style="height: 10px">
     </div>
