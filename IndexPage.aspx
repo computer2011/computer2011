@@ -14,8 +14,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <table  width="1000px" height="729px" background="Images/zhuye.jpg"
-            cellpadding="0" cellspacing="0">
+        <table width="1000px" height="729px" background="Images/zhuye.jpg" cellpadding="0"
+            cellspacing="0">
             <tr height="270px">
                 <td>
                     <table width="1000px" height="270" cellpadding="0" cellspacing="0">
@@ -63,7 +63,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <table  width="354px" height="258px" cellpadding="0" cellspacing="0">
+                                            <table width="354px" height="258px" cellpadding="0" cellspacing="0">
                                                 <tr>
                                                     <td>
                                                         <a style="color: #006699; font-family: 楷体; font-size: 14pt; font-weight: bold">2011级计算机科学与技术</a>
@@ -178,10 +178,10 @@
                             <td width="90px">
                             </td>
                             <td width="245px">
-                                <table  width="245px" height="380px" cellpadding="0" cellspacing="0">
+                                <table width="245px" height="380px" cellpadding="0" cellspacing="0">
                                     <tr height="190px">
                                         <td>
-                                            <table  width="245px" height="190px" cellpadding="0" cellspacing="0">
+                                            <table width="245px" height="190px" cellpadding="0" cellspacing="0">
                                                 <tr height="40px">
                                                     <td>
                                                         <a style="color: #006699; font-family: 楷体; font-size: 14pt; font-weight: bold">最新班级新闻</a>
@@ -222,7 +222,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <table  width="245px" height="190px" cellpadding="0" cellspacing="0">
+                                            <table width="245px" height="190px" cellpadding="0" cellspacing="0">
                                                 <tr height="2px">
                                                     <td>
                                                         <div style='height: 1px; background-color: #3399FF; line-height: 1px; clear: both;
@@ -276,7 +276,7 @@
                                 <table width="265px" height="380px" cellpadding="0" cellspacing="0">
                                     <tr height="190px">
                                         <td>
-                                            <table  width="265px" height="190px" cellpadding="0" cellspacing="0">
+                                            <table width="265px" height="190px" cellpadding="0" cellspacing="0">
                                                 <tr height="40px">
                                                     <td>
                                                         <a style="color: #006699; font-family: 楷体; font-size: 14pt; font-weight: bold">最新学习资料</a>
@@ -317,7 +317,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <table  width="265px" height="190px" cellpadding="0" cellspacing="0">
+                                            <table width="265px" height="190px" cellpadding="0" cellspacing="0">
                                                 <tr height="2px">
                                                     <td>
                                                         <div style='height: 1px; background-color: #3399FF; line-height: 1px; clear: both;
@@ -371,8 +371,10 @@
                     </table>
                 </td>
             </tr>
-            <tr height="70px">
+            <tr height="70px" align="center">
                 <td>
+                    <asp:Label ID="Label4" runat="server" Text="站内统计："></asp:Label><asp:Label ID="Label5"
+                        runat="server" Text=""></asp:Label>
                 </td>
             </tr>
         </table>

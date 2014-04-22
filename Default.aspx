@@ -31,28 +31,42 @@
                 </td>
             </tr>
             <tr>
-                <td background="Images/daohanglang.jpg">
-                    <table width="480px">
+                <td background="Images/daohanglang.jpg" align="center">
+                    <table width="800px">
                         <tr height="30">
                             <td width="10px">
                             </td>
                             <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
-                                <a href="IndexPage.aspx" target="content1" style="color: White">首页</a>
+                                <a href="IndexPage.aspx" target="content1" style="color: White; font-family: 华文行楷;
+                                    font-size: 15pt">首页</a>
                             </td>
                             <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
-                                <a href="#" target="content1" style="color: White">相册</a>
+                                <a target="content1" style="color: White; font-family: 华文行楷;
+                                    font-size: 15pt">相册</a>
                             </td>
                             <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
-                                <a href="#" target="content1" style="color: White">留言板</a>
+                                <a target="content1" style="color: White; font-family: 华文行楷;
+                                    font-size: 15pt">留言板</a>
                             </td>
                             <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
-                                <a href="#" target="content1" style="color: White">同学录</a>
+                                <a target="content1" style="color: White; font-family: 华文行楷;
+                                    font-size: 15pt">同学录</a>
                             </td>
                             <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
-                                <a href="#" target="content1" style="color: White">资源下载</a>
+                                <a target="content1" style="color: White; font-family: 华文行楷;
+                                    font-size: 15pt">问卷调查</a>
                             </td>
                             <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
-                                <a href="KBCX.aspx" target="content1" style="color: White">课表查询</a>
+                                <a href="KBCX.aspx" target="content1" style="color: White; font-family: 华文行楷;
+                                    font-size: 15pt">课表查询</a>
+                            </td>
+                            <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
+                                <a target="content1" style="color: White; font-family: 华文行楷;
+                                    font-size: 15pt">考勤</a>
+                            </td>
+                            <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
+                                <a target="content1" style="color: White; font-family: 华文行楷;
+                                    font-size: 15pt">综合量化</a>
                             </td>
                         </tr>
                     </table>

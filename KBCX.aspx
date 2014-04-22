@@ -6,16 +6,19 @@
 <head runat="server">
     <title></title>
     <link href="Table.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body style="width: 900px">
     <form id="form1" runat="server">
     <div>
-        <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">统计课表</asp:LinkButton></div>
+        <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" 
+            Font-Size="15pt">查询并统计课表</asp:LinkButton></div>
     <div>
         <asp:Label ID="Label15" runat="server"></asp:Label>
     </div>
     <div id="div1" runat="server" visible="false">
-        <table class="table table-hover" width="900px" class="tab" border="1">
+        <table class="table table-hover" width="900px"  border="1" 
+            style="text-align: center">
             <tr height="20px" bgcolor="#99ccff">
                 <td class="TD">
                     时间
@@ -188,11 +191,16 @@
             Width="886px" GridLines="Horizontal" PageSize="100">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
-                <asp:BoundField DataField="Sno" HeaderText="学号" />
+                <asp:BoundField DataField="Sno" HeaderText="学号" >
+                <HeaderStyle HorizontalAlign="Center" />
+                </asp:BoundField>
                 <asp:BoundField DataField="Name" HeaderText="姓名">
+                    <HeaderStyle HorizontalAlign="Center" />
                     <ItemStyle Width="100px" />
                 </asp:BoundField>
-                <asp:BoundField DataField="CName" HeaderText="课程名" />
+                <asp:BoundField DataField="CName" HeaderText="课程名" >
+                <HeaderStyle HorizontalAlign="Center" />
+                </asp:BoundField>
                 <asp:TemplateField HeaderText="上课地点">
                     <EditItemTemplate>
                         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
@@ -201,16 +209,20 @@
                         <asp:Label ID="Label3" runat="server" Text='<%# Eval("Time1") %>'></asp:Label>
                         <asp:Label ID="Label1" runat="server" Text='<%# Eval("Address1") %>'></asp:Label>
                     </ItemTemplate>
+                    <HeaderStyle HorizontalAlign="Center" />
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="上课地点">
                     <ItemTemplate>
                         <asp:Label ID="Label5" runat="server" Text='<%# Eval("Time2") %>'></asp:Label>
                         <asp:Label ID="Label4" runat="server" Text='<%# Eval("Address2") %>'></asp:Label>
                     </ItemTemplate>
+                    <HeaderStyle HorizontalAlign="Center" />
                 </asp:TemplateField>
             </Columns>
-            <HeaderStyle BackColor="#CCCCCC" Font-Names="微软雅黑" />
-            <RowStyle BorderStyle="None" Font-Names="微软雅黑" HorizontalAlign="Center" />
+            <HeaderStyle BackColor="#CCCCCC" Font-Names="微软雅黑" HorizontalAlign="Center" 
+                VerticalAlign="Middle" />
+            <RowStyle BorderStyle="None" Font-Names="微软雅黑" HorizontalAlign="Center" 
+                Height="40px" />
             <SelectedRowStyle BackColor="#CCCCCC" />
         </asp:GridView>
     </div>
@@ -249,8 +261,9 @@
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
-            <HeaderStyle BackColor="#CCCCCC" Font-Names="微软雅黑" />
-            <RowStyle BorderStyle="None" Font-Names="微软雅黑" HorizontalAlign="Center" />
+            <HeaderStyle BackColor="#CCCCCC" Font-Names="微软雅黑" HorizontalAlign="Center" />
+            <RowStyle BorderStyle="None" Font-Names="微软雅黑" HorizontalAlign="Center" 
+                Height="40px" />
         </asp:GridView>
     </div>
     <div style="height: 10px">
