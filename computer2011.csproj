@@ -57,8 +57,23 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
+    <Content Include="bootstrap\js\jquery-2.1.0.min.js" />
     <Content Include="Category.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Images\logo.jpg" />
+    <Content Include="Images\主页.jpg" />
+    <Content Include="Images\博物馆.jpg" />
+    <Content Include="Images\导航栏.jpg" />
+    <Content Include="Images\拔河.jpg" />
+    <Content Include="Images\拔河领奖.jpg" />
+    <Content Include="Images\班级活动.jpg" />
+    <Content Include="Images\背景.jpg" />
+    <Content Include="Images\页眉.jpg" />
     <Content Include="IndexPage.aspx" />
     <Content Include="KBCX.aspx" />
     <Content Include="Student.aspx" />
@@ -112,6 +127,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="bootstrap\config.json" />
+    <None Include="bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

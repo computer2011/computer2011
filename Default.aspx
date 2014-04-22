@@ -24,11 +24,15 @@
 <body>
     <form id="form1" runat="server">
     <div id="div1">
-        <table style="background-color: #ccccff" align="center" width="900" cellpadding="0"
+        <table style="background-color: #ccccff" align="center" width="1000" cellpadding="0"
             cellspacing="0">
+            <tr height="112px">
+                <td width="1000px" background="Images/页眉.jpg">
+                </td>
+            </tr>
             <tr>
-                <td>
-                    <table>
+                <td background="Images/导航栏.jpg">
+                    <table >
                         <tr height="30" bgcolor="#99ccff">
                             <td class="td" onmouseover="this.bgColor='#669999'" onmouseout="this.bgColor='#99ccff'">
                                 <a href="IndexPage.aspx" target="content1">首页</a>
@@ -52,14 +56,10 @@
                     </table>
                 </td>
             </tr>
-            <tr bgcolor="#ffffff" height="10px">
-                <td>
-                    &nbsp;</td>
-            </tr>
             <tr>
                 <td>
                     <iframe id="content1" src="IndexPage.aspx" name="content1" height="100%" onload="Javascript:SetWinHeight(this)"
-                        width="900px" frameborder="0" style="overflow-y: visible" scrolling="no"></iframe>
+                        width="1000px" frameborder="0" style="overflow-y: visible" scrolling="no"></iframe>
                 </td>
             </tr>
             <tr>
