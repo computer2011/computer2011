@@ -14,15 +14,23 @@ namespace computer2011
         protected void Page_Load(object sender, EventArgs e)
         {
             SqlConnection cn=new SqlConnection("Server=0c88271c-fdd3-49c7-9b3d-a26800e5cc00.sqlserver.sequelizer.com;Database=db0c88271cfdd349c79b3da26800e5cc00;User ID=azefycnhafeeukyh;Password=aL6wpXdRyJSgqh4FJDhyfKBB6D3XiURZa6aRWgSPKD8TmYx2ge2HjSXxjBzS4nGL;");
-            string loginIP = Request.UserHostAddress;
+            string ip = "-1";
+            if (Context.Request.ServerVariables["HTTP_VIA"] != null) // using proxy 
+            {
+                ip = Context.Request.ServerVariables["HTTP_X_FORWARDED_FOR"].ToString(); // Return real client IP. 
+            }
+            else// not using proxy or can't get the Client IP 
+            {
+                ip = Context.Request.ServerVariables["REMOTE_ADDR"].ToString(); //While it can't get the Client IP, it will return proxy IP. 
+            }
 
-            SqlCommand cmd1 = new SqlCommand("select * from Visite_Recorder where OPIP='" + loginIP + "' and OPTime='" + System.DateTime.Today.Date.ToShortDateString() + "'", cn);
+            SqlCommand cmd1 = new SqlCommand("select * from Visite_Recorder where OPIP='" + ip + "' and OPTime='" + System.DateTime.Today.Date.ToShortDateString() + "'", cn);
             try
             {
                 cn.Open();
                 if (cmd1.ExecuteScalar() == null)
                 {
-                    SqlCommand cmd = new SqlCommand("insert into Visite_Recorder(opip,optime)values('" + loginIP + "','" + System.DateTime.Today.Date.ToShortDateString() + "') ", cn);
+                    SqlCommand cmd = new SqlCommand("insert into Visite_Recorder(opip,optime)values('" + ip + "','" + System.DateTime.Today.Date.ToShortDateString() + "') ", cn);
                     cmd.ExecuteNonQuery();
                 }
 
