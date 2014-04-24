@@ -13,50 +13,9 @@ namespace computer2011
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection cn=new SqlConnection("Server=0c88271c-fdd3-49c7-9b3d-a26800e5cc00.sqlserver.sequelizer.com;Database=db0c88271cfdd349c79b3da26800e5cc00;User ID=azefycnhafeeukyh;Password=aL6wpXdRyJSgqh4FJDhyfKBB6D3XiURZa6aRWgSPKD8TmYx2ge2HjSXxjBzS4nGL;");
-            string Ip = string.Empty;
-            if (Request.ServerVariables["HTTP_VIA"] != null)
-            {
-                if (Request.ServerVariables["HTTP_X_FORWARDED_FOR"] == null)
-                {
-                    if (Request.ServerVariables["HTTP_CLIENT_IP"] != null)
-                        Ip = Request.ServerVariables["HTTP_CLIENT_IP"].ToString();
-                    else
-                        if (Request.ServerVariables["REMOTE_ADDR"] != null)
-                            Ip = Request.ServerVariables["REMOTE_ADDR"].ToString();
-                        else
-                            Ip = "202.96.134.133";
-                }
-                else
-                    Ip = Request.ServerVariables["HTTP_X_FORWARDED_FOR"].ToString();
-            }
-            else if (Request.ServerVariables["REMOTE_ADDR"] != null)
-            {
-                Ip = Request.ServerVariables["REMOTE_ADDR"].ToString();
-            }
-            else
-            {
-                Ip = "202.96.134.133";
-            }
 
-            SqlCommand cmd1 = new SqlCommand("select * from Visite_Recorder where OPIP='" + Ip + "' and OPTime='" + System.DateTime.Today.Date.ToShortDateString() + "'", cn);
-            try
-            {
-                cn.Open();
-                if (cmd1.ExecuteScalar() == null)
-                {
-                    SqlCommand cmd = new SqlCommand("insert into Visite_Recorder(opip,optime)values('" + Ip + "','" + System.DateTime.Today.Date.ToShortDateString() + "') ", cn);
-                    cmd.ExecuteNonQuery();
-                }
+            this.Label5.Text = "你是第" + Session["count"].ToString() + "位访问者";
 
-                SqlCommand cmd2 = new SqlCommand("select count(*) from Visite_Recorder ", cn);
-                this.Label5.Text = "你是第" + cmd2.ExecuteScalar().ToString() + "位访问者";
-            }
-            catch { }
-            finally
-            {
-                cn.Close();
-            }
         }
     }
 }

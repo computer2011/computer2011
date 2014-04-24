@@ -69,40 +69,46 @@
                                                         <a style="color: #006699; font-family: 楷体; font-size: 14pt; font-weight: bold">2011级计算机科学与技术</a>
                                                     </td>
                                                 </tr>
-                                                <tr align="center">
+                                                <tr align="left">
                                                     <td>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">1.红河学院坐落于云南省红河州蒙自县</a>
+                                                            text-decoration: underline">1.2011级计算机科学与技术班简介</a>
                                                     </td>
                                                 </tr>
-                                                <tr align="center">
+                                                <tr align="left">
                                                     <td>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">2.红河学院坐落于云南省红河州蒙自县</a>
+                                                            text-decoration: underline">2.班级网站维护相关准备工作</a>
                                                     </td>
                                                 </tr>
-                                                <tr align="center">
+                                                <tr align="left">
                                                     <td>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">3.红河学院坐落于云南省红河州蒙自县</a>
+                                                            text-decoration: underline">3.关于近期校园安全的重要通知</a>
                                                     </td>
                                                 </tr>
-                                                <tr align="center">
+                                                <tr align="left">
                                                     <td>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">4.红河学院坐落于云南省红河州蒙自县</a>
+                                                            text-decoration: underline">4.关于本学期做好假期实习准备工作</a>
                                                     </td>
                                                 </tr>
-                                                <tr align="center">
+                                                <tr align="left">
                                                     <td>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">5.红河学院坐落于云南省红河州蒙自县</a>
+                                                            text-decoration: underline">5.本学期我班将进行推优工作</a>
                                                     </td>
                                                 </tr>
-                                                <tr align="center">
+                                                <tr align="left">
                                                     <td>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">6.红河学院坐落于云南省红河州蒙自县</a>
+                                                            text-decoration: underline">6.认真贯彻落实党的十八大精神</a>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -188,33 +194,33 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="center">
+                                                    <td align="left">
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
                                                             text-decoration: underline">本学期开展排球比赛活动</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="center">
+                                                    <td align="left">
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">本学期开展排球比赛活动</a>
+                                                            text-decoration: underline">本学期将进行优秀班集体评选</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="center">
+                                                    <td align="left">
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">本学期开展排球比赛活动</a>
+                                                            text-decoration: underline">本学期的篮球比赛已圆满结束</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="center">
+                                                    <td align="left">
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">本学期开展排球比赛活动</a>
+                                                            text-decoration: underline">本学期将做好假期实习准备工作</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="center">
+                                                    <td align="left">
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">本学期开展排球比赛活动</a>
+                                                            text-decoration: underline">本学期将进行推优工作</a>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -236,33 +242,33 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="center">
+                                                    <td align="left">
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">本学期组织户外拓展活动</a>
+                                                            text-decoration: underline">我班积极参与篮球比赛项目</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="center">
+                                                    <td align="left">
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">本学期组织户外拓展活动</a>
+                                                            text-decoration: underline">我班集体组织户外拓展活动</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="center">
+                                                    <td align="left">
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">本学期组织户外拓展活动</a>
+                                                            text-decoration: underline">进行班级网站建设的筹划工作</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="center">
+                                                    <td align="left">
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">本学期组织户外拓展活动</a>
+                                                            text-decoration: underline">班级集体组织到长桥海郊游</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="center">
+                                                    <td align="left">
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">本学期组织户外拓展活动</a>
+                                                            text-decoration: underline">我班在排球比赛中取得优异成绩</a>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -283,33 +289,33 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="center">
+                                                    <td align="left">
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
                                                             text-decoration: underline">ASP.NET高级应用</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="center">
+                                                    <td align="left">
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">ASP.NET高级应用</a>
+                                                            text-decoration: underline">C#.NET高级应用实例</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="center">
+                                                    <td align="left">
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">ASP.NET高级应用</a>
+                                                            text-decoration: underline">路由器与交换机课程实验</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="center">
+                                                    <td align="left">
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">ASP.NET高级应用</a>
+                                                            text-decoration: underline">C#网络应用编程实例</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="center">
+                                                    <td align="left">
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">ASP.NET高级应用</a>
+                                                            text-decoration: underline">计算机维护技术ppt</a>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -331,33 +337,33 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="center">
+                                                    <td align="left">
+                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
+                                                            text-decoration: underline">红河学院主页</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left">
+                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
+                                                            text-decoration: underline">红河学院校园日历</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left">
+                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
+                                                            text-decoration: underline">红河学院学生学费查询系统</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left">
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
                                                             text-decoration: underline">红河学院学生选课系统</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td align="center">
+                                                    <td align="left">
                                                         <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">红河学院学生选课系统</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="center">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">红河学院学生选课系统</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="center">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">红河学院学生选课系统</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="center">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">红河学院学生选课系统</a>
+                                                            text-decoration: underline">红河学院工学院资源下载</a>
                                                     </td>
                                                 </tr>
                                             </table>

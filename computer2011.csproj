@@ -64,6 +64,7 @@
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\jquery-2.1.0.min.js" />
     <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="Images\bahe.jpg" />
     <Content Include="Images\bahelingjiang.jpg" />
     <Content Include="Images\banjihuodong.jpg" />
@@ -88,6 +89,9 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="IndexPage.aspx.cs">
       <DependentUpon>IndexPage.aspx</DependentUpon>
