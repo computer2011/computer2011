@@ -14,7 +14,7 @@ namespace computer2011
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            this.Label5.Text = "你是第" + Application["count"] + "位访问者";
+            this.Label5.Text = "你是第" + Session["count"] + "位访问者";
 
         }
     }
