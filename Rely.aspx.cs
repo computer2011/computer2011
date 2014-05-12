@@ -11,6 +11,7 @@ namespace liuyanban
 {
     public partial class Rely : System.Web.UI.Page
     {
+        SqlConnection cn = new SqlConnection(new computer2011.ConnectDatabase().conn);
         protected void Page_Load(object sender, EventArgs e)
         {
             this.InfoData();
@@ -24,8 +25,7 @@ namespace liuyanban
         }
         private void InfoData()
         {
-            SqlConnection conn = new SqlConnection(System.Configuration.ConfigurationManager.AppSettings["ConnectionString"].ToString());
-            SqlCommand com = new SqlCommand("select * from Guest where id=@ID", conn);
+            SqlCommand com = new SqlCommand("select * from Guest where id=@ID", cn);
             com.Parameters.Add("@ID", SqlDbType.Int).Value = Convert.ToInt32(Session["ID"]);
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = com;
@@ -36,9 +36,7 @@ namespace liuyanban
 
         private void RelyInfo()
         {
-
-            SqlConnection conn = new SqlConnection(System.Configuration.ConfigurationManager.AppSettings["ConnectionString"].ToString());
-            SqlCommand com = new SqlCommand("select * from Rely where Guestid=@ID", conn);
+            SqlCommand com = new SqlCommand("select * from Rely where Guestid=@ID", cn);
             com.Parameters.Add("@ID", SqlDbType.Int).Value = Convert.ToInt32(Session["ID"]);
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = com;
@@ -64,20 +62,20 @@ namespace liuyanban
             }
 
             //连接数据库字符串 
-            string dbConnString = System.Configuration.ConfigurationManager.AppSettings["ConnectionString"].ToString();
+
             string sql = "INSERT INTO Rely(Name,Rely,Guestid) VALUES ('" + TextBox1.Text.Trim() + "','" + txtRely.Text.Trim() + "', " + Session["ID"].ToString() + ")";
             try
             {
                 //using 是系统关键字, 作用是自动释放资源。
-                using (SqlConnection conn = new SqlConnection(dbConnString))
+                using (cn)
                 {
-                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    SqlCommand cmd = new SqlCommand(sql, cn);
                     //打开数据库连接 
-                    conn.Open();
+                    cn.Open();
                     //对数据进行插入操作, 返回影响行数 
                     int val = cmd.ExecuteNonQuery();
                     //关闭数据库连接;
-                    conn.Close();
+                    cn.Close();
                     if (val <= 0)
                         ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('对不起，回复失败!')</script>");
                     else
@@ -128,7 +126,6 @@ namespace liuyanban
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlcon = new SqlConnection(System.Configuration.ConfigurationManager.AppSettings["ConnectionString"].ToString());
             SqlCommand sqlcom;
             for (int i = 0; i <= GridView1.Rows.Count - 1; i++)
             {
@@ -136,10 +133,10 @@ namespace liuyanban
                 if (cbox.Checked == true)
                 {
                     string sqlstr = "delete from Rely where ID='" + GridView1.DataKeys[i].Value + "'";
-                    sqlcom = new SqlCommand(sqlstr, sqlcon);
-                    sqlcon.Open();
+                    sqlcom = new SqlCommand(sqlstr, cn);
+                    cn.Open();
                     sqlcom.ExecuteNonQuery();
-                    sqlcon.Close();
+                    cn.Close();
                 }
             }
             RelyInfo();
@@ -148,11 +145,6 @@ namespace liuyanban
         {
             GridView1.PageIndex = e.NewPageIndex;
             RelyInfo(); //重新绑定GridView数据的函数
-        }
-
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

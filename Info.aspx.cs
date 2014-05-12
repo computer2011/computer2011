@@ -12,6 +12,7 @@ namespace liuyanban
 {
     public partial class Info : System.Web.UI.Page
     {
+        SqlConnection cn = new SqlConnection(new computer2011.ConnectDatabase().conn);
         protected void Page_Load(object sender, EventArgs e)
         {
             {
@@ -25,10 +26,8 @@ namespace liuyanban
 
         private void Showdata()
         {
-
-            SqlConnection conn = new SqlConnection(System.Configuration.ConfigurationManager.AppSettings["ConnectionString"].ToString());
             SqlCommand com = new SqlCommand();
-            com.Connection = conn;
+            com.Connection = cn;
             com.CommandText = "select *  from Guest order by ID desc";
             DataTable table = new DataTable();
 
@@ -69,19 +68,17 @@ namespace liuyanban
         }
         protected void Button2_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlcon = new SqlConnection(System.Configuration.ConfigurationManager.AppSettings["ConnectionString"].ToString());
             SqlCommand sqlcom;
             for (int i = 0; i <= GridView1.Rows.Count - 1; i++)
             {
                 CheckBox cbox = (CheckBox)GridView1.Rows[i].FindControl("CheckBox1");
                 if (cbox.Checked == true)
                 {
-                    
                     string sqlstr = "delete from Guest where ID='" + GridView1.DataKeys[i].Value + "'";
-                    sqlcom = new SqlCommand(sqlstr, sqlcon);
-                    sqlcon.Open();
+                    sqlcom = new SqlCommand(sqlstr, cn);
+                    cn.Open();
                     sqlcom.ExecuteNonQuery();
-                    sqlcon.Close();
+                    cn.Close();
                 }
             }
             Showdata();

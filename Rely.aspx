@@ -44,9 +44,8 @@
             <td colspan="2" align="center">
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4"
                     ForeColor="Black" Width="878px" DataKeyNames="ID" BackColor="#CCCCCC" BorderColor="#999999"
-                    BorderStyle="Solid" BorderWidth="3px" CellSpacing="2" AllowPaging="True" 
-                    PageSize="5" onpageindexchanging="GridView1_PageIndexChanging" 
-                    onselectedindexchanged="GridView1_SelectedIndexChanged">
+                    BorderStyle="Solid" BorderWidth="3px" CellSpacing="2" AllowPaging="True" PageSize="5"
+                    OnPageIndexChanging="GridView1_PageIndexChanging">
                     <Columns>
                         <asp:TemplateField>
                             <EditItemTemplate>
