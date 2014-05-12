@@ -14,7 +14,6 @@ namespace KQ
         SqlConnection cn = new SqlConnection(new computer2011.ConnectDatabase().conn);
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection cn = new SqlConnection(new computer2011.ConnectDatabase().conn);
             if (!IsPostBack)
             {
                 SqlDataAdapter sa = new SqlDataAdapter("select Sno,Name from Student", cn);
@@ -73,7 +72,16 @@ namespace KQ
 
         protected void LinkButton3_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CJ.aspx");
+            Business.Users.Competence thecom = new Business.Users.Competence();
+            string qx = thecom.isCompetence("" + Session["LoginStudentXH"] + "", "62");
+            if (qx == "")
+            {
+                Response.Redirect("CJ.aspx");
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + qx + "');</script>");
+            }
         }
     }
 }
