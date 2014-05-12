@@ -220,6 +220,7 @@
     <Compile Include="KBCX.aspx.designer.cs">
       <DependentUpon>KBCX.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LHPF.cs" />
     <Compile Include="Main_Content.aspx.cs">
       <DependentUpon>Main_Content.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
