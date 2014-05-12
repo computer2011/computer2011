@@ -82,6 +82,11 @@
     <Content Include="Images\logo.jpg" />
     <Content Include="Images\yemei.jpg" />
     <Content Include="Images\zhuye.jpg" />
+    <Content Include="img\123.jpg" />
+    <Content Include="img\34.jpg" />
+    <Content Include="img\879.jpg" />
+    <Content Include="img\Q.jpg" />
+    <Content Include="img\QQ图片20140512185702.jpg" />
     <Content Include="IndexPage.aspx" />
     <Content Include="Info.aspx" />
     <Content Include="js\bootstrap.js" />
@@ -166,6 +171,11 @@
     <Content Include="wjlr.aspx" />
     <Content Include="WJSC.aspx" />
     <Content Include="XG.aspx" />
+    <Content Include="上传.aspx" />
+    <Content Include="个人风采.aspx" />
+    <Content Include="班级相册.aspx" />
+    <Content Include="班级风采.aspx" />
+    <Content Include="相册管理.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CJ.aspx.cs">
@@ -378,6 +388,42 @@
     <Compile Include="XG.aspx.designer.cs">
       <DependentUpon>XG.aspx</DependentUpon>
     </Compile>
+    <Compile Include="上传.aspx.cs">
+      <DependentUpon>上传.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="上传.aspx.designer.cs">
+      <DependentUpon>上传.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="个人风采.aspx.cs">
+      <DependentUpon>个人风采.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="个人风采.aspx.designer.cs">
+      <DependentUpon>个人风采.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="班级相册.aspx.cs">
+      <DependentUpon>班级相册.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="班级相册.aspx.designer.cs">
+      <DependentUpon>班级相册.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="班级相册.Master.cs">
+      <DependentUpon>班级相册.Master</DependentUpon>
+    </Compile>
+    <Compile Include="班级相册.Master.designer.cs">
+      <DependentUpon>班级相册.Master</DependentUpon>
+    </Compile>
+    <Compile Include="班级风采.aspx.cs">
+      <DependentUpon>班级风采.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="班级风采.aspx.designer.cs">
+      <DependentUpon>班级风采.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="相册管理.aspx.cs">
+      <DependentUpon>相册管理.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="相册管理.aspx.designer.cs">
+      <DependentUpon>相册管理.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="bootstrap\config.json" />
@@ -390,6 +436,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="班级相册.Master" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Business\Business.csproj">
