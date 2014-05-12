@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "computer2011", "computer2011.csproj", "{908F6976-7B94-4FC7-A59F-74C0D9056EEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{7038AB3A-4415-4D48-8F64-EC1F040BD29F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{D3CAB48B-8AEA-4E15-9E3B-5846681C54B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{908F6976-7B94-4FC7-A59F-74C0D9056EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{908F6976-7B94-4FC7-A59F-74C0D9056EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{908F6976-7B94-4FC7-A59F-74C0D9056EEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7038AB3A-4415-4D48-8F64-EC1F040BD29F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7038AB3A-4415-4D48-8F64-EC1F040BD29F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7038AB3A-4415-4D48-8F64-EC1F040BD29F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7038AB3A-4415-4D48-8F64-EC1F040BD29F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3CAB48B-8AEA-4E15-9E3B-5846681C54B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3CAB48B-8AEA-4E15-9E3B-5846681C54B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3CAB48B-8AEA-4E15-9E3B-5846681C54B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3CAB48B-8AEA-4E15-9E3B-5846681C54B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
