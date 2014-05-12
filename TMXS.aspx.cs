@@ -15,7 +15,6 @@ namespace WJDC
         SqlConnection cn = new SqlConnection(new computer2011.ConnectDatabase().conn);
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (Request.HttpMethod.Equals("GET"))
             {
                 CheckID();

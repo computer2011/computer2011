@@ -34,9 +34,9 @@ namespace WJDC
         //    Response.Redirect("/tjcx.aspx");
         //}
 
-        //protected void LinkButton_Click(object sender, EventArgs e)
-        //{
-        //    Response.Redirect("/MCXS.aspx");
-        //}
+        protected void LinkButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/MCXS.aspx");
+        }
     }
 }
