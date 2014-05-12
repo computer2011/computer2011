@@ -15,15 +15,11 @@ namespace KQ
         SqlCommand cmd;
         SqlDataAdapter da;
         DataTable table;
-        SqlConnection cn = new SqlConnection("Server=0c88271c-fdd3-49c7-9b3d-a26800e5cc00.sqlserver.sequelizer.com;Database=db0c88271cfdd349c79b3da26800e5cc00;User ID=azefycnhafeeukyh;Password=aL6wpXdRyJSgqh4FJDhyfKBB6D3XiURZa6aRWgSPKD8TmYx2ge2HjSXxjBzS4nGL;");
+        SqlConnection cn = new SqlConnection(new computer2011.ConnectDatabase().conn);
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //SqlDataAdapter sa = new SqlDataAdapter("select Sno,Name from Student", cn);
-            //DataTable table = new DataTable();
-            //sa.Fill(table);
-            //this.GridViewTime.DataSource = table;
-            //this.GridViewTime.DataBind();
+
         }
         protected void Button1_Click(object sender, EventArgs e)
         {

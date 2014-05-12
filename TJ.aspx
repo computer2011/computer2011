@@ -50,7 +50,7 @@
         </div>
         <div>
             <asp:GridView ID="GridViewXQ" runat="server" AutoGenerateColumns="False" Width="500px"
-                AllowSorting="True" CssClass="table">
+                AllowSorting="True" CssClass="table" Visible="False">
                 <AlternatingRowStyle CssClass="success" />
                 <Columns>
                     <asp:BoundField DataField="sno" HeaderText="学号" />

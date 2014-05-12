@@ -12,10 +12,10 @@ namespace KQ
 {
     public partial class TimeTJ : System.Web.UI.Page
     {
-        SqlConnection cn = new SqlConnection("Server=0c88271c-fdd3-49c7-9b3d-a26800e5cc00.sqlserver.sequelizer.com;Database=db0c88271cfdd349c79b3da26800e5cc00;User ID=azefycnhafeeukyh;Password=aL6wpXdRyJSgqh4FJDhyfKBB6D3XiURZa6aRWgSPKD8TmYx2ge2HjSXxjBzS4nGL;");
+        SqlConnection cn = new SqlConnection(new computer2011.ConnectDatabase().conn);
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlDataAdapter sa = new SqlDataAdapter("select Sno,Name from Student", cn);
+            SqlDataAdapter sa = new SqlDataAdapter("select Sno,Name from Student order by sno", cn);
             DataTable table = new DataTable();
             sa.Fill(table);
             this.GridViewTime.DataSource = table;
@@ -43,8 +43,6 @@ namespace KQ
                 TimeQX.CommandText = "select count(kqid) from kq,sj where kq.ID=sj.ID and kqid='4' and Sno='" + TimeSno + "' and time>='" + begin + "'and time<='" + end + "'";
                 try
                 {
-                    //int Tcq = Convert.ToInt32(TimeCQ.ExecuteScalar());
-                    //this.GridViewTime.Rows[i].Cells[2].Text = Tcq.ToString();
                     this.GridViewTime.Rows[i].Cells[2].Text = TimeCQ.ExecuteScalar().ToString();
                     this.GridViewTime.Rows[i].Cells[3].Text = TimeCD.ExecuteScalar().ToString();
                     this.GridViewTime.Rows[i].Cells[4].Text = TimeZT.ExecuteScalar().ToString();
