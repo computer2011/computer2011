@@ -50,8 +50,7 @@
                                                         </div>--%>
                                                     </div>
                                                     <div class="item ">
-                                                        <img src="Images/banjihuodong.jpg" alt="" />
-                                                        <%-- <div class="carousel-caption">
+                                                        <img src="Images/banjihuodong.jpg" alt="" />                                                        <%-- <div class="carousel-caption">
                                                         </div>--%>
                                                     </div>
                                                 </div>
@@ -62,53 +61,28 @@
                                                         </span></a>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td valign="top">
                                             <table width="354px" height="258px" cellpadding="0" cellspacing="0">
-                                                <tr>
+                                                <tr height="40px">
                                                     <td>
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 14pt; font-weight: bold">2011级计算机科学与技术</a>
+                                                        <asp:Label ID="Label7" Style="color: #006699; font-family: 楷体; font-size: 14pt; font-weight: bold"
+                                                            runat="server" Text="班级简介"></asp:Label>
                                                     </td>
                                                 </tr>
-                                                <tr align="left">
-                                                    <td>
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">1.2011级计算机科学与技术班简介</a>
-                                                    </td>
-                                                </tr>
-                                                <tr align="left">
-                                                    <td>
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">2.班级网站维护相关准备工作</a>
-                                                    </td>
-                                                </tr>
-                                                <tr align="left">
-                                                    <td>
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">3.关于近期校园安全的重要通知</a>
-                                                    </td>
-                                                </tr>
-                                                <tr align="left">
-                                                    <td>
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">4.关于本学期做好假期实习准备工作</a>
-                                                    </td>
-                                                </tr>
-                                                <tr align="left">
-                                                    <td>
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">5.本学期我班将进行推优工作</a>
-                                                    </td>
-                                                </tr>
-                                                <tr align="left">
-                                                    <td>
-                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">6.认真贯彻落实党的十八大精神</a>
+                                                <tr align="center">
+                                                    <td valign="top">
+                                                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Height="197px"
+                                                            PageSize="6" ShowHeader="False" Width="319px" BorderStyle="None">
+                                                            <Columns>
+                                                                <asp:TemplateField>
+                                                                    <ItemTemplate>
+                                                                        <asp:Label ID="Label12" runat="server" Text='<%# Eval("Text") %>'></asp:Label>
+                                                                    </ItemTemplate>
+                                                                    <ItemStyle HorizontalAlign="Left" BorderStyle="None" Font-Names="楷体" Font-Size="12pt" 
+                                                                        ForeColor="#006699" />
+                                                                </asp:TemplateField>
+                                                            </Columns>
+                                                        </asp:GridView>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -188,39 +162,36 @@
                                     <tr height="190px">
                                         <td>
                                             <table width="245px" height="190px" cellpadding="0" cellspacing="0">
-                                                <tr height="40px">
+                                                <tr height="35px">
                                                     <td>
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 14pt; font-weight: bold">最新班级新闻</a>
+                                                        <asp:Label Style="color: #006699; font-family: 楷体; font-size: 14pt; font-weight: bold"
+                                                            ID="Label8" runat="server" Text="班级新闻"></asp:Label>
                                                     </td>
                                                 </tr>
-                                                <tr>
+                                                <tr height="146px">
                                                     <td align="left">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">本学期开展排球比赛活动</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">本学期将进行优秀班集体评选</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">本学期的篮球比赛已圆满结束</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">本学期将做好假期实习准备工作</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">本学期将进行推优工作</a>
+                                                        <%-- <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
+                                                            text-decoration: underline">本学期开展排球比赛活动</a>--%>
+                                                        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" Height="146px"
+                                                            PageSize="5"  ShowHeader="False" Width="239px" BackColor="White" 
+                                                            BorderStyle="None" BorderWidth="0px">
+                                                            <Columns>
+                                                                <asp:TemplateField Visible="False">
+                                                                    <ItemTemplate>
+                                                                        <asp:Label ID="Label13" runat="server" Text='<%# Eval("ID") %>'></asp:Label>
+                                                                    </ItemTemplate>
+                                                                </asp:TemplateField>
+                                                                <asp:TemplateField>
+                                                                    <ItemTemplate>
+                                                                        <asp:LinkButton ID="LinkButton4" runat="server" Text='<%# Eval("Title") %>' 
+                                                                            Font-Underline="False" onclick="LinkButton4_Click"></asp:LinkButton>
+                                                                    </ItemTemplate>
+                                                                    <ItemStyle Font-Names="楷体" Font-Size="12pt" 
+                                                                        ForeColor="#006699"  />
+                                                                </asp:TemplateField>
+                                                            </Columns>
+                                                            <RowStyle BorderStyle="None" />
+                                                        </asp:GridView>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -236,39 +207,36 @@
                                                         </div>
                                                     </td>
                                                 </tr>
-                                                <tr height="40px">
+                                                <tr height="35px">
                                                     <td>
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 14pt; font-weight: bold">最新活动回顾</a>
+                                                        <asp:Label ID="Label11" Style="color: #006699; font-family: 楷体; font-size: 14pt;
+                                                            font-weight: bold" runat="server" Text="班级活动"></asp:Label>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td align="left">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">我班积极参与篮球比赛项目</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">我班集体组织户外拓展活动</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">进行班级网站建设的筹划工作</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">班级集体组织到长桥海郊游</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">我班在排球比赛中取得优异成绩</a>
+                                                        <%-- <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
+                                                            text-decoration: underline">我班积极参与篮球比赛项目</a>--%>
+                                                        <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" Height="146px"
+                                                            PageSize="5"  ShowHeader="False" Width="239px" BackColor="White" 
+                                                            BorderStyle="None" BorderWidth="0px">
+                                                            <Columns>
+                                                                <asp:TemplateField Visible="False">
+                                                                    <ItemTemplate>
+                                                                        <asp:Label ID="Label15" runat="server" Text='<%# Eval("ID") %>'></asp:Label>
+                                                                    </ItemTemplate>
+                                                                </asp:TemplateField>
+                                                                <asp:TemplateField>
+                                                                    <ItemTemplate>
+                                                                        <asp:LinkButton ID="LinkButton6" runat="server" Text='<%# Eval("Title") %>' 
+                                                                            onclick="LinkButton6_Click"></asp:LinkButton>
+                                                                    </ItemTemplate>
+                                                                    <ItemStyle Font-Names="楷体" Font-Size="12pt" 
+                                                                        ForeColor="#006699" />
+                                                                </asp:TemplateField>
+                                                            </Columns>
+                                                            <RowStyle BorderStyle="None" />
+                                                        </asp:GridView>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -283,39 +251,36 @@
                                     <tr height="190px">
                                         <td>
                                             <table width="265px" height="190px" cellpadding="0" cellspacing="0">
-                                                <tr height="40px">
+                                                <tr height="35px">
                                                     <td>
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 14pt; font-weight: bold">最新学习资料</a>
+                                                        <asp:Label Style="color: #006699; font-family: 楷体; font-size: 14pt; font-weight: bold"
+                                                            ID="Label9" runat="server" Text="学习资料"></asp:Label>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td align="left">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">ASP.NET高级应用</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">C#.NET高级应用实例</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">路由器与交换机课程实验</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">C#网络应用编程实例</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">计算机维护技术ppt</a>
+                                                        <%--<a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
+                                                            text-decoration: underline">ASP.NET高级应用</a>--%>
+                                                         <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" Height="146px"
+                                                            PageSize="5"  ShowHeader="False" Width="239px" BackColor="White" 
+                                                            BorderStyle="None" BorderWidth="0px">
+                                                            <Columns>
+                                                                <asp:TemplateField Visible="False">
+                                                                    <ItemTemplate>
+                                                                        <asp:Label ID="Label14" runat="server" Text='<%# Eval("ID") %>'></asp:Label>
+                                                                    </ItemTemplate>
+                                                                </asp:TemplateField>
+                                                                <asp:TemplateField>
+                                                                    <ItemTemplate>
+                                                                        <asp:LinkButton ID="LinkButton5" runat="server" Text='<%# Eval("Title") %>' 
+                                                                            onclick="LinkButton5_Click"></asp:LinkButton>
+                                                                    </ItemTemplate>
+                                                                    <ItemStyle Font-Names="楷体" Font-Size="12pt" 
+                                                                        ForeColor="#006699" />
+                                                                </asp:TemplateField>
+                                                            </Columns>
+                                                            <RowStyle BorderStyle="None" />
+                                                        </asp:GridView>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -331,39 +296,36 @@
                                                         </div>
                                                     </td>
                                                 </tr>
-                                                <tr height="40px">
+                                                <tr height="35px">
                                                     <td>
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 14pt; font-weight: bold">友情链接</a>
+                                                        <asp:Label ID="Label10" Style="color: #006699; font-family: 楷体; font-size: 14pt;
+                                                            font-weight: bold" runat="server" Text="友情链接"></asp:Label>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td align="left">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">红河学院主页</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">红河学院校园日历</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">红河学院学生学费查询系统</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">红河学院学生选课系统</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="left">
-                                                        <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
-                                                            text-decoration: underline">红河学院工学院资源下载</a>
+                                                        <%--  <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
+                                                            text-decoration: underline">红河学院主页</a>--%>
+                                                         <asp:GridView ID="GridView5" runat="server" AutoGenerateColumns="False" Height="146px"
+                                                            PageSize="5"  ShowHeader="False" Width="239px" BackColor="White" 
+                                                            BorderStyle="None" BorderWidth="0px">
+                                                            <Columns>
+                                                                <asp:TemplateField Visible="False">
+                                                                    <ItemTemplate>
+                                                                        <asp:Label ID="Label16" runat="server" Text='<%# Eval("ID") %>'></asp:Label>
+                                                                    </ItemTemplate>
+                                                                </asp:TemplateField>
+                                                                <asp:TemplateField>
+                                                                    <ItemTemplate>
+                                                                        <asp:LinkButton ID="LinkButton7" runat="server" Text='<%# Eval("Title") %>' 
+                                                                            onclick="LinkButton7_Click"></asp:LinkButton>
+                                                                    </ItemTemplate>
+                                                                    <ItemStyle Font-Names="楷体" Font-Size="12pt" 
+                                                                        ForeColor="#006699" />
+                                                                </asp:TemplateField>
+                                                            </Columns>
+                                                            <RowStyle BorderStyle="None" />
+                                                        </asp:GridView>
                                                     </td>
                                                 </tr>
                                             </table>

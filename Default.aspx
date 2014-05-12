@@ -32,7 +32,7 @@
             </tr>
             <tr>
                 <td background="Images/daohanglang.jpg" align="center">
-                    <table width="800px">
+                    <table width="900px">
                         <tr height="30">
                             <td width="10px">
                             </td>
@@ -41,32 +41,30 @@
                                     font-size: 15pt">首页</a>
                             </td>
                             <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
-                                <a target="content1" style="color: White; font-family: 华文行楷;
-                                    font-size: 15pt">相册</a>
+                                <a target="content1" style="color: White; font-family: 华文行楷; font-size: 15pt">相册</a>
                             </td>
                             <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
-                                <a target="content1" style="color: White; font-family: 华文行楷;
-                                    font-size: 15pt">留言板</a>
+                                <a target="content1" style="color: White; font-family: 华文行楷; font-size: 15pt">留言板</a>
                             </td>
                             <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
-                                <a target="content1" style="color: White; font-family: 华文行楷;
-                                    font-size: 15pt">同学录</a>
+                                <a href="Student.aspx" target="content1" style="color: White; font-family: 华文行楷; font-size: 15pt">通讯录</a>
                             </td>
                             <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
-                                <a target="content1" style="color: White; font-family: 华文行楷;
-                                    font-size: 15pt">问卷调查</a>
+                                <a target="content1" style="color: White; font-family: 华文行楷; font-size: 15pt">问卷调查</a>
                             </td>
                             <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
-                                <a href="KBCX.aspx" target="content1" style="color: White; font-family: 华文行楷;
-                                    font-size: 15pt">课表查询</a>
+                                <a href="KBCX.aspx" target="content1" style="color: White; font-family: 华文行楷; font-size: 15pt">
+                                    课表查询</a>
                             </td>
                             <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
-                                <a target="content1" style="color: White; font-family: 华文行楷;
-                                    font-size: 15pt">考勤</a>
+                                <a href="TJ.aspx" target="content1" style="color: White; font-family: 华文行楷; font-size: 15pt">考勤</a>
                             </td>
                             <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
-                                <a target="content1" style="color: White; font-family: 华文行楷;
-                                    font-size: 15pt">综合量化</a>
+                                <a target="content1" style="color: White; font-family: 华文行楷; font-size: 15pt">综合量化</a>
+                            </td>
+                            <td id="tdzy" runat="server" class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
+                                <a href="Main_Manage.aspx" target="content1" style="color: White; font-family: 华文行楷;
+                                    font-size: 15pt">主页管理</a>
                             </td>
                         </tr>
                     </table>
@@ -75,7 +73,8 @@
             <tr>
                 <td>
                     <iframe id="content1" src="IndexPage.aspx" name="content1" height="100%" onload="Javascript:SetWinHeight(this)"
-                        width="1000px" frameborder="0" style="overflow-y: visible" scrolling="no"></iframe>
+                        width="1000px" frameborder="1" style="overflow-y: visible" scrolling="no" bordercolor="#CCCCFF">
+                    </iframe>
                 </td>
             </tr>
             <tr>
