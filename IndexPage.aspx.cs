@@ -18,7 +18,7 @@ namespace computer2011
             {
 
                 DataTable table1 = new DataTable();
-                SqlDataAdapter da1 = new SqlDataAdapter("select top 6 text from MainPage where LBID=1 order by ID desc", cn);//班级简介
+                SqlDataAdapter da1 = new SqlDataAdapter("select top 1 text from MainPage where LBID=1 order by ID desc", cn);//班级简介
                 da1.Fill(table1);
                 this.GridView1.DataSource = table1;
                 this.GridView1.DataBind();
@@ -115,6 +115,11 @@ namespace computer2011
         {
             string ID = ((Label)((LinkButton)sender).Parent.Parent.Controls[0].FindControl("Label16")).Text;
             Response.Redirect("Main_Content.aspx?ID=" + ID + "");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)//登录
+        {
+           
         }
 
     }

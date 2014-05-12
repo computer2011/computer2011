@@ -72,7 +72,7 @@
                                                 <tr align="center">
                                                     <td valign="top">
                                                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Height="197px"
-                                                            PageSize="6" ShowHeader="False" Width="319px" BorderStyle="None">
+                                                            PageSize="1" ShowHeader="False" Width="319px" BorderStyle="None">
                                                             <Columns>
                                                                 <asp:TemplateField>
                                                                     <ItemTemplate>
@@ -137,7 +137,8 @@
                                     </tr>
                                     <tr height="30px" align="center">
                                         <td>
-                                            <asp:Button ID="Button1" CssClass="btn btn-info btn-xs" runat="server" Text="登录" />
+                                            <asp:Button ID="Button1" CssClass="btn btn-info btn-xs" runat="server" 
+                                                Text="登录" onclick="Button1_Click" />
                                             &nbsp;
                                             <asp:Button ID="Button2" CssClass="btn btn-info btn-xs" runat="server" Text="重置" />
                                         </td>
