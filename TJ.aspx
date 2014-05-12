@@ -10,13 +10,13 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <div>
+        <div class="form-group">
             <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" class="btn btn-primary">个人查询</asp:LinkButton>
             &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click" class="btn btn-success">新建考勤</asp:LinkButton>
             &nbsp;<asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click" class="btn btn-warning">统计查询</asp:LinkButton></div>
-        <div>
+        <div class="form-group">
             <asp:Label ID="LabelTJ" runat="server" Text="考勤统计"></asp:Label></div>
-        <div>
+        <div class="form-group">
             <asp:GridView ID="GridViewTJ" runat="server" AutoGenerateColumns="False" Width="600px"
                 CssClass="table">
                 <AlternatingRowStyle CssClass="success" />
@@ -48,7 +48,7 @@
                 <HeaderStyle CssClass="danger" />
             </asp:GridView>
         </div>
-        <div>
+        <div class="form-group">
             <asp:GridView ID="GridViewXQ" runat="server" AutoGenerateColumns="False" Width="500px"
                 AllowSorting="True" CssClass="table" Visible="False">
                 <AlternatingRowStyle CssClass="success" />

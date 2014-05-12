@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <div>
+        <div class="form-group">
             <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" class="btn btn-primary">考勤首页</asp:LinkButton>
             &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" class="btn btn-success">个人查询</asp:LinkButton>
             &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click" class="btn btn-info">新建考勤</asp:LinkButton></div>
@@ -21,7 +21,7 @@
             <asp:TextBox ID="TextBoxEndTime" runat="server" class="CanLoginBeginTime"></asp:TextBox>
             <asp:Button ID="ButtonTime" runat="server" Text="查询" OnClick="ButtonTime_Click" class="btn btn-primary btn-lg active" />
         </div>
-        <div>
+        <div class="form-group">
             <asp:GridView ID="GridViewTime" runat="server" AutoGenerateColumns="False" Visible="False"
                 Width="800px" CssClass="table">
                 <AlternatingRowStyle CssClass="success" />

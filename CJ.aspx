@@ -9,22 +9,22 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <div class="form-group">
         <asp:LinkButton ID="LinkButtonTJ" runat="server" OnClick="LinkButtonTJ_Click" class="btn btn-primary">考勤首页</asp:LinkButton>
         &nbsp;<asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" class="btn btn-success">个人查询</asp:LinkButton>
         &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" class="btn btn-info">统计查询</asp:LinkButton></div>
-    <div>
+    <div class="form-group">
         <asp:Label ID="Label1" runat="server" Text="考勤名称："></asp:Label>
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
     </div>
-    <div>
+    <div class="form-group">
         <asp:Label ID="Label2" runat="server" Text="考勤介绍："></asp:Label>
         <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></div>
     <div>
-        <div>
+        <div class="form-group">
             <asp:Button ID="Button1" runat="server" Text="确认" OnClick="Button1_Click"  class="btn btn-primary"/></div>
     </div>
-    <div>
+    <div class="form-group">
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Style="margin-top: 1px"
             Width="500px" Visible="False" CssClass="table">
             <AlternatingRowStyle CssClass="success" />
@@ -45,7 +45,7 @@
             <HeaderStyle CssClass="danger" />
         </asp:GridView>
     </div>
-    <div>
+    <div class="form-group">
         <asp:Button ID="Button2" runat="server" Text="完成" Visible="False" OnClick="Button2_Click"  class="btn btn-primary"/></div>
     </form>
 </body>
