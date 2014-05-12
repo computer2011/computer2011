@@ -13,8 +13,8 @@ namespace WJDC.Models
     {
         public static IList<FjdcTm> GetTmList(string wjh)
         {
-            
-            var cn = new SqlConnection("Data Source=(local);Initial Catalog=Wjdc;Integrated Security=True");
+
+            SqlConnection cn = new SqlConnection(new computer2011.ConnectDatabase().conn);
             var cmd = new SqlCommand();
             cmd.Connection = cn;
             cmd.CommandText = "select Th,Tm from Tm where Tm.Wjh="+wjh+"";
