@@ -100,7 +100,7 @@ namespace WJDC
             cmd.CommandType = System.Data.CommandType.Text;
             cmd.Parameters.Add("@sno", SqlDbType.NVarChar, 12);
             cmd.Parameters.Add("@wjh", SqlDbType.NChar, 12);
-            cmd.Parameters["@sno"].Value = this.txtsno.Text;
+            cmd.Parameters["@sno"].Value = Session["UserLoginXH"];
             cmd.Parameters["@wjh"].Value = id;
 
 
@@ -117,7 +117,7 @@ namespace WJDC
                 }
                 else
                 {
-                    SqlCommand cmd1 = new SqlCommand("INSERT INTO TongJi(sno,Wjh) VALUES ('" + txtsno.Text.Trim() + "','" + id + "')", cn);
+                    SqlCommand cmd1 = new SqlCommand("INSERT INTO TongJi(sno,Wjh) VALUES ('" + Session["UserLoginXH"] + "','" + id + "')", cn);
                     cmd1.ExecuteNonQuery();
                     
                     DataTable table = new DataTable();

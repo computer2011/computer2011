@@ -28,12 +28,12 @@
                          <asp:TextBox ID="Mctxt" runat="server"  type="text" class="form-control"  placeholder="text"></asp:TextBox>
                       </div>
               </div>
-              <div class="form-group">
+              <%--<div class="form-group">
                    <label for="inputtext" class="col-sm-2 control-label">提问人：</label>
                       <div class="col-sm-10">
                          <asp:TextBox ID="snotxt" runat="server"  type="number" class="form-control"  placeholder="number"></asp:TextBox>
                       </div>
-               </div>
+               </div>--%>
                <div class="form-horizontal">
                    <div class="col-sm-offset-2 col-sm-10">
                     <asp:Button ID="Mcbtn" runat="server" Text="添加" type="submit" class="btn btn-default" onclick="Mcbtn_Click"  />

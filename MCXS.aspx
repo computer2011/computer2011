@@ -64,6 +64,7 @@
             </asp:TemplateField>
         </columns>
         </asp:GridView>
+        <hr />
         <br />
         <br />
         <br />

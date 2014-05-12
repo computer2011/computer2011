@@ -37,9 +37,9 @@
     <td><b> 注：</b> <asp:RadioButton ID="RadioButton1" runat="server"  Text=此为单项选择题 ForeColor=Red/>&nbsp&nbsp&nbsp
             <asp:CheckBox ID="CheckBox1" runat="server" Text=此为不定项选择题 ForeColor=Red/></td>
     </tr>
-    <tr>
+    <%--<tr>
        <td>学号：<asp:TextBox ID="txtsno" runat="server" type="number"></asp:TextBox></td>
-    </tr>
+    </tr>--%>
     <tr>
     <td>
     <div id="div1" runat=server></div>

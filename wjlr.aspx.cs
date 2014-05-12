@@ -24,13 +24,13 @@ namespace WJDC
                 ClientScript.RegisterStartupScript(this.GetType(), "", "alert('Mctxt不可为空!')");
                 return;
             }
-            if (string.IsNullOrEmpty(snotxt.Text))
-            {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "alert('snotxt不可为空!')");
-                return;
-            }
+            //if (string.IsNullOrEmpty(snotxt.Text))
+            //{
+            //    ClientScript.RegisterStartupScript(this.GetType(), "", "alert('snotxt不可为空!')");
+            //    return;
+            //}
         
-            SqlCommand cmd = new SqlCommand("INSERT INTO Wj (Wjm,Sno) VALUES ('" + Mctxt.Text.Trim() + "','" + snotxt.Text.Trim() + "')", cn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO Wj (Wjm,Sno) VALUES ('" + Mctxt.Text.Trim() + "','" + Session["UserLoginXH"] + "')", cn);
             try
             {
                 cn.Open();
