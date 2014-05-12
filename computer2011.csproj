@@ -88,7 +88,6 @@
     <Content Include="KBCX.aspx" />
     <Content Include="Main_Content.aspx" />
     <Content Include="Main_Manage.aspx" />
-    <Content Include="MCList.aspx" />
     <Content Include="MCXS.aspx" />
     <Content Include="noTj.aspx" />
     <Content Include="script\js\bootstrap-datetimepicker.js" />
@@ -212,13 +211,6 @@
     </Compile>
     <Compile Include="Main_Manage.aspx.designer.cs">
       <DependentUpon>Main_Manage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="MCList.aspx.cs">
-      <DependentUpon>MCList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MCList.aspx.designer.cs">
-      <DependentUpon>MCList.aspx</DependentUpon>
     </Compile>
     <Compile Include="MCXS.aspx.cs">
       <DependentUpon>MCXS.aspx</DependentUpon>
