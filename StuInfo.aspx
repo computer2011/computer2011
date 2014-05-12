@@ -155,11 +155,7 @@
                 ControlToValidate="TextBox7" ValidationExpression="^.{0,15}$" ForeColor="Blue"
                 ErrorMessage="不超过15个字符"></asp:RegularExpressionValidator>
         </div>
-        <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="TextBox7"
-                                    ForeColor="Red" runat="server" Width="10px" ErrorMessage="*"></asp:RequiredFieldValidator>
-                                <asp:RegularExpressionValidator ID="RegularExpressionValidator8" runat="server" Width="5px"
-                                    ControlToValidate="TextBox7" ValidationExpression="^.{1,15}$" ForeColor="Blue"
-                                    ErrorMessage="*"></asp:RegularExpressionValidator>--%>
+      
         <div class="form-group">
             <label for="TextBox12" class="col-sm-2 control-label">
                 家庭联系人姓名</label>
