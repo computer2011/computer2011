@@ -24,9 +24,10 @@ namespace computer2011
 
             cmd = new SqlCommand("select num from  Visite_Recorder", cn);
 
-            cn.Open();
+
             try
             {
+                cn.Open();
                 Session["count"] = cmd.ExecuteScalar();
             }
             catch 

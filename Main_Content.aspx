@@ -24,13 +24,14 @@
                 </td>
             </tr>
         </table>
-        <div style="position: absolute; left: 400px; top: 0px; width: 400px; right: 595px;">
+        <div style="position: absolute; left: 400px; top: 10px; width: 400px; right: 595px;">
             <asp:Label ID="Label3" CssClass="text-info" Font-Size="12pt" runat="server" Text=""></asp:Label>
         </div>
-        <hr />
-        <div align="center">
-            <textarea id="text1" runat="server" class="form-control"  rows="50" readonly="readonly"
-                style="background-color: #FFFFFF; font-size: 17px; line-height: 1px; font-family: 楷体;"></textarea>
+        <hr style="width: 924px; text-align: left" />
+        <div align="left">
+           
+            <textarea id="text1" runat="server" class="form-control"  rows="30" readonly="readonly"
+                style="background-color: #FFFFFF; font-size: 20px;  font-family: 楷体;"></textarea>
         </div>
     </div>
     </form>
