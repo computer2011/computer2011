@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Business.Codes.BaseCode" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQABggAAAEAAIAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Codes\BaseCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Business.Codes.BaseCode_List" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAACAAAAAACAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Codes\BaseCode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Business.Common.BaseList" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAQAAAAggABAAiAAAABQQCACAAAAAAAABAEAAAAAA=</HashCode>
+      <FileName>Common\BaseList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Business.Common.BaseModelClass" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAgAQAJgAAAUKgAAgAAACQCEAADAQAgAAgQQAAAA=</HashCode>
+      <FileName>Common\BaseModelClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Business.Common.DataCommon" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAKAABAAACAgAAAAAAAAAAAAAQAAAI=</HashCode>
+      <FileName>Common\DataCommon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Business.Common.DataIO" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\DataCommon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Business.Common.FormOperateMethod" Collapsed="true">
+    <Position X="6" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAYAAAAAAABAgAAACAAAAAADAAAAAAAAAAIAgAA=</HashCode>
+      <FileName>Common\FormOperateMethod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Business.Common.Controls.ImageButtonRules" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAACAADAQA=</HashCode>
+      <FileName>Common\Controls\ImageButtonRules.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Business.InputDataMethod.DataInputMethod" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InputDataMethod\DataInputMethod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Business.Common.IToolStripMergableForm" Collapsed="true">
+    <Position X="7.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\FormOperateMethod.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Business.Common.IStatusStripMergableForm" Collapsed="true">
+    <Position X="6" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\FormOperateMethod.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

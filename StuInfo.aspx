@@ -56,8 +56,8 @@
             <asp:RequiredFieldValidator ID="RequiredFieldValidator10" ControlToValidate="TextBox3"
                 CssClass="col-sm-3 control-label" ForeColor="Red" runat="server" ErrorMessage="出生日期不能为空"></asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox3"
-                CssClass="col-sm-2 control-label" ValidationExpression="/^((((1[6-9]|[2-9]\d)\d{2})-(0?[13578]|1[02])-(0?[1-9]|[12]\d|3[01]))|(((1[6-9]|[2-9]\d)\d{2})-(0?[13456789]|1[012])-(0?[1-9]|[12]\d|30))|(((1[6-9]|[2-9]\d)\d{2})-0?2-(0?[1-9]|1\d|2[0-8]))|(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))-0?2-29-))$/"
-                ForeColor="Blue" ErrorMessage="日期格式不规范"></asp:RegularExpressionValidator>
+                CssClass="col-sm-2 control-label" ValidationExpression="^(\d{4})-(0\d{1}|1[0-2])-(0\d{1}|[12]\d{1}|3[01])$"
+                ForeColor="Blue" ErrorMessage="格式为2014-03-01"></asp:RegularExpressionValidator>
         </div>
         <%--  <asp:RequiredFieldValidator ID="RequiredFieldValidator10" ControlToValidate="TextBox3"
                                     ForeColor="Red" runat="server" Width="10px" ErrorMessage="*"></asp:RequiredFieldValidator>
@@ -289,7 +289,7 @@
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <asp:Button ID="Button1" CssClass="btn btn-info" runat="server" Text="提 交" OnClick="Button1_Click" />
+                <asp:Button ID="Button1" CssClass="btn btn-info" runat="server" Text="提 交" OnClick="Button1_Click" ValidationGroup="checkText" />
             </div>
         </div>
     </fieldset>
