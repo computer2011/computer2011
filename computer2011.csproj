@@ -64,6 +64,10 @@
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\jquery-2.1.0.min.js" />
     <Content Include="CJ.aspx" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
     <Content Include="CX.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -78,9 +82,15 @@
     <Content Include="Images\yemei.jpg" />
     <Content Include="Images\zhuye.jpg" />
     <Content Include="IndexPage.aspx" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-2.1.1.js" />
     <Content Include="KBCX.aspx" />
     <Content Include="Main_Content.aspx" />
     <Content Include="Main_Manage.aspx" />
+    <Content Include="MCList.aspx" />
+    <Content Include="MCXS.aspx" />
+    <Content Include="noTj.aspx" />
     <Content Include="script\js\bootstrap-datetimepicker.js" />
     <Content Include="script\js\bootstrap-datetimepicker.min.js" />
     <Content Include="script\js\bootstrap-datetimepicker.zh-CN.js" />
@@ -135,13 +145,18 @@
     <Content Include="script\js\locales\bootstrap-datetimepicker.zh-TW.js" />
     <Content Include="Student.aspx" />
     <Content Include="StuInfo.aspx" />
+    <Content Include="SuccessTj.aspx" />
     <Content Include="Table.css" />
     <Content Include="TimeTJ.aspx" />
     <Content Include="TJ.aspx" />
+    <Content Include="TjcxTm.aspx" />
+    <Content Include="TMXS.aspx" />
     <Content Include="UTC_LinkButton.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="wjlr.aspx" />
+    <Content Include="WJSC.aspx" />
     <Content Include="XG.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -198,6 +213,29 @@
     <Compile Include="Main_Manage.aspx.designer.cs">
       <DependentUpon>Main_Manage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MCList.aspx.cs">
+      <DependentUpon>MCList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MCList.aspx.designer.cs">
+      <DependentUpon>MCList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MCXS.aspx.cs">
+      <DependentUpon>MCXS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MCXS.aspx.designer.cs">
+      <DependentUpon>MCXS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Fjdc.cs" />
+    <Compile Include="Models\FjdcDAL.cs" />
+    <Compile Include="noTj.aspx.cs">
+      <DependentUpon>noTj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="noTj.aspx.designer.cs">
+      <DependentUpon>noTj.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.aspx.cs">
       <DependentUpon>Student.aspx</DependentUpon>
@@ -213,6 +251,13 @@
     <Compile Include="StuInfo.aspx.designer.cs">
       <DependentUpon>StuInfo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SuccessTj.aspx.cs">
+      <DependentUpon>SuccessTj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuccessTj.aspx.designer.cs">
+      <DependentUpon>SuccessTj.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TimeTJ.aspx.cs">
       <DependentUpon>TimeTJ.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -227,12 +272,40 @@
     <Compile Include="TJ.aspx.designer.cs">
       <DependentUpon>TJ.aspx</DependentUpon>
     </Compile>
+    <Compile Include="TjcxTm.aspx.cs">
+      <DependentUpon>TjcxTm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TjcxTm.aspx.designer.cs">
+      <DependentUpon>TjcxTm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TMXS.aspx.cs">
+      <DependentUpon>TMXS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TMXS.aspx.designer.cs">
+      <DependentUpon>TMXS.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UTC_LinkButton.ascx.cs">
       <DependentUpon>UTC_LinkButton.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UTC_LinkButton.ascx.designer.cs">
       <DependentUpon>UTC_LinkButton.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="wjlr.aspx.cs">
+      <DependentUpon>wjlr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wjlr.aspx.designer.cs">
+      <DependentUpon>wjlr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WJSC.aspx.cs">
+      <DependentUpon>WJSC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WJSC.aspx.designer.cs">
+      <DependentUpon>WJSC.aspx</DependentUpon>
     </Compile>
     <Compile Include="XG.aspx.cs">
       <DependentUpon>XG.aspx</DependentUpon>
