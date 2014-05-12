@@ -31,6 +31,7 @@ namespace computer2011
 
         protected void Button1_Click(object sender, EventArgs e)//发布
         {
+            this.Button1.Enabled = false;
             bool yz = true;
             string message = "";
             
@@ -57,6 +58,7 @@ namespace computer2011
                 {
                     cn.Open();
                     cmd.ExecuteNonQuery();
+                    Response.Redirect("Default.aspx");
                 }
                 else
                 {
