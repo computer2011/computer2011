@@ -17,7 +17,7 @@ namespace computer2011
             if(!IsPostBack)
             {
                 DataTable table = new DataTable();
-                SqlCommand cmd = new SqlCommand("select sno,name,sex,mz,P_Self_Num,QQ,SS_Address from student", cn);
+                SqlCommand cmd = new SqlCommand("select sno,name,(select MC from DM_Sex where DM=sex) as sex,(select MC from DM_MZ where DM= mz) as mz,P_Self_Num,QQ,SS_Address from student", cn);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 
                 try

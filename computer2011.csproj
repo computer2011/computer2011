@@ -153,6 +153,11 @@
     <Content Include="TJ.aspx" />
     <Content Include="TjcxTm.aspx" />
     <Content Include="TMXS.aspx" />
+    <Content Include="Users\Login.aspx" />
+    <Content Include="Users\RoleCompetenceEdit.aspx" />
+    <Content Include="Users\UserManage.aspx" />
+    <Content Include="Users\UserPwdManage.aspx" />
+    <Content Include="Users\UserRoleEdit.aspx" />
     <Content Include="UTC_LinkButton.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -302,6 +307,41 @@
     <Compile Include="TMXS.aspx.designer.cs">
       <DependentUpon>TMXS.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Users\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\RoleCompetenceEdit.aspx.cs">
+      <DependentUpon>RoleCompetenceEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\RoleCompetenceEdit.aspx.designer.cs">
+      <DependentUpon>RoleCompetenceEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UserManage.aspx.cs">
+      <DependentUpon>UserManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\UserManage.aspx.designer.cs">
+      <DependentUpon>UserManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UserPwdManage.aspx.cs">
+      <DependentUpon>UserPwdManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\UserPwdManage.aspx.designer.cs">
+      <DependentUpon>UserPwdManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UserRoleEdit.aspx.cs">
+      <DependentUpon>UserRoleEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\UserRoleEdit.aspx.designer.cs">
+      <DependentUpon>UserRoleEdit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UTC_LinkButton.ascx.cs">
       <DependentUpon>UTC_LinkButton.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -343,7 +383,16 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="Business\Business.csproj">
+      <Project>{D3CAB48B-8AEA-4E15-9E3B-5846681C54B3}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="DataAccess\DataAccess.csproj">
+      <Project>{7038AB3A-4415-4D48-8F64-EC1F040BD29F}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
