@@ -63,28 +63,12 @@
     <Content Include="bootstrap\js\bootstrap.js" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\jquery-2.1.0.min.js" />
-    <Content Include="Business\bin\Debug\Business.dll" />
-    <Content Include="Business\bin\Debug\Business.pdb" />
-    <Content Include="Business\bin\Debug\DataAccess.dll" />
-    <Content Include="Business\bin\Debug\DataAccess.pdb" />
-    <Content Include="Business\Business.csproj" />
-    <Content Include="Business\Business.csproj.user" />
-    <Content Include="Business\obj\Debug\Business.csproj.FileListAbsolute.txt" />
-    <Content Include="Business\obj\Debug\Business.dll" />
-    <Content Include="Business\obj\Debug\Business.pdb" />
     <Content Include="CJ.aspx" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="CX.aspx" />
-    <Content Include="DataAccess\bin\Debug\DataAccess.dll" />
-    <Content Include="DataAccess\bin\Debug\DataAccess.pdb" />
-    <Content Include="DataAccess\DataAccess.csproj" />
-    <Content Include="DataAccess\DataAccess.csproj.user" />
-    <Content Include="DataAccess\obj\Debug\DataAccess.csproj.FileListAbsolute.txt" />
-    <Content Include="DataAccess\obj\Debug\DataAccess.dll" />
-    <Content Include="DataAccess\obj\Debug\DataAccess.pdb" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Guest.aspx" />
@@ -170,11 +154,6 @@
     <Content Include="TJ.aspx" />
     <Content Include="TjcxTm.aspx" />
     <Content Include="TMXS.aspx" />
-    <Content Include="Users\Login.aspx" />
-    <Content Include="Users\RoleCompetenceEdit.aspx" />
-    <Content Include="Users\UserManage.aspx" />
-    <Content Include="Users\UserPwdManage.aspx" />
-    <Content Include="Users\UserRoleEdit.aspx" />
     <Content Include="UTC_LinkButton.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -184,9 +163,6 @@
     <Content Include="XG.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\Users\Competence.cs" />
-    <Compile Include="Business\Users\Role.cs" />
-    <Compile Include="Business\Users\User.cs" />
     <Compile Include="CJ.aspx.cs">
       <DependentUpon>CJ.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -202,7 +178,6 @@
     <Compile Include="CX.aspx.designer.cs">
       <DependentUpon>CX.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\DataAccess.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -335,41 +310,6 @@
     <Compile Include="TMXS.aspx.designer.cs">
       <DependentUpon>TMXS.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Users\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Users\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Users\RoleCompetenceEdit.aspx.cs">
-      <DependentUpon>RoleCompetenceEdit.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Users\RoleCompetenceEdit.aspx.designer.cs">
-      <DependentUpon>RoleCompetenceEdit.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Users\UserManage.aspx.cs">
-      <DependentUpon>UserManage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Users\UserManage.aspx.designer.cs">
-      <DependentUpon>UserManage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Users\UserPwdManage.aspx.cs">
-      <DependentUpon>UserPwdManage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Users\UserPwdManage.aspx.designer.cs">
-      <DependentUpon>UserPwdManage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Users\UserRoleEdit.aspx.cs">
-      <DependentUpon>UserRoleEdit.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Users\UserRoleEdit.aspx.designer.cs">
-      <DependentUpon>UserRoleEdit.aspx</DependentUpon>
-    </Compile>
     <Compile Include="UTC_LinkButton.ascx.cs">
       <DependentUpon>UTC_LinkButton.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -404,10 +344,6 @@
     <None Include="bootstrap\fonts\glyphicons-halflings-regular.eot" />
     <None Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <None Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
-    <None Include="Business\ClassDiagram2.cd" />
-    <None Include="Business\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="Business\obj\Debug\ResolveAssemblyReference.cache" />
-    <None Include="DataAccess\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -415,13 +351,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Business\bin\Release\" />
-    <Folder Include="Business\obj\Debug\TempPE\" />
-    <Folder Include="Business\Properties\" />
-    <Folder Include="DataAccess\bin\Release\" />
-    <Folder Include="DataAccess\obj\Debug\TempPE\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
