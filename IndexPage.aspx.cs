@@ -16,7 +16,7 @@ namespace computer2011
         {
             if (!IsPostBack)
             {
-                if (Session["LoginStudentXH"] != "")
+                if (Session["LoginStudentXH"] != null)
                 {
                     this.divuser.InnerHtml = "2011级计算机科学与技术班";
                     this.divpwd.InnerHtml = "欢迎你 " + Session["LoginStudentXH"].ToString() + " 用户";

@@ -445,6 +445,7 @@
     </Compile>
     <Compile Include="Users\UserRoleEdit.aspx.cs">
       <DependentUpon>UserRoleEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Users\UserRoleEdit.aspx.designer.cs">
       <DependentUpon>UserRoleEdit.aspx</DependentUpon>

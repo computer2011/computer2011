@@ -12,10 +12,10 @@ namespace computer2011
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                Session["LoginStudentXH"] = "";
-            }
+            //if (!IsPostBack)
+            //{
+            //    Session["LoginStudentXH"] =null;
+            //}
             LinkButton1.Attributes.Add("target", "content1");
             LinkButton1.Attributes.Add("href", "IndexPage.aspx");
 

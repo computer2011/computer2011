@@ -19,7 +19,7 @@ namespace computer2011
                 if (Session["LoginStudentXH"].ToString() != "")
                 {
                     Business.Users.Competence thecom = new Business.Users.Competence();
-                    string qx = thecom.isCompetence("" + Session["LoginStudentXH"].ToString() + "", "62");
+                    string qx = thecom.isCompetence("" + Session["LoginStudentXH"].ToString() + "", "17");
                     if (qx != "")
                     {
                         SqlDataAdapter da = new SqlDataAdapter("select * from DM_LB", cn);
@@ -34,7 +34,7 @@ namespace computer2011
                     }
                     else
                     {
-                        Response.Write("<script>alert('你没有发布权限，如有疑问请与管理员联系!');window.location.href ='http://computer2011.apphb.com'</script>");
+                        Response.Write("<script>alert('你没有发布权限，如有疑问请与管理员联系!');window.location.href ='http://computer2011.apphb.com/default.aspx'</script>");
                        // Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert(你没有权限，如有疑问，请与管理员联系！);</script>");
                     }
                 }
