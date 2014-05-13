@@ -64,6 +64,7 @@
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\jquery-2.1.0.min.js" />
     <Content Include="CJ.aspx" />
+    <Content Include="CJstudent.aspx" />
     <Content Include="classfc.aspx" />
     <Content Include="classxc.aspx" />
     <Content Include="css\bootstrap-theme.css" />
@@ -194,6 +195,13 @@
     </Compile>
     <Compile Include="CJ.aspx.designer.cs">
       <DependentUpon>CJ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CJstudent.aspx.cs">
+      <DependentUpon>CJstudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CJstudent.aspx.designer.cs">
+      <DependentUpon>CJstudent.aspx</DependentUpon>
     </Compile>
     <Compile Include="classfc.aspx.cs">
       <DependentUpon>classfc.aspx</DependentUpon>
