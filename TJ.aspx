@@ -60,7 +60,7 @@
                     <asp:BoundField DataField="name" HeaderText="姓名" />
                     <asp:BoundField DataField="kqlb" HeaderText="出勤情况" />
                 </Columns>
-                <<HeaderStyle CssClass="danger" Font-Names="微软雅黑" />
+                <HeaderStyle CssClass="danger" Font-Names="微软雅黑" />
                 <RowStyle Font-Names="微软雅黑" />
             </asp:GridView>
         </div>
