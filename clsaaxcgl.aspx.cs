@@ -7,15 +7,16 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace classphoto
+namespace computer2011
 {
-    public partial class xcgl : System.Web.UI.Page
+    public partial class clsaaxcgl : System.Web.UI.Page
     {
         SqlConnection cn = new SqlConnection(new computer2011.ConnectDatabase().conn);
         protected void Page_Load(object sender, EventArgs e)
-        { //SqlConnection myConn = new SqlConnection("Data Source=.;Initial Catalog=photo;Integrated Security=True");
+        {
+            //SqlConnection myConn = new SqlConnection("Data Source=.;Initial Catalog=photo;Integrated Security=True");
             //myConn.Open();
-            string sqlStr = "select * from grfc";
+            string sqlStr = "select * from classfc";
             SqlDataAdapter myDa = new SqlDataAdapter(sqlStr, cn);
             DataSet myDs = new DataSet();
             myDa.Fill(myDs);
@@ -25,20 +26,12 @@ namespace classphoto
             myDs.Dispose();
             myDs.Dispose();
             cn.Close();
-        
-            
-
         }
-        
-
-        
-
-       
 
         protected void GridView1_RowDeleting1(object sender, GridViewDeleteEventArgs e)
         {
             int photoID = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value.ToString());
-            string sqlStr = "delete from grfc where photoID=" + photoID;
+            string sqlStr = "delete from classfc where photoID=" + photoID;
             //SqlConnection myconn = new SqlConnection("Data Source=.;Initial Catalog=photo;Integrated Security=True");
             cn.Open();
             SqlCommand myCmd = new SqlCommand(sqlStr, cn);
@@ -49,7 +42,6 @@ namespace classphoto
             this.GridView1.DataBind();
         }
 
-        
         protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
@@ -57,13 +49,5 @@ namespace classphoto
                 ((LinkButton)e.Row.Cells[0].Controls[0]).Attributes.Add("onclick", "return confirm('确定要删除吗？')");
             }
         }
-
-       
-
-        
-       
-
-
-       
     }
 }

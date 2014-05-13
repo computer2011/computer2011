@@ -15,31 +15,36 @@ namespace liuyanban
         SqlConnection cn = new SqlConnection(new computer2011.ConnectDatabase().conn);
         protected void Page_Load(object sender, EventArgs e)
         {
-            {
-                if (!IsPostBack)
-                {
-                    this.Showdata();
-                }
-                Button2.Attributes.Add("onclick", "return confirm('你确定要删除所选择的记录么?')");
-            }
-        }
 
+            this.btn全选.Enabled = false;
+            this.Button2.Enabled = false;
+            this.Showdata();
+        }
+        /// <summary>
+        /// 
+        /// </summary>
         private void Showdata()
         {
             SqlCommand com = new SqlCommand();
             com.Connection = cn;
             com.CommandText = "select *  from Guest order by ID desc";
             DataTable table = new DataTable();
-
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = com;
             da.Fill(table);
-
-
             this.GridView1.DataSource = table;
             this.GridView1.DataBind();
+            if (table.Rows.Count > 0)
+            {
+                this.btn全选.Enabled = true;          
+                this.Button2.Enabled = true;
+            }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn全选_Click(object sender, EventArgs e)
         {
             CheckBox chk;
@@ -66,22 +71,35 @@ namespace liuyanban
                 btn全选.Text = "全选";
             }
         }
+        /// <summary>
+        /// 删除留言
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Button2_Click(object sender, EventArgs e)
         {
-            SqlCommand sqlcom;
-            for (int i = 0; i <= GridView1.Rows.Count - 1; i++)
+            Business.Users.Competence thecom = new Business.Users.Competence();
+            if (thecom.isCompetence("" + Session["LoginStudentXH"] + "", "41") == "")
             {
-                CheckBox cbox = (CheckBox)GridView1.Rows[i].FindControl("CheckBox1");
-                if (cbox.Checked == true)
+                SqlCommand sqlcom;
+                for (int i = 0; i <= GridView1.Rows.Count - 1; i++)
                 {
-                    string sqlstr = "delete from Guest where ID='" + GridView1.DataKeys[i].Value + "'";
-                    sqlcom = new SqlCommand(sqlstr, cn);
-                    cn.Open();
-                    sqlcom.ExecuteNonQuery();
-                    cn.Close();
+                    CheckBox cbox = (CheckBox)GridView1.Rows[i].FindControl("CheckBox1");
+                    if (cbox.Checked == true)
+                    {
+                        string sqlstr = "delete from Guest where ID='" + GridView1.DataKeys[i].Value + "'";
+                        sqlcom = new SqlCommand(sqlstr, cn);
+                        cn.Open();
+                        sqlcom.ExecuteNonQuery();
+                        cn.Close();
+                    }
                 }
+                Showdata();
             }
-            Showdata();
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + thecom.isCompetence("" + Session["LoginStudentXH"] + "", "41") + "!');</script>");
+            }
         }
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
@@ -89,12 +107,20 @@ namespace liuyanban
             Response.Redirect("~/Rely.aspx");
             Response.End();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Button3_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Guest.aspx");
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             GridView1.PageIndex = e.NewPageIndex;

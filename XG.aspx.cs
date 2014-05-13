@@ -16,7 +16,7 @@ namespace KQ
         {
             if (!IsPostBack)
             {
-                SqlDataAdapter sa = new SqlDataAdapter("select Sno,Name from Student where sno like '20110103%'", cn);
+                SqlDataAdapter sa = new SqlDataAdapter("select Sno,Name from Student where sno like '201101%'", cn);
                 DataTable table = new DataTable();
                 sa.Fill(table);
                 this.GridView1.DataSource = table;
@@ -43,7 +43,14 @@ namespace KQ
                         int val = cmd.ExecuteNonQuery();
                         cn.Close();
                         if (val <= 0)
-                            ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('修改数据失败!')</script>");
+                        {
+                            SqlCommand TJ = new SqlCommand();
+                            TJ.Connection = cn;
+                            TJ.CommandText = "insert into kq(id,sno,kqid) values('" + id + "','" + sno + "','" + kqid + "')";
+                            cn.Open();
+                            TJ.ExecuteNonQuery();
+                            cn.Close();
+                        }
                         else
                             ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('修改数据成功!')</script>");
                 }
@@ -53,9 +60,12 @@ namespace KQ
                 }
                 
             }
+            TimeZoneInfo bjTimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("China Standard Time");
+            DateTime Time = DateTime.Now;
+            DateTime Ctime = TimeZoneInfo.ConvertTime(Time, bjTimeZoneInfo);
             SqlCommand SJ = new SqlCommand();
             SJ.Connection = cn;
-            SJ.CommandText = "update sj set time='" + System.DateTime.Now.ToLocalTime() + "' where id='" + id + "'";
+            SJ.CommandText = "update sj set time='" + Ctime+ "' where id='" + id + "'";
             cn.Open();
             SJ.ExecuteNonQuery();
             cn.Close();
@@ -73,7 +83,16 @@ namespace KQ
 
         protected void LinkButton2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("TimeTJ.aspx");
+            Business.Users.Competence thecom = new Business.Users.Competence();
+            string qx = thecom.isCompetence("" + Session["LoginStudentXH"] + "", "63");
+            if (qx == "")
+            {
+                Response.Redirect("TimeTJ.aspx");
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + qx + "');</script>");
+            }
         }
 
         protected void LinkButton3_Click(object sender, EventArgs e)
