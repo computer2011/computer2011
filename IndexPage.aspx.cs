@@ -82,8 +82,6 @@ namespace computer2011
                 this.GridView5.DataBind();
                 #endregion
 
-               if(Session["LoginStudentXH"]!="") 
-
             }
 
             this.Label5.Text = "你是第" + Session["count"] + "位访问者";
