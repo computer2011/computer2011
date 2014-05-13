@@ -100,7 +100,8 @@ namespace computer2011
                 }
                 else
                 {
-                    Response.Write("<script>alert('请先登录!');window.location.href ='http://computer2011.apphb.com'</script>");
+                    this.divkb.Visible = false;
+                    Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('请先登录！');</script>");
                 }
             }
             this.UTC_LinkButton1.L_Click += LinkButton1_Click;

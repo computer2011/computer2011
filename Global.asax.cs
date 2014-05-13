@@ -59,9 +59,10 @@ namespace computer2011
         {
 
             cmd = new SqlCommand("update Visite_Recorder set num=num+1", cn);
-            cn.Open();
+            
             try
             {
+                cn.Open();
                 cmd.ExecuteNonQuery();
             }
             catch
