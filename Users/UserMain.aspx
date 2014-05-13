@@ -57,7 +57,7 @@
     <script src="../script/js/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="../js/bootstrap.js" type="text/javascript"></script>
     <iframe id="UserMain" src="HY.aspx" name="UserMain" height="100%" onload="Javascript:SetWinHeight(this)"
-        width="100%"  style="overflow-y: visible" scrolling="no">
+        width="1000"  style="overflow-y: visible" scrolling="no">
     </iframe>
 </body>
 </html>

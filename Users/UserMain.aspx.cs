@@ -13,14 +13,5 @@ namespace computer2011.Users
         {
 
         }
-        //安全退出
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-           
-                Session["UserRoleEditXH"] = "";
-                //Response.Redirect("UserRoleEdit.aspx");
-        }
-
-
         }
     }
