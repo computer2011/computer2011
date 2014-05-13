@@ -55,8 +55,8 @@ namespace liuyanban
             this.GridView1.DataBind();
             if (tt.Rows.Count > 0)
             {
-                this.Button2.Visible = true;
-                this.Button3.Enabled = true;
+                this.Button2.Enabled = true;
+                this.Button3.Visible = true;
             }
         }
         /// <summary>
