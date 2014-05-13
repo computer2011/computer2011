@@ -5,6 +5,9 @@
 <head runat="server">
     <title></title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+       <script id="1">
+        if (window != top) top.location.href = window.location.href;
+    </script>
 </head>
 <body>
     <form id="form1" runat="server" style="width: 1000px">
@@ -37,12 +40,12 @@
                 </td>
                 <td>
                     <textarea runat="server" class="form-control" rows="20" id="TextArea1" name="S1"></textarea>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" Enabled="false"
+                  <%--  <asp:RegularExpressionValidator ID="RegularExpressionValidator1" Enabled="false"
                         ControlToValidate="TextArea1" ValidationExpression=" 
 ^[a-zA-z]+://(\w+(-\w+)*)(\.(\w+(-\w+)*))*(\?\s*)?$ 
  " runat="server" ValidationGroup="checkText" ForeColor="Red" ErrorMessage="网址格式不正确"></asp:RegularExpressionValidator>
                     <asp:ValidationSummary ID="ValidationSummary1" ValidationGroup="checkText" Enabled="false"
-                        ShowMessageBox="true" ShowSummary="false" runat="server" />
+                        ShowMessageBox="true" ShowSummary="false" runat="server" />--%>
                 </td>
             </tr>
             <tr>
