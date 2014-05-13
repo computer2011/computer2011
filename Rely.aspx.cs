@@ -31,15 +31,26 @@ namespace liuyanban
             da.SelectCommand = com;
             DataTable tt = new DataTable();
             da.Fill(tt);
-            this.Label1.Text = "留言内容：" + tt.Rows[0][1].ToString();
+            if (tt.Rows.Count > 0)
+            {
+                this.Label1.Text = "留言内容：" + tt.Rows[0][1].ToString();
+            }
+            
         }
 
         private void RelyInfo()
         {
-            SqlCommand com = new SqlCommand("select * from Rely where Guestid=@ID", cn);
+            SqlCommand com = new SqlCommand();
+            com.CommandText="select * from Rely where Guestid=@ID";
+            com.Connection = new SqlConnection(new computer2011.ConnectDatabase().conn); //cn;
             com.Parameters.Add("@ID", SqlDbType.Int).Value = Convert.ToInt32(Session["ID"]);
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = com;
+            
+           
+            
+            
+            
             DataTable tt = new DataTable();
             da.Fill(tt);
             this.GridView1.DataSource = tt;
@@ -63,7 +74,7 @@ namespace liuyanban
 
             //连接数据库字符串 
 
-            string sql = "INSERT INTO Rely(Name,Rely,Guestid) VALUES ('" + TextBox1.Text.Trim() + "','" + txtRely.Text.Trim() + "', " + Session["ID"].ToString() + ")";
+            string sql = "INSERT INTO Rely(Name,Rely,Guestid,Time) VALUES ('" + TextBox1.Text.Trim() + "','" + txtRely.Text.Trim() + "','" + Session["ID"].ToString() + "','" + System.DateTime.Now + "')";
             try
             {
                 //using 是系统关键字, 作用是自动释放资源。

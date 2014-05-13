@@ -32,7 +32,7 @@ namespace liuyanban
                 return;
             }
             //连接数据库字符串 
-            string sql = " INSERT INTO Guest (Contents) VALUES ('" + Contents.Text.Trim() + "')";
+            string sql = " INSERT INTO Guest (Contents,Time) VALUES ('" + Contents.Text.Trim() + "','" + System.DateTime.Now + "')";
             try
             {
                 //using 是系统关键字, 作用是自动释放资源。
