@@ -16,12 +16,21 @@ namespace computer2011
         {
             if (!IsPostBack)
             {
-                if (Session["LoginStudentXH"].ToString() != null)
+                string a = null;
+                try
                 {
-                    Business.Users.Competence thecom = new Business.Users.Competence();
-                    string qx = thecom.isCompetence("" + Session["LoginStudentXH"].ToString() + "", "50");//查看学生信息权限
-                    if (qx == "")
-                    {
+                    a = Session["LoginStudentXH"].ToString();
+                }
+                catch 
+                {
+                    this.divstu.Visible = false;
+                    Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('请先登录!');</script>");
+                    //Response.Write("<script>alert('请先登录!');window.location.href ='http://computer2011.apphb.com/default.aspx'</script>");
+                   // return;
+                }
+                //if (a != null)
+                //{
+                  
                         DataTable table = new DataTable();
                         SqlCommand cmd = new SqlCommand("select sno,name,(select MC from DM_Sex where DM=sex) as sex,(select MC from DM_MZ where DM= mz) as mz,P_Self_Num,QQ,SS_Address from student", cn);
                         SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -36,17 +45,13 @@ namespace computer2011
                         }
                         this.GridView1.DataSource = table;
                         this.GridView1.DataBind();
-                    }
-                    else
-                    {
-                        Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('你没有权限，如有疑问，请与管理员联系！');</script>");
-                    }
-                }
-                else
-                {
-                    Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('请先登录！');</script>");
-                    //Response.Write("<script>alert('请先登录!');window.location.href ='http://computer2011.apphb.com'</script>");
-                }
+                   
+                //}
+                //else
+                //{
+                //    Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('请先登录！');</script>");
+                //    //Response.Write("<script>alert('请先登录!');window.location.href ='http://computer2011.apphb.com'</script>");
+                //}
             }
         }
 
@@ -67,7 +72,7 @@ namespace computer2011
             }
             else
             {
-                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert(你没有修改权限，如有疑问，请与管理员联系！);</script>");
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('你没有修改权限，如有疑问，请与管理员联系！');</script>");
             }
         }
     }

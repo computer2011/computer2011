@@ -19,7 +19,7 @@ namespace computer2011
                 if (Session["LoginStudentXH"] != null)
                 {
                     this.divuser.InnerHtml = "2011级计算机科学与技术班";
-                    this.divpwd.InnerHtml = "欢迎你 " + Session["LoginStudentXH"].ToString() + " 用户";
+                    this.divpwd.InnerHtml = "欢迎你 " + Session["LoginStudentXM"].ToString() + " ";
                     this.divlogin.Visible = false;
                     this.divupdate.Visible = true;
                 }
@@ -186,8 +186,21 @@ namespace computer2011
             else
             {
                 Session["LoginStudentXH"] = this.TextBox1.Text;
+
+                SqlCommand cmd2 = new SqlCommand("select name from student where sno='" + this.TextBox1.Text + "'", cn);
+                try
+                {
+                    cn.Open();
+                    Session["LoginStudentXM"] = cmd2.ExecuteScalar();
+                }
+                catch { this.divpwd.InnerHtml = "欢迎你 " + Session["LoginStudentXH"].ToString() + "用户 "; }
+                finally
+                {
+                    cn.Close();
+                }
                 this.divuser.InnerHtml = "2011级计算机科学与技术班";
-                this.divpwd.InnerHtml = "欢迎你 " + this.TextBox1.Text + " 用户";
+
+                this.divpwd.InnerHtml = "欢迎你 " + Session["LoginStudentXM"].ToString() + " ";
                 this.divlogin.Visible = false;
                 this.divupdate.Visible = true;
             }

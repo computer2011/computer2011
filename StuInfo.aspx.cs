@@ -17,7 +17,7 @@ namespace computer2011
             if (!IsPostBack)
             {
                 DataTable table = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter("SELECT  [Sno],[Name],(select MC from DM_Sex where DM=[Sex]) ,(select MC from DM_MZ where DM=[MZ]) ,[Birthday],(select MC from DM_ZZMM where DM=[ZZMM]),[SFZH] ,[P_Self_Num] ,[QQ] ,[SS_Address] ,[ZhiWu] ,[F_Address] ,[YouBian]  ,[F_PhoneName] ,[F_PhoneNum]  ,[CommitteeName]  ,[CommitteePhone]  ,[FMDWFZRXM]  ,[FMDWFZRDH]  ,[BZ]  FROM [Student] where sno=" + Request.QueryString["ID"] + "", cn);
+                SqlDataAdapter da = new SqlDataAdapter("SELECT  [Sno],[Name],(select MC from DM_Sex where DM=[Sex]) ,(select MC from DM_MZ where DM=[MZ]) ,[Birthday],(select MC from DM_ZZMM where DM=[ZZMM]),[SFZH] ,[P_Self_Num] ,[QQ] ,[SS_Address] ,[ZhiWu] ,[F_Address] ,[YouBian]  ,[F_PhoneName] ,[F_PhoneNum]  ,[CommitteeName]  ,[CommitteePhone]  ,[FMDWFZRXM]  ,[FMDWFZRDH]  ,[BZ]  FROM [Student] where sno='" + Request.QueryString["ID"] + "'", cn);
                 try
                 {
                     da.Fill(table);
@@ -67,16 +67,18 @@ namespace computer2011
                 }
 
                 
-
             }
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
-              SqlCommand cmd=new SqlCommand("update Student set [MZ]=(select DM from DM_MZ where MC= "+this.TextBox19.Text+") ,[Birthday]="+this.TextBox3.Text+" ,[ZZMM]=(select DM from DM_ZZMM where MC="+this.TextBox4.Text+") ,[SFZH]="+this.TextBox5.Text+",[P_Self_Num]="+this.TextBox6.Text+",[QQ]="+this.TextBox7.Text+" ,[SS_Address]="+this.TextBox8.Text+" ,[ZhiWu]="+this.TextBox9.Text+" ,[F_Address]="+this.TextBox10.Text+" ,[YouBian]="+this.TextBox11.Text+" ,[F_PhoneName]="+this.TextBox12.Text+" ,[F_PhoneNum]="+this.TextBox13.Text+"  ,[CommitteeName]="+this.TextBox14.Text+" ,[CommitteePhone]="+this.TextBox15.Text+" ,[FMDWFZRXM]="+this.TextBox16.Text+" ,[FMDWFZRDH]="+this.TextBox17.Text+" ,[BZ]="+this.TextBox18.Text+"  where Sno="+this.TextBox2.Text+"",cn);
+           
+              SqlCommand cmd=new SqlCommand("update Student set [MZ]=(select DM from DM_MZ where MC= '"+this.TextBox19.Text+"') ,[Birthday]='"+this.TextBox3.Text+"' ,[ZZMM]=(select DM from DM_ZZMM where MC='"+this.TextBox4.Text+"') ,[SFZH]='"+this.TextBox5.Text+"',[P_Self_Num]='"+this.TextBox6.Text+"',[QQ]='"+this.TextBox7.Text+"' ,[SS_Address]='"+this.TextBox8.Text+"' ,[ZhiWu]='"+this.TextBox9.Text+"' ,[F_Address]='"+this.TextBox10.Text+"' ,[YouBian]='"+this.TextBox11.Text+"' ,[F_PhoneName]='"+this.TextBox12.Text+"' ,[F_PhoneNum]='"+this.TextBox13.Text+"'  ,[CommitteeName]='"+this.TextBox14.Text+"' ,[CommitteePhone]='"+this.TextBox15.Text+"' ,[FMDWFZRXM]='"+this.TextBox16.Text+"' ,[FMDWFZRDH]='"+this.TextBox17.Text+"' ,[BZ]='"+this.TextBox18.Text+"'  where Sno='"+this.TextBox2.Text+"'",cn);
               try
               {
                   cn.Open();
                   cmd.ExecuteNonQuery();
+                  Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('提交成功！');</script>");
+
               }
               catch
               {

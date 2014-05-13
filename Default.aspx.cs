@@ -40,8 +40,10 @@ namespace computer2011
             LinkButton8.Attributes.Add("target", "content1");
             LinkButton8.Attributes.Add("href", "shixiantongji.aspx");
 
-            
-            
+
+            LinkButton9.Attributes.Add("target", "content1");
+            LinkButton9.Attributes.Add("href", "Main_Manage.aspx");
+
 
 
         }
@@ -63,7 +65,19 @@ namespace computer2011
 
         protected void LinkButton9_Click(object sender, EventArgs e)//主页管理
         {
-            Response.Redirect("Main_Manage.aspx");
+            //if (Session["LoginStudentXH"].ToString() != null)
+            //{
+            //    Business.Users.Competence thecom = new Business.Users.Competence();
+            //    string qx = thecom.isCompetence("" + Session["LoginStudentXH"].ToString() + "", "17");
+            //    if (qx == "")
+            //    {
+            //        Response.Redirect("Main_Manage.aspx");
+            //    }
+            //    else
+            //    {
+            //        Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('你没有权限，如有疑问，请与管理员联系！');</script>");
+            //    }
+            //}
         }
     }
 }

@@ -7,12 +7,12 @@
 </head>
 <body>
     <form id="form1" runat="server" style="width: 1000px">
-    <div style="width: 1000px">
+    <div id="divstu" runat="server" style="width: 1000px">
         <table width="1000px">
             <tr>
                 <td align="center">
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-                        Width="988px" BackColor="#99CCFF">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="988px"
+                        BackColor="#99CCFF">
                         <Columns>
                             <asp:TemplateField HeaderText="学号">
                                 <ItemTemplate>

@@ -5,13 +5,13 @@
 <head runat="server">
     <title></title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script id="script" type="text/javascript">
+  <%--  <script id="script" type="text/javascript">
         if (window != top) top.location.href = window.location.href;
-    </script>
+    </script>--%>
 </head>
 <body>
     <form id="form1" runat="server" style="text-align: center">
-    <div align="center">
+    <div id="divmanage" runat="server" visible="true" align="center">
         <table width="1000px">
             <tr height="50px">
                 <td width="80px" align="right">
@@ -55,8 +55,8 @@
                 <td align="center">
                     <asp:Button ID="Button1" CssClass="btn btn-info" runat="server" Text="发布内容" OnClick="Button1_Click"
                         ValidationGroup="checkText" />
-                    &nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="Button2" CssClass="btn btn-info" runat="server" Text="返回主页" OnClick="Button2_Click" />
+                 <%--   &nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="Button2" CssClass="btn btn-info" runat="server" Text="返回主页" OnClick="Button2_Click" />--%>
                 </td>
             </tr>
         </table>
