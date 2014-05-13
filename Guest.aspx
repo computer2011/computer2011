@@ -14,16 +14,12 @@
             font-size: large;
             color: #3333CC;
         }
-        .style5
-        {
-            width: 338px;
-        }
     </style>
 </head>
 <body>
-    <h2 align="center">
+    <h1 align="center">
         留言板
-    </h2>
+    </h1>
     <div align="center">
         <center>
             <table border="0" height="115" cellpadding="0" style="width: 80%">
@@ -47,24 +43,14 @@
                         <form id="form1" runat="server">
                         <table border="0" cellspacing="0" cellpadding="3" style="width: 372px; height: 222px">
                             <tr>
-                                <td height="18" valign="top" bgcolor="#CCFFFF" class="style5">
+                                <td align="left" height="31" bgcolor="#CCFFFF">
+                                    <asp:Label ID="Label1" runat="server" Text="请输入留言内容！" Style="font-size: x-large"></asp:Label>
                                 </td>
                             </tr>
                             <tr>
-                                <td height="31" valign="top" bgcolor="#CCFFFF" class="style5">
-                                    <div>
-                                        <asp:Label ID="Label1" runat="server" Text="请输入留言内容！" Style="font-size: x-large"></asp:Label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td height="160" valign="top" bgcolor="#CCFFFF" class="style5">
-                                    <div>
-                                        <asp:TextBox ID="Contents" runat="server" Columns="50" TextMode="MultiLine" Style="word-wrap: break-word;
-                                            margin-top: 10px;" Height="142px" Width="520px"></asp:TextBox>
-                                    </div>
-                                    <div align="right" style="width: 365px">
-                                    </div>
+                                <td height="150" valign="top" bgcolor="#CCFFFF" class="style5">
+                                    <asp:TextBox ID="Contents" runat="server" Columns="50" TextMode="MultiLine" Style="word-wrap: break-word;
+                                        margin-top: 10px;" Height="150px" Width="550px"></asp:TextBox>
                                 </td>
                             </tr>
                         </table>
@@ -72,8 +58,6 @@
                             <asp:Button ID="Button1" runat="server" Text="提交留言" Height="30px" OnClick="Button1_Click" />
                             <asp:Button ID="Button2" runat="server" Text="浏览留言" Height="30px" OnClick="Button2_Click" />
                         </p>
-                        <p class="style1">
-                            &nbsp;</p>
                         </form>
                     </td>
                 </tr>
