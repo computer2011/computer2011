@@ -20,7 +20,7 @@
         .style3
         {
             font-family: 华文行楷;
-            color: #66FF99;
+            color: #6699FF;
         }
     </style>
 </head>
@@ -41,7 +41,7 @@
         </tr>
         <tr>
             <td>
-                <asp:Label ID="Label1" runat="server" Text="Label" Style="color: #00FF99; font-size: x-large;
+                <asp:Label ID="Label1" runat="server" Text="Label" Style="color: #6699FF; font-size: x-large;
                     font-weight: 700; text-decoration: underline; font-family: 华文行楷;"></asp:Label>
             </td>
         </tr>
