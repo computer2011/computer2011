@@ -99,7 +99,7 @@ namespace computer2011
 
                     cn.Open();
                     cmd.ExecuteNonQuery();
-                    Response.Write("<script>alert('发布成功!');window.location.href ='http://computer2011.apphb.com/default.aspx'</script>");
+                    Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('发布成功！');</script>");
 
                 }
                 catch
