@@ -164,8 +164,8 @@
                                     </tr>
                                     <tr height="30px" align="center">
                                         <td>
-                                            <input id="Button3" runat="server" class="btn btn-info btn-xs" type="button" value="修改密码"
-                                                onserverclick="Button3_onclick" />
+                                          <%--  <input id="Button3" runat="server" class="btn btn-info btn-xs" type="button" value="修改密码"
+                                                onserverclick="Button3_onclick" />--%>
                                         </td>
                                     </tr>
                                     <tr>
