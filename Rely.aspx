@@ -12,6 +12,15 @@
             font-family: 幼圆;
             color: #0066FF;
         }
+        .style2
+        {
+            font-family: 华文行楷;
+        }
+        .style3
+        {
+            font-family: 华文行楷;
+            color: #66FF99;
+        }
     </style>
 </head>
 <body>
@@ -19,25 +28,28 @@
     <table align="center" width="70%" cellpadding="5" cellspacing="10">
         <tr>
             <td colspan="2" class="style1">
-                <strong>留言回复 </strong>
+                <span class="style3">留言回复</span><strong> </strong>
             </td>
         </tr>
         <tr>
             <td>
                 <asp:Button ID="Button1" runat="server" Text="<<<<返回留言列表" OnClick="Button1_Click"
-                    Height="25px" Width="140px" />
+                    Height="28px" Width="120px" 
+                    style="font-family: 宋体; text-decoration: underline" />
             </td>
         </tr>
         <tr>
             <td>
-                <asp:Label ID="Label1" runat="server" Text="Label" Style="color: #00CCFF; font-size: x-large;
-                    font-weight: 700;"></asp:Label>
+                <asp:Label ID="Label1" runat="server" Text="Label" Style="color: #0099CC; font-size: x-large;
+                    font-weight: 700; text-decoration: underline;"></asp:Label>
             </td>
         </tr>
         <tr>
             <td>
-                <asp:Button ID="Button2" runat="server" Text="全选" OnClick="Button2_Click" />
-                <asp:Button ID="Button3" runat="server" Text="删除" OnClick="Button3_Click" />
+                <asp:Button ID="Button2" runat="server" Text="全选" OnClick="Button2_Click" 
+                    Height="28px" style="text-decoration: underline" />
+                <asp:Button ID="Button3" runat="server" Text="删除" OnClick="Button3_Click" 
+                    Height="28px" style="text-decoration: underline" />
             </td>
         </tr>
         <tr>
@@ -73,14 +85,15 @@
         </tr>
         <tr>
             <td align="left">
-                <asp:Label ID="Label2" runat="server" Text="请 输 入 姓 名：" Style="font-size: large"
+                <asp:Label ID="Label2" runat="server" Text="请   输  入  姓  名 ：" Style="font-size: large"
                     CssClass="style2"></asp:Label>
                 <asp:TextBox ID="TextBox1" runat="server" Height="26px" Style="margin-top: 20px;"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td>
-                <asp:Label ID="Label3" runat="server" Font-Size="X-Large" Text="请输入回复内容：" Style="font-size: large"></asp:Label>
+                <asp:Label ID="Label3" runat="server" Font-Size="X-Large" Text="请输入回复内容：" 
+                    Style="font-size: large; font-family: 华文行楷;"></asp:Label>
                 <asp:TextBox ID="txtRely" runat="server" Columns="50" TextMode="MultiLine" Height="31px"
                     Width="341px"></asp:TextBox>
                 <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">回复</asp:LinkButton>

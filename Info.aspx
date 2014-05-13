@@ -11,13 +11,16 @@
         <table>
             <tr>
                 <td>
-                    <asp:Button ID="btn全选" runat="server" OnClick="btn全选_Click" Text="全选" />
+                    <asp:Button ID="btn全选" runat="server" OnClick="btn全选_Click" Text="全选" 
+                        Height="28px" Width="50px" style="text-decoration: underline" />
                 </td>
                 <td>
-                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="删除" />
+                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="删除" 
+                        Height="28px" style="text-decoration: underline" />
                 </td>
                 <td align="right">
-                    <asp:Button ID="Button3" runat="server" Text="返回留言板主页" OnClick="Button3_Click" />
+                    <asp:Button ID="Button3" runat="server" Text="返回留言板主页" OnClick="Button3_Click" 
+                        Height="28px" style="text-decoration: underline" />
                 </td>
             </tr>
         </table>
