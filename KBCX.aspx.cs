@@ -25,7 +25,7 @@ namespace computer2011
         {
             if (!IsPostBack)
             {
-                if (Session["LoginStudentXH"] != "")
+                if (Session["LoginStudentXH"].ToString() != "")
                 {
                     this.div1.Visible = true;
                     this.UTC_LinkButton1.The_Text = SKCount("周一", "第1,2节");

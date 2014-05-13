@@ -16,10 +16,10 @@ namespace computer2011
         {
             if (!IsPostBack)
             {
-                if (Session["LoginStudentXH"] != "")
+                if (Session["LoginStudentXH"].ToString() != "")
                 {
                     Business.Users.Competence thecom = new Business.Users.Competence();
-                    string qx = thecom.isCompetence("" + Session["LoginStudentXH"] + "", "62");
+                    string qx = thecom.isCompetence("" + Session["LoginStudentXH"].ToString() + "", "62");
                     if (qx != "")
                     {
                         SqlDataAdapter da = new SqlDataAdapter("select * from DM_LB", cn);

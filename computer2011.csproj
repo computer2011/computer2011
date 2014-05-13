@@ -160,6 +160,7 @@
     <Content Include="shixiantongji.aspx" />
     <Content Include="Student.aspx" />
     <Content Include="StuInfo.aspx" />
+    <Content Include="StuPwdUpdate.aspx" />
     <Content Include="SuccessTj.aspx" />
     <Content Include="Table.css" />
     <Content Include="TimeTJ.aspx" />
@@ -355,6 +356,13 @@
     </Compile>
     <Compile Include="StuInfo.aspx.designer.cs">
       <DependentUpon>StuInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StuPwdUpdate.aspx.cs">
+      <DependentUpon>StuPwdUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StuPwdUpdate.aspx.designer.cs">
+      <DependentUpon>StuPwdUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="SuccessTj.aspx.cs">
       <DependentUpon>SuccessTj.aspx</DependentUpon>

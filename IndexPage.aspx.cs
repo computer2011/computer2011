@@ -153,8 +153,9 @@ namespace computer2011
             {
                 Session["LoginStudentXH"] = this.TextBox1.Text;
                 this.divuser.InnerHtml = "2011级计算机科学与技术班";
-                this.divpwd.InnerHtml = "欢迎你" + this.TextBox1.Text + "用户";
-                this.divlogin.InnerHtml = "<input id=Button3 runat=server type=button value=修改密码 onserverclick=Button3_onclick() />";
+                this.divpwd.InnerHtml = "欢迎你 " + this.TextBox1.Text + " 用户";
+                this.divlogin.Visible = false;
+                this.divupdate.Visible = true;
             }
 
         }
