@@ -43,37 +43,45 @@ namespace computer2011
             if (this.TextBox1.Text.Length > 14)
             {
                 yz = false;
-                message += "标题不能超过14个汉字；";
+                message += "标题不能超过14个字符；";
             }
             if (this.TextArea1.Value == "")
             {
                 yz = false;
                 message += "正文不能为空";
             }
-          
-            
+
+
             SqlCommand cmd = new SqlCommand("insert into MainPage(LBID,Title,Text,FBTime)values(" + this.DropDownList1.SelectedValue + ",'" + this.TextBox1.Text + "','" + this.TextArea1.Value + "','" + DateTime.Now + "')", cn);
-            try
+            if (yz == true)
             {
-                if (yz == true)
+                try
                 {
+
                     cn.Open();
                     cmd.ExecuteNonQuery();
+                    Response.Write("<script>alert('发布成功!');window.location.href ='http://computer2011.apphb.com'</script>");
+ 
                 }
-                else
+                catch
                 {
-                    Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + message + "');</script>");
+                    Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('发布失败，请检查网络或格式是否正确，如有疑问请与系统管理员联系！');</script>");
+                }
+                finally
+                {
+                    cn.Close();
                 }
             }
-            catch
+            else
             {
-                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('发布失败，请检查网络或格式是否正确，如有疑问请与系统管理员联系！');</script>");
-            }
-            finally
-            {
-                cn.Close();
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + message + "');</script>");
             }
 
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("http://computer2011.apphb.com");
         }
     }
 }

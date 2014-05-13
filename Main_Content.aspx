@@ -4,35 +4,40 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="http://localhost:9258/bootstrap/css/bootstrap.min.css" rel="stylesheet"
-        type="text/css" />
-    <style type="text/css">
-        .form-control
-        {
-            width: 971px;
-        }
-    </style>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server" style="width: 1000px;">
-    <div style="width: 1000px">
+    <div style="background-color: #FFFFFF;">
         <table width="1000px">
             <tr>
                 <td>
-                    <asp:Label ID="Label1" CssClass="text-info" Font-Size="12pt" runat="server" Text=""></asp:Label>
-                    <asp:Label ID="Label2" CssClass="text-info" Font-Size="12pt" runat="server" Text=""></asp:Label>
+                    <table width="1000px">
+                        <tr>
+                            <td width="500px">
+                                <asp:Label ID="Label1" CssClass="text-info" Font-Size="12pt" runat="server" Text=""></asp:Label>
+                                <asp:Label ID="Label2" CssClass="text-info" Font-Size="12pt" runat="server" Text=""></asp:Label>
+                            </td>
+                            <td align="center">
+                                <asp:Label ID="Label3" CssClass="text-info" Font-Size="12pt" runat="server" Text=""></asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <hr style="width: 924px; text-align: left" color="#CCCCFF" />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <textarea id="text1" name="S1" runat="server" class="form-control" readonly="readonly"
+                        rows="30"></textarea>
                 </td>
             </tr>
         </table>
-        <div style="position: absolute; left: 400px; top: 10px; width: 400px; right: 595px;">
-            <asp:Label ID="Label3" CssClass="text-info" Font-Size="12pt" runat="server" Text=""></asp:Label>
-        </div>
-        <hr style="width: 924px; text-align: left" />
-        <div align="left">
-           
-            <textarea id="text1" runat="server" class="form-control"  rows="30" readonly="readonly"
-                style="background-color: #FFFFFF; font-size: 20px;  font-family: 楷体;"></textarea>
-        </div>
+        
     </div>
     </form>
 </body>

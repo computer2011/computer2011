@@ -11,7 +11,7 @@ namespace computer2011
 {
     public partial class IndexPage : System.Web.UI.Page
     {
-        SqlConnection cn =new SqlConnection( new ConnectDatabase().conn);
+        SqlConnection cn = new SqlConnection(new ConnectDatabase().conn);
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -90,36 +90,60 @@ namespace computer2011
 
         protected void LinkButton4_Click(object sender, EventArgs e)//跳转到相应模块
         {
-            string ID = ((Label)((LinkButton)sender).Parent.Parent.Controls[0].FindControl("Label13")).Text;
-            Response.Redirect("Main_Content.aspx?ID="+ID+"");
+            try
+            {
+                string ID = ((Label)((LinkButton)sender).Parent.Parent.Controls[0].FindControl("Label13")).Text;
+
+                Response.Redirect("Main_Content.aspx?ID=" + ID + "");
+            }
+            catch
+            { 
+            
+            }
         }
 
         protected void LinkButton5_Click(object sender, EventArgs e)
         {
-            string ID = ((Label)((LinkButton)sender).Parent.Parent.Controls[0].FindControl("Label14")).Text;
-            Response.Redirect("Main_Content.aspx?ID=" + ID + "");
+            try
+            {
+                string ID = ((Label)((LinkButton)sender).Parent.Parent.Controls[0].FindControl("Label14")).Text;
+                Response.Redirect("Main_Content.aspx?ID=" + ID + "");
+            }
+            catch
+            { }
         }
 
         protected void LinkButton6_Click(object sender, EventArgs e)
         {
-            string ID = ((Label)((LinkButton)sender).Parent.Parent.Controls[0].FindControl("Label15")).Text;
-            Response.Redirect("Main_Content.aspx?ID=" + ID + "");
+            try
+            {
+                string ID = ((Label)((LinkButton)sender).Parent.Parent.Controls[0].FindControl("Label15")).Text;
+                Response.Redirect("Main_Content.aspx?ID=" + ID + "");
+            }
+            catch
+            { }
         }
 
         protected void LinkButton7_Click(object sender, EventArgs e)
         {
-
-            string ID = ((Label)((LinkButton)sender).Parent.Parent.Controls[0].FindControl("Label16")).Text;
-            SqlCommand cmd = new SqlCommand("select text  from MainPage where id="+ID+"",cn);
-            cn.Open();
             
-            Response.Redirect(""+cmd.ExecuteScalar()+"");
+            string ID = ((Label)((LinkButton)sender).Parent.Parent.Controls[0].FindControl("Label16")).Text;
+            SqlCommand cmd = new SqlCommand("select text  from MainPage where id=" + ID + "", cn);
+            cn.Open();
+            try
+            {
+                Response.Redirect("" + cmd.ExecuteScalar() + "");
+            }
+            catch 
+            {
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('无法打开网页，请检查网络，如有疑问请与系统管理员联系！');</script>");
+            }
             cn.Close();
         }
 
         protected void Button1_Click(object sender, EventArgs e)//登录
         {
-           
+
         }
 
     }

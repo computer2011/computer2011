@@ -5,21 +5,21 @@
 <head runat="server">
     <title></title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-       <script id="1">
+    <script id="script" type="text/javascript">
         if (window != top) top.location.href = window.location.href;
     </script>
 </head>
 <body>
-    <form id="form1" runat="server" style="width: 1000px">
+    <form id="form1" runat="server" style=" text-align: center">
     <div>
         <table width="1000px">
-            <tr height="32px">
+            <tr height="50px">
                 <td width="80px" align="right">
                     <p class="text-primary">
                         选择栏目：</p>
                 </td>
                 <td>
-                    <asp:DropDownList ID="DropDownList1" runat="server" Height="25px" Width="165px">
+                    <asp:DropDownList ID="DropDownList1" CssClass ="form-control" runat="server" Height="40px" Width="165px">
                     </asp:DropDownList>
                 </td>
             </tr>
@@ -40,7 +40,7 @@
                 </td>
                 <td>
                     <textarea runat="server" class="form-control" rows="20" id="TextArea1" name="S1"></textarea>
-                  <%--  <asp:RegularExpressionValidator ID="RegularExpressionValidator1" Enabled="false"
+                    <%--  <asp:RegularExpressionValidator ID="RegularExpressionValidator1" Enabled="false"
                         ControlToValidate="TextArea1" ValidationExpression=" 
 ^[a-zA-z]+://(\w+(-\w+)*)(\.(\w+(-\w+)*))*(\?\s*)?$ 
  " runat="server" ValidationGroup="checkText" ForeColor="Red" ErrorMessage="网址格式不正确"></asp:RegularExpressionValidator>
@@ -54,6 +54,8 @@
                 <td align="center">
                     <asp:Button ID="Button1" CssClass="btn btn-info" runat="server" Text="发布内容" OnClick="Button1_Click"
                         ValidationGroup="checkText" />
+                    &nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="Button2" CssClass="btn btn-info" runat="server" Text="返回主页" OnClick="Button2_Click" />
                 </td>
             </tr>
         </table>
