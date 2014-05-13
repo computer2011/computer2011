@@ -75,6 +75,7 @@ namespace computer2011
             else
             {
                 Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + message + "');</script>");
+                this.Button1.Enabled = true;
             }
 
         }

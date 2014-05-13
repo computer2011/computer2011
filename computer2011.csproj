@@ -64,6 +64,8 @@
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\jquery-2.1.0.min.js" />
     <Content Include="CJ.aspx" />
+    <Content Include="classfc.aspx" />
+    <Content Include="classxc.aspx" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
@@ -71,6 +73,8 @@
     <Content Include="CX.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="gr.aspx" />
+    <Content Include="grxc.aspx" />
     <Content Include="Guest.aspx" />
     <Content Include="Images\bahe.jpg" />
     <Content Include="Images\bahelingjiang.jpg" />
@@ -82,6 +86,10 @@
     <Content Include="Images\logo.jpg" />
     <Content Include="Images\yemei.jpg" />
     <Content Include="Images\zhuye.jpg" />
+    <Content Include="img\123.jpg" />
+    <Content Include="img\34.jpg" />
+    <Content Include="img\879.jpg" />
+    <Content Include="img\Q.jpg" />
     <Content Include="IndexPage.aspx" />
     <Content Include="Info.aspx" />
     <Content Include="js\bootstrap.js" />
@@ -90,9 +98,11 @@
     <Content Include="KBCX.aspx" />
     <Content Include="Main_Content.aspx" />
     <Content Include="Main_Manage.aspx" />
+    <Content Include="MCList.aspx" />
     <Content Include="MCXS.aspx" />
     <Content Include="noTj.aspx" />
     <Content Include="Rely.aspx" />
+    <Content Include="sc.aspx" />
     <Content Include="script\js\bootstrap-datetimepicker.js" />
     <Content Include="script\js\bootstrap-datetimepicker.min.js" />
     <Content Include="script\js\bootstrap-datetimepicker.zh-CN.js" />
@@ -166,6 +176,7 @@
     </Content>
     <Content Include="wjlr.aspx" />
     <Content Include="WJSC.aspx" />
+    <Content Include="xcgl.aspx" />
     <Content Include="XG.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +186,20 @@
     </Compile>
     <Compile Include="CJ.aspx.designer.cs">
       <DependentUpon>CJ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="classfc.aspx.cs">
+      <DependentUpon>classfc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classfc.aspx.designer.cs">
+      <DependentUpon>classfc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="classxc.aspx.cs">
+      <DependentUpon>classxc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="classxc.aspx.designer.cs">
+      <DependentUpon>classxc.aspx</DependentUpon>
     </Compile>
     <Compile Include="ConnectDatabase.cs" />
     <Compile Include="CX.aspx.cs">
@@ -193,6 +218,20 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="gr.aspx.cs">
+      <DependentUpon>gr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gr.aspx.designer.cs">
+      <DependentUpon>gr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="grxc.aspx.cs">
+      <DependentUpon>grxc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="grxc.aspx.designer.cs">
+      <DependentUpon>grxc.aspx</DependentUpon>
     </Compile>
     <Compile Include="Guest.aspx.cs">
       <DependentUpon>Guest.aspx</DependentUpon>
@@ -237,6 +276,13 @@
     <Compile Include="Main_Manage.aspx.designer.cs">
       <DependentUpon>Main_Manage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MCList.aspx.cs">
+      <DependentUpon>MCList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MCList.aspx.designer.cs">
+      <DependentUpon>MCList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MCXS.aspx.cs">
       <DependentUpon>MCXS.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -260,6 +306,13 @@
     </Compile>
     <Compile Include="Rely.aspx.designer.cs">
       <DependentUpon>Rely.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sc.aspx.cs">
+      <DependentUpon>sc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sc.aspx.designer.cs">
+      <DependentUpon>sc.aspx</DependentUpon>
     </Compile>
     <Compile Include="Student.aspx.cs">
       <DependentUpon>Student.aspx</DependentUpon>
@@ -380,6 +433,13 @@
     <Compile Include="WJSC.aspx.designer.cs">
       <DependentUpon>WJSC.aspx</DependentUpon>
     </Compile>
+    <Compile Include="xcgl.aspx.cs">
+      <DependentUpon>xcgl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xcgl.aspx.designer.cs">
+      <DependentUpon>xcgl.aspx</DependentUpon>
+    </Compile>
     <Compile Include="XG.aspx.cs">
       <DependentUpon>XG.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -387,7 +447,6 @@
     <Compile Include="XG.aspx.designer.cs">
       <DependentUpon>XG.aspx</DependentUpon>
     </Compile>
-
   </ItemGroup>
   <ItemGroup>
     <None Include="bootstrap\config.json" />

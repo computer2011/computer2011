@@ -13,8 +13,9 @@
             <tr>
                 <td>
                     <table width="1000px">
-                        <tr>
+                        <tr valign="middle">
                             <td width="500px">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <asp:Label ID="Label1" CssClass="text-info" Font-Size="12pt" runat="server" Text=""></asp:Label>
                                 <asp:Label ID="Label2" CssClass="text-info" Font-Size="12pt" runat="server" Text=""></asp:Label>
                             </td>
@@ -25,15 +26,15 @@
                     </table>
                 </td>
             </tr>
-            <tr>
+            <tr height="5px">
                 <td>
-                    <hr style="width: 924px; text-align: left" color="#CCCCFF" />
+                    <hr style="width: 987px; text-align: left" color="#CCCCFF" />
                 </td>
             </tr>
             <tr>
                 <td align="center">
-                    <textarea id="text1" name="S1" runat="server" class="form-control" readonly="readonly"
-                        rows="30"></textarea>
+                    <textarea id="text1" name="S1" runat="server" class="form-control"
+                        rows="30" disabled="disabled" style="background-color: #FFFFFF"></textarea>
                 </td>
             </tr>
         </table>
