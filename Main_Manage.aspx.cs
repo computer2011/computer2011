@@ -67,7 +67,7 @@ namespace computer2011
             }
 
 
-            SqlCommand cmd = new SqlCommand("insert into MainPage(LBID,Title,Text,FBTime)values(" + this.DropDownList1.SelectedValue + ",'" + this.TextBox1.Text + "','" + this.TextArea1.Value + "','" + System.DateTime.Now.ToLocalTime() + "')", cn);
+            SqlCommand cmd = new SqlCommand("insert into MainPage(LBID,Title,Text,FBTime)values(" + this.DropDownList1.SelectedValue + ",'" + this.TextBox1.Text + "','" + this.TextArea1.Value + "','" + DateTime.Now.ToUniversalTime().AddHours(8).ToString() + "')", cn);
             if (yz == true)
             {
                 try

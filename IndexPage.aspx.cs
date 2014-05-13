@@ -82,6 +82,8 @@ namespace computer2011
                 this.GridView5.DataBind();
                 #endregion
 
+               if(Session["LoginStudentXH"]!="") 
+
             }
 
             this.Label5.Text = "你是第" + Session["count"] + "位访问者";
@@ -166,9 +168,9 @@ namespace computer2011
             this.TextBox2.Text = "";
         }
 
-        public void Button3_onclick(object sender, EventArgs e)
+        public void Button3_onclick(object sender, EventArgs e)//修改密码
         {
-            Response.Redirect("CJ.aspx");
+            Response.Redirect("StuPwdUpdate.aspx");
         }
 
     }

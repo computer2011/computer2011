@@ -168,6 +168,8 @@
     <Content Include="TjcxTm.aspx" />
     <Content Include="TMXS.aspx" />
     <Content Include="Users\HY.aspx" />
+    <Content Include="Users\img\b.jpg" />
+    <Content Include="Users\img\t.jpg" />
     <Content Include="Users\Login.aspx" />
     <Content Include="Users\RoleCompetenceEdit.aspx" />
     <Content Include="Users\UserMain.aspx" />
@@ -548,7 +550,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>12382</DevelopmentServerPort>
+          <DevelopmentServerPort>10623</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
