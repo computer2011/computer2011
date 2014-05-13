@@ -12,6 +12,10 @@ namespace UserWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["LoginUserXH"].ToString() == "")
+            {
+                Response.Redirect("Login.aspx");
+            }
           if (!Page.IsPostBack)
            {
             Business.Users.Competence thecom = new Business.Users.Competence();

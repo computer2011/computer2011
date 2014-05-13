@@ -22,14 +22,14 @@ namespace UserWeb.Users
         protected void Button1_Click(object sender, EventArgs e)
         {
             Business.Users.User loginnuer = new Business.Users.User();
-            Business.Users.User theuser = loginnuer.Login("" + this.TextBoxXH.Text + "", "" + this.TextBoxPWD.Text + "");
+            Business.Users.User theuser = loginnuer.UserLogin("" + this.TextBoxXH.Text + "", "" + this.TextBoxPWD.Text + "");
             if (theuser == null)
             {
                 Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('登录失败，学号或密码错误！');</script>");
             }
             else
             {
-                Business.Users.Competence thecom = new Business.Users.Competence();
+            Business.Users.Competence thecom = new Business.Users.Competence();
             string qx = thecom.isCompetence("" + this.TextBoxXH.Text + "", "10");
             if (qx == "")
             {

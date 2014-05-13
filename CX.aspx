@@ -11,8 +11,10 @@
     <form id="form1" runat="server">
     <div class="form-group">
         <asp:LinkButton ID="LinkButtonTJ" runat="server" OnClick="LinkButtonTJ_Click" class="btn btn-primary">考勤首页</asp:LinkButton>
-        &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click" class="btn btn-success">统计查询</asp:LinkButton>
-        &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" class="btn btn-info">新建考勤</asp:LinkButton></div>
+        &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click"
+            class="btn btn-success">统计查询</asp:LinkButton>
+        &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click"
+            class="btn btn-info">新建考勤</asp:LinkButton></div>
     <div class="form-group">
         查询</div>
     <div class="form-group">
@@ -37,7 +39,8 @@
                 <asp:BoundField DataField="time" HeaderText="考勤时间" />
                 <asp:BoundField DataField="ID" HeaderText="考勤项目号" />
             </Columns>
-            <HeaderStyle CssClass="danger" />
+            <HeaderStyle CssClass="danger" Font-Names="微软雅黑" />
+            <RowStyle Font-Names="微软雅黑" />
         </asp:GridView>
     </div>
     </form>

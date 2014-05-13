@@ -38,12 +38,14 @@ namespace KQ
                 ClientScript.RegisterStartupScript(this.GetType(), "", "alert('TextBox2不可为空!')");
                 return;
             }
-            string sql = "INSERT INTO sj (IDname,introduce) VALUES ('" + TextBox1.Text.Trim() + "','" + TextBox2.Text.Trim() + "')";
+            string sql = "INSERT INTO sj (IDname,introduce,time) VALUES ('" + TextBox1.Text.Trim() + "','" + TextBox2.Text.Trim() + "','"+System.DateTime.Now+"')";
             try
             {
-                using (cn)
+                using (SqlConnection cn = new SqlConnection(new computer2011.ConnectDatabase().conn))
                 {
-                    SqlCommand cmd = new SqlCommand(sql, cn);
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection= cn;
+                    cmd.CommandText=sql;
                     cn.Open();
                     int val = cmd.ExecuteNonQuery();
                     cn.Close();

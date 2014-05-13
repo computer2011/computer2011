@@ -12,8 +12,10 @@
     <div>
         <div class="form-group">
             <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" class="btn btn-primary">考勤首页</asp:LinkButton>
-            &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" class="btn btn-success">个人查询</asp:LinkButton>
-            &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click" class="btn btn-info">新建考勤</asp:LinkButton></div>
+            &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click"
+                class="btn btn-success">个人查询</asp:LinkButton>
+            &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click"
+                class="btn btn-info">新建考勤</asp:LinkButton></div>
         <div>
             <asp:Label ID="Label1" runat="server" Text="开始时间"></asp:Label>
             <asp:TextBox ID="TextBoxBeginTime" runat="server" class="CanLoginBeginTime"></asp:TextBox>
@@ -33,7 +35,8 @@
                     <asp:BoundField HeaderText="早退" />
                     <asp:BoundField HeaderText="缺席" />
                 </Columns>
-                <HeaderStyle CssClass="danger" />
+                <HeaderStyle CssClass="danger" Font-Names="微软雅黑" />
+                <RowStyle Font-Names="微软雅黑" />
             </asp:GridView>
         </div>
         <hr />

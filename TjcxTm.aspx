@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    <table align="center" width="1000">      
+    <table align="center" width="1000" >      
       <tr>
        <td width="80">
         <asp:LinkButton ID="homeLinkButton" runat="server" onclick="homeLinkButton_Click">问卷主页</asp:LinkButton></td>

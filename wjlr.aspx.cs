@@ -30,7 +30,7 @@ namespace WJDC
             //    return;
             //}
         
-            SqlCommand cmd = new SqlCommand("INSERT INTO Wj (Wjm,Sno) VALUES ('" + Mctxt.Text.Trim() + "','" + Session["UserLoginXH"] + "')", cn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO Wj (Wjm,Sno,wjTime) VALUES ('" + Mctxt.Text.Trim() + "','" + Session["UserLoginXH"] + "','"+System.DateTime.Now+"')", cn);
             try
             {
                 cn.Open();

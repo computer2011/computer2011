@@ -11,7 +11,10 @@ namespace UserWeb.Users
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["LoginUserXH"].ToString() == "")
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
         /// <summary>
         /// 修改密码
@@ -21,7 +24,7 @@ namespace UserWeb.Users
         protected void Button1_Click(object sender, EventArgs e)
         {
             Business.Users.User theuser = new Business.Users.User();
-            string RetString = theuser.ChangePassword("" + Session["LoginUserXH"] + "", ""+this.TextBoxOld.Text+"", ""+this.TextBoxNew.Text+"", ""+this.TextBoxReNew.Text+"");
+            string RetString = theuser.UserChangePassword("" + Session["LoginUserXH"] + "", ""+this.TextBoxOld.Text+"", ""+this.TextBoxNew.Text+"", ""+this.TextBoxReNew.Text+"");
             if (RetString == "密码修改成功")
             {
                 Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('"+RetString+"!');</script>");
@@ -30,8 +33,6 @@ namespace UserWeb.Users
             {
                 Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + RetString + "!');</script>");
             }
-
-            //theuser.UserPwdUpdate("" + Session["LoginUserXH"] + "", "");
         }
     }
 }

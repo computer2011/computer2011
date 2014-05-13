@@ -53,6 +53,12 @@ namespace KQ
                 }
                 
             }
+            SqlCommand SJ = new SqlCommand();
+            SJ.Connection = cn;
+            SJ.CommandText = "update sj set time='" + System.DateTime.Now + "' where id='" + id + "'";
+            cn.Open();
+            SJ.ExecuteNonQuery();
+            cn.Close();
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)

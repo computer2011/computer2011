@@ -4,12 +4,14 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link href="../script/js/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
      <table cellpadding="0" cellspacing="0" width="420" align="center">
+     <tr height="50"><td></td></tr>
         <tr>
             <td align="right" width="150" valign="bottom">
                 <asp:Label ID="Label1" runat="server" Text="旧密码：" CssClass="Label_Normal"></asp:Label>
@@ -45,8 +47,8 @@
         </tr>
         <tr height="50">
             <td colspan="2" align="center">
-                <asp:LinkButton ID="LinkButton1" CssClass="Button_Common" runat="server" OnClick="Button1_Click"
-                    Width="67" Height="32" TabIndex="2" BackColor="#CC0000" ForeColor="Black">修改</asp:LinkButton>
+                <asp:LinkButton ID="LinkButton1"  class="btn btn-primary" runat="server" 
+                    OnClick="Button1_Click" Width="49px">修改</asp:LinkButton>
             </td>
         </tr>
     </table>
