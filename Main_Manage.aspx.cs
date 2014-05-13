@@ -16,11 +16,11 @@ namespace computer2011
         {
             if (!IsPostBack)
             {
-                if (Session["LoginStudentXH"].ToString() != "")
+                if (Session["LoginStudentXH"].ToString() != null)
                 {
                     Business.Users.Competence thecom = new Business.Users.Competence();
                     string qx = thecom.isCompetence("" + Session["LoginStudentXH"].ToString() + "", "17");
-                    if (qx != "")
+                    if (qx == "")
                     {
                         SqlDataAdapter da = new SqlDataAdapter("select * from DM_LB", cn);
                         DataSet ds = new DataSet();

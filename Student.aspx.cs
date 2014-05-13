@@ -39,7 +39,7 @@ namespace computer2011
                     }
                     else
                     {
-                        Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert(你没有权限，如有疑问，请与管理员联系！);</script>");
+                        Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('你没有权限，如有疑问，请与管理员联系！');</script>");
                     }
                 }
                 else
