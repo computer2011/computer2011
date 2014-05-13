@@ -50,11 +50,7 @@ namespace computer2011
                 yz = false;
                 message += "正文不能为空";
             }
-            if (this.DropDownList1.Text == "5")
-            {
-                this.RegularExpressionValidator1.Enabled = true;
-                this.ValidationSummary1.Enabled = true;
-            }
+          
             
             SqlCommand cmd = new SqlCommand("insert into MainPage(LBID,Title,Text,FBTime)values(" + this.DropDownList1.SelectedValue + ",'" + this.TextBox1.Text + "','" + this.TextArea1.Value + "','" + DateTime.Now + "')", cn);
             try
@@ -62,12 +58,7 @@ namespace computer2011
                 if (yz == true)
                 {
                     cn.Open();
-                    if (this.ValidationSummary1.ShowMessageBox != true)
-                    {
-                        cmd.ExecuteNonQuery();
-                        Response.Redirect("Default.aspx");
-                    }
-                   // Response.Redirect("Default.aspx");
+                    cmd.ExecuteNonQuery();
                 }
                 else
                 {
