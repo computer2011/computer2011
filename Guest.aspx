@@ -14,7 +14,7 @@
         .style2
         {
             font-family: 华文行楷;
-            color: #66FF99;
+            color: #9999FF;
         }
         .style3
         {
@@ -23,7 +23,7 @@
         }
     </style>
 </head>
-<body>
+<body background="img/LYB.jpg">
     <h1 align="center">
         <span class="style2">留言板</span>
     </h1>

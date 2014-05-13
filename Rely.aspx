@@ -24,7 +24,7 @@
         }
     </style>
 </head>
-<body>
+<body background="img/LYB.jpg">
     <form id="form1" runat="server">
     <table align="center" width="70%" cellpadding="5" cellspacing="10">
         <tr>

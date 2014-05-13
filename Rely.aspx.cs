@@ -14,8 +14,8 @@ namespace liuyanban
         SqlConnection cn = new SqlConnection(new computer2011.ConnectDatabase().conn);
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.Button2.Visible = false;
-            this.Button3.Enabled = false;
+            this.Button2.Enabled = false;
+            this.Button3.Visible = false;
             this.InfoData();    
             this.RelyInfo();
         }
