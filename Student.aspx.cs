@@ -16,10 +16,10 @@ namespace computer2011
         {
             if (!IsPostBack)
             {
-                if (Session["LoginStudentXH"] != "")
+                if (Session["LoginStudentXH"].ToString() != "")
                 {
                     Business.Users.Competence thecom = new Business.Users.Competence();
-                    string qx = thecom.isCompetence("" + Session["LoginStudentXH"] + "", "62");
+                    string qx = thecom.isCompetence("" + Session["LoginStudentXH"].ToString() + "", "62");
                     if (qx != "")
                     {
                         DataTable table = new DataTable();
@@ -44,7 +44,8 @@ namespace computer2011
                 }
                 else
                 {
-                    Response.Write("<script>alert('请先登录!');window.location.href ='http://computer2011.apphb.com'</script>");
+                    Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('请先登录！');</script>");
+                    //Response.Write("<script>alert('请先登录!');window.location.href ='http://computer2011.apphb.com'</script>");
                 }
             }
         }
@@ -59,7 +60,7 @@ namespace computer2011
         protected void LinkButton2_Click(object sender, EventArgs e)//修改
         {
 
-            if (Session["LoginStudentXH"] == ((Label)((LinkButton)sender).Parent.Parent.Controls[0].FindControl("Label1")).Text)
+            if (Session["LoginStudentXH"].ToString() == ((Label)((LinkButton)sender).Parent.Parent.Controls[0].FindControl("Label1")).Text)
             {
                 string ID = ((Label)((LinkButton)sender).Parent.Parent.Controls[0].FindControl("Label1")).Text;
                 Response.Redirect("StuInfo.aspx?ID=" + ID + "&CZLX=0");

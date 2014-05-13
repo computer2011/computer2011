@@ -16,10 +16,10 @@ namespace computer2011
         {
             if (!IsPostBack)
             {
-                if (Session["LoginStudentXH"] != "")
+                if (Session["LoginStudentXH"].ToString() != "")
                 {
                     Business.Users.Competence thecom = new Business.Users.Competence();
-                    string qx = thecom.isCompetence("" + Session["LoginStudentXH"] + "", "62");
+                    string qx = thecom.isCompetence("" + Session["LoginStudentXH"].ToString() + "", "62");
                     if (qx != "")
                     {
                         SqlDataAdapter da = new SqlDataAdapter("select * from DM_LB", cn);
@@ -35,11 +35,12 @@ namespace computer2011
                     else
                     {
                         Response.Write("<script>alert('你没有发布权限，如有疑问请与管理员联系!');window.location.href ='http://computer2011.apphb.com'</script>");
+                       // Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert(你没有权限，如有疑问，请与管理员联系！);</script>");
                     }
                 }
                 else
                 {
-                    Response.Write("<script>alert('请先登录!');window.location.href ='http://computer2011.apphb.com'</script>");
+                    Response.Write("<script>alert('请先登录!');window.location.href ='http://computer2011.apphb.com/default.aspx'</script>");
                 }
             }
         }
@@ -67,7 +68,7 @@ namespace computer2011
             }
 
 
-            SqlCommand cmd = new SqlCommand("insert into MainPage(LBID,Title,Text,FBTime)values(" + this.DropDownList1.SelectedValue + ",'" + this.TextBox1.Text + "','" + this.TextArea1.Value + "','" + DateTime.Now + "')", cn);
+            SqlCommand cmd = new SqlCommand("insert into MainPage(LBID,Title,Text,FBTime)values(" + this.DropDownList1.SelectedValue + ",'" + this.TextBox1.Text + "','" + this.TextArea1.Value + "','" + DateTime.Now.ToUniversalTime().AddHours(8).ToString() + "')", cn);
             if (yz == true)
             {
                 try
@@ -75,7 +76,7 @@ namespace computer2011
 
                     cn.Open();
                     cmd.ExecuteNonQuery();
-                    Response.Write("<script>alert('发布成功!');window.location.href ='http://computer2011.apphb.com'</script>");
+                    Response.Write("<script>alert('发布成功!');window.location.href ='http://computer2011.apphb.com/default.aspx'</script>");
 
                 }
                 catch
@@ -97,7 +98,7 @@ namespace computer2011
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("http://computer2011.apphb.com");
+            Response.Redirect("http://computer2011.apphb.com/default.aspx");
         }
     }
 }

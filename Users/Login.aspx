@@ -16,10 +16,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div align="center">
-        
-        <table cellpadding="0" cellspacing="0" width="320">
-            <tr height="100">
+    <div align="center" style="background-image: url('img/b.jpg'); height:800px;">
+        <table cellpadding="0" cellspacing="0" align="center" >
+            <tr height="300">
                 <td colspan="2">
                 </td>
             </tr>

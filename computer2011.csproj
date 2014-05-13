@@ -71,6 +71,7 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="CX.aspx" />
+    <Content Include="dafenfenlei.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="gr.aspx" />
@@ -101,6 +102,7 @@
     <Content Include="MCList.aspx" />
     <Content Include="MCXS.aspx" />
     <Content Include="noTj.aspx" />
+    <Content Include="pingfentongji.aspx" />
     <Content Include="Rely.aspx" />
     <Content Include="sc.aspx" />
     <Content Include="script\js\bootstrap-datetimepicker.js" />
@@ -155,8 +157,10 @@
     <Content Include="script\js\locales\bootstrap-datetimepicker.uk.js" />
     <Content Include="script\js\locales\bootstrap-datetimepicker.zh-CN.js" />
     <Content Include="script\js\locales\bootstrap-datetimepicker.zh-TW.js" />
+    <Content Include="shixiantongji.aspx" />
     <Content Include="Student.aspx" />
     <Content Include="StuInfo.aspx" />
+    <Content Include="StuPwdUpdate.aspx" />
     <Content Include="SuccessTj.aspx" />
     <Content Include="Table.css" />
     <Content Include="TimeTJ.aspx" />
@@ -164,6 +168,8 @@
     <Content Include="TjcxTm.aspx" />
     <Content Include="TMXS.aspx" />
     <Content Include="Users\HY.aspx" />
+    <Content Include="Users\img\b.jpg" />
+    <Content Include="Users\img\t.jpg" />
     <Content Include="Users\Login.aspx" />
     <Content Include="Users\RoleCompetenceEdit.aspx" />
     <Content Include="Users\UserMain.aspx" />
@@ -178,6 +184,10 @@
     <Content Include="WJSC.aspx" />
     <Content Include="xcgl.aspx" />
     <Content Include="XG.aspx" />
+    <Content Include="xiangxixinxi.aspx" />
+    <Content Include="xingmubiao.aspx" />
+    <Content Include="zitian.aspx" />
+    <Content Include="zonghelianghua.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CJ.aspx.cs">
@@ -208,6 +218,13 @@
     </Compile>
     <Compile Include="CX.aspx.designer.cs">
       <DependentUpon>CX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dafenfenlei.aspx.cs">
+      <DependentUpon>dafenfenlei.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dafenfenlei.aspx.designer.cs">
+      <DependentUpon>dafenfenlei.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -299,6 +316,13 @@
     <Compile Include="noTj.aspx.designer.cs">
       <DependentUpon>noTj.aspx</DependentUpon>
     </Compile>
+    <Compile Include="pingfentongji.aspx.cs">
+      <DependentUpon>pingfentongji.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pingfentongji.aspx.designer.cs">
+      <DependentUpon>pingfentongji.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rely.aspx.cs">
       <DependentUpon>Rely.aspx</DependentUpon>
@@ -314,6 +338,13 @@
     <Compile Include="sc.aspx.designer.cs">
       <DependentUpon>sc.aspx</DependentUpon>
     </Compile>
+    <Compile Include="shixiantongji.aspx.cs">
+      <DependentUpon>shixiantongji.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="shixiantongji.aspx.designer.cs">
+      <DependentUpon>shixiantongji.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Student.aspx.cs">
       <DependentUpon>Student.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -327,6 +358,13 @@
     </Compile>
     <Compile Include="StuInfo.aspx.designer.cs">
       <DependentUpon>StuInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StuPwdUpdate.aspx.cs">
+      <DependentUpon>StuPwdUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StuPwdUpdate.aspx.designer.cs">
+      <DependentUpon>StuPwdUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="SuccessTj.aspx.cs">
       <DependentUpon>SuccessTj.aspx</DependentUpon>
@@ -407,7 +445,6 @@
     </Compile>
     <Compile Include="Users\UserRoleEdit.aspx.cs">
       <DependentUpon>UserRoleEdit.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Users\UserRoleEdit.aspx.designer.cs">
       <DependentUpon>UserRoleEdit.aspx</DependentUpon>
@@ -447,6 +484,34 @@
     <Compile Include="XG.aspx.designer.cs">
       <DependentUpon>XG.aspx</DependentUpon>
     </Compile>
+    <Compile Include="xiangxixinxi.aspx.cs">
+      <DependentUpon>xiangxixinxi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xiangxixinxi.aspx.designer.cs">
+      <DependentUpon>xiangxixinxi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="xingmubiao.aspx.cs">
+      <DependentUpon>xingmubiao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xingmubiao.aspx.designer.cs">
+      <DependentUpon>xingmubiao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zitian.aspx.cs">
+      <DependentUpon>zitian.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zitian.aspx.designer.cs">
+      <DependentUpon>zitian.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="zonghelianghua.aspx.cs">
+      <DependentUpon>zonghelianghua.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zonghelianghua.aspx.designer.cs">
+      <DependentUpon>zonghelianghua.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="bootstrap\config.json" />
@@ -484,7 +549,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>12382</DevelopmentServerPort>
+          <DevelopmentServerPort>10623</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

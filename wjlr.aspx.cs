@@ -39,9 +39,9 @@ namespace WJDC
 
                 cn.Close();
                 if (val <= 0)
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "alert('插入数据失败!')");
+                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('对不起，插入失败!')</script>");
                 else
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "alert('插入数据成功!')");
+                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('名称插入成功！')</script>");
 
             }
             //捕获异常 
@@ -70,9 +70,9 @@ namespace WJDC
                 cn.Close();
                 this.NRListBox.Items.Add(this.Tmtxt.Text);
                 if (val <= 0)
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "alert('插入数据失败!')");
+                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('对不起，插入失败!')</script>");
                 else
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "alert('插入数据成功!')");
+                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('题目插入成功!')</script>");
               
             }
             //捕获异常 
@@ -101,9 +101,9 @@ namespace WJDC
                 cn.Close();
                 this.NRListBox.Items.Add(this.XXtxt.Text);              
                 if (val <= 0)
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "alert('插入数据失败!')");
+                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('对不起，插入失败!')</script>");
                 else
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "alert('插入数据成功!')");
+                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('选项插入成功!')</script>");
 
             }
             //捕获异常 

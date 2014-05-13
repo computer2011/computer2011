@@ -34,7 +34,7 @@ namespace UserWeb.Users
             if (qx == "")
             {
                 Session["LoginUserXH"] = "" + this.TextBoxXH.Text + "";
-                Response.Redirect("UserManage.aspx");
+                Response.Redirect("UserMain.aspx");
             }
             else
             {
