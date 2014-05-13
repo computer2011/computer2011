@@ -10,6 +10,9 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <script src="bootstrap/js/bootstrap.js" type="text/javascript"></script>
+    <%-- <script id="1">
+        if (window != top) top.location.href = window.location.href;
+    </script>--%>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -50,7 +53,8 @@
                                                         </div>--%>
                                                     </div>
                                                     <div class="item ">
-                                                        <img src="Images/banjihuodong.jpg" alt="" />                                                        <%-- <div class="carousel-caption">
+                                                        <img src="Images/banjihuodong.jpg" alt="" />
+                                                        <%-- <div class="carousel-caption">
                                                         </div>--%>
                                                     </div>
                                                 </div>
@@ -78,7 +82,7 @@
                                                                     <ItemTemplate>
                                                                         <asp:Label ID="Label12" runat="server" Text='<%# Eval("Text") %>'></asp:Label>
                                                                     </ItemTemplate>
-                                                                    <ItemStyle HorizontalAlign="Left" BorderStyle="None" Font-Names="楷体" Font-Size="12pt" 
+                                                                    <ItemStyle HorizontalAlign="Left" BorderStyle="None" Font-Names="楷体" Font-Size="12pt"
                                                                         ForeColor="#006699" />
                                                                 </asp:TemplateField>
                                                             </Columns>
@@ -137,8 +141,8 @@
                                     </tr>
                                     <tr height="30px" align="center">
                                         <td>
-                                            <asp:Button ID="Button1" CssClass="btn btn-info btn-xs" runat="server" 
-                                                Text="登录" onclick="Button1_Click" />
+                                            <asp:Button ID="Button1" CssClass="btn btn-info btn-xs" runat="server" Text="登录"
+                                                OnClick="Button1_Click" />
                                             &nbsp;
                                             <asp:Button ID="Button2" CssClass="btn btn-info btn-xs" runat="server" Text="重置" />
                                         </td>
@@ -174,8 +178,8 @@
                                                         <%-- <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
                                                             text-decoration: underline">本学期开展排球比赛活动</a>--%>
                                                         <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" Height="146px"
-                                                            PageSize="5"  ShowHeader="False" Width="239px" BackColor="White" 
-                                                            BorderStyle="None" BorderWidth="0px">
+                                                            PageSize="5" ShowHeader="False" Width="239px" BackColor="White" BorderStyle="None"
+                                                            BorderWidth="0px">
                                                             <Columns>
                                                                 <asp:TemplateField Visible="False">
                                                                     <ItemTemplate>
@@ -184,11 +188,10 @@
                                                                 </asp:TemplateField>
                                                                 <asp:TemplateField>
                                                                     <ItemTemplate>
-                                                                        <asp:LinkButton ID="LinkButton4" runat="server" Text='<%# Eval("Title") %>' 
-                                                                            Font-Underline="False" onclick="LinkButton4_Click"></asp:LinkButton>
+                                                                        <asp:LinkButton ID="LinkButton4" runat="server" Text='<%# Eval("Title") %>' Font-Underline="False"
+                                                                            OnClick="LinkButton4_Click"></asp:LinkButton>
                                                                     </ItemTemplate>
-                                                                    <ItemStyle Font-Names="楷体" Font-Size="12pt" 
-                                                                        ForeColor="#006699"  />
+                                                                    <ItemStyle Font-Names="楷体" Font-Size="12pt" ForeColor="#006699" Height="29px" />
                                                                 </asp:TemplateField>
                                                             </Columns>
                                                             <RowStyle BorderStyle="None" />
@@ -219,8 +222,8 @@
                                                         <%-- <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
                                                             text-decoration: underline">我班积极参与篮球比赛项目</a>--%>
                                                         <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" Height="146px"
-                                                            PageSize="5"  ShowHeader="False" Width="239px" BackColor="White" 
-                                                            BorderStyle="None" BorderWidth="0px">
+                                                            PageSize="5" ShowHeader="False" Width="239px" BackColor="White" BorderStyle="None"
+                                                            BorderWidth="0px">
                                                             <Columns>
                                                                 <asp:TemplateField Visible="False">
                                                                     <ItemTemplate>
@@ -229,11 +232,9 @@
                                                                 </asp:TemplateField>
                                                                 <asp:TemplateField>
                                                                     <ItemTemplate>
-                                                                        <asp:LinkButton ID="LinkButton6" runat="server" Text='<%# Eval("Title") %>' 
-                                                                            onclick="LinkButton6_Click"></asp:LinkButton>
+                                                                        <asp:LinkButton ID="LinkButton6" runat="server" Text='<%# Eval("Title") %>' OnClick="LinkButton6_Click"></asp:LinkButton>
                                                                     </ItemTemplate>
-                                                                    <ItemStyle Font-Names="楷体" Font-Size="12pt" 
-                                                                        ForeColor="#006699" />
+                                                                    <ItemStyle Font-Names="楷体" Font-Size="12pt" ForeColor="#006699" />
                                                                 </asp:TemplateField>
                                                             </Columns>
                                                             <RowStyle BorderStyle="None" />
@@ -262,9 +263,9 @@
                                                     <td align="left">
                                                         <%--<a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
                                                             text-decoration: underline">ASP.NET高级应用</a>--%>
-                                                         <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" Height="146px"
-                                                            PageSize="5"  ShowHeader="False" Width="239px" BackColor="White" 
-                                                            BorderStyle="None" BorderWidth="0px">
+                                                        <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" Height="146px"
+                                                            PageSize="5" ShowHeader="False" Width="239px" BackColor="White" BorderStyle="None"
+                                                            BorderWidth="0px">
                                                             <Columns>
                                                                 <asp:TemplateField Visible="False">
                                                                     <ItemTemplate>
@@ -273,11 +274,9 @@
                                                                 </asp:TemplateField>
                                                                 <asp:TemplateField>
                                                                     <ItemTemplate>
-                                                                        <asp:LinkButton ID="LinkButton5" runat="server" Text='<%# Eval("Title") %>' 
-                                                                            onclick="LinkButton5_Click"></asp:LinkButton>
+                                                                        <asp:LinkButton ID="LinkButton5" runat="server" Text='<%# Eval("Title") %>' OnClick="LinkButton5_Click"></asp:LinkButton>
                                                                     </ItemTemplate>
-                                                                    <ItemStyle Font-Names="楷体" Font-Size="12pt" 
-                                                                        ForeColor="#006699" />
+                                                                    <ItemStyle Font-Names="楷体" Font-Size="12pt" ForeColor="#006699" />
                                                                 </asp:TemplateField>
                                                             </Columns>
                                                             <RowStyle BorderStyle="None" />
@@ -307,9 +306,9 @@
                                                     <td align="left">
                                                         <%--  <a style="color: #006699; font-family: 楷体; font-size: 12pt; font-weight: normal;
                                                             text-decoration: underline">红河学院主页</a>--%>
-                                                         <asp:GridView ID="GridView5" runat="server" AutoGenerateColumns="False" Height="146px"
-                                                            PageSize="5"  ShowHeader="False" Width="239px" BackColor="White" 
-                                                            BorderStyle="None" BorderWidth="0px">
+                                                        <asp:GridView ID="GridView5" runat="server" AutoGenerateColumns="False" Height="146px"
+                                                            PageSize="5" ShowHeader="False" Width="239px" BackColor="White" BorderStyle="None"
+                                                            BorderWidth="0px">
                                                             <Columns>
                                                                 <asp:TemplateField Visible="False">
                                                                     <ItemTemplate>
@@ -318,11 +317,11 @@
                                                                 </asp:TemplateField>
                                                                 <asp:TemplateField>
                                                                     <ItemTemplate>
-                                                                        <asp:LinkButton ID="LinkButton7" runat="server" Text='<%# Eval("Title") %>' 
-                                                                            onclick="LinkButton7_Click"></asp:LinkButton>
+                                                                        <asp:HyperLink ID="HyperLink1" Target="_blank" NavigateUrl='<%# Eval("text") %>'
+                                                                            runat="server" Text='<%# Eval("Title") %>'></asp:HyperLink>
+                                                                        
                                                                     </ItemTemplate>
-                                                                    <ItemStyle Font-Names="楷体" Font-Size="12pt" 
-                                                                        ForeColor="#006699" />
+                                                                    <ItemStyle Font-Names="楷体" Font-Size="12pt" ForeColor="#006699" />
                                                                 </asp:TemplateField>
                                                             </Columns>
                                                             <RowStyle BorderStyle="None" />

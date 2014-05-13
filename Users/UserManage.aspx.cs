@@ -11,9 +11,14 @@ namespace UserWeb.Users
 {
     public partial class UserManage : System.Web.UI.Page
     {
+
         DataAccess.GetData GD = new DataAccess.GetData();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["LoginUserXH"].ToString() == "")
+            {
+                Response.Redirect("Login.aspx");
+            }
             DataShow();
         }
         /// <summary>
@@ -57,35 +62,6 @@ namespace UserWeb.Users
            
         }
         /// <summary>
-        /// 禁止用
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        protected void LinkButton3_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string xh = ((GridViewRow)((LinkButton)sender).Parent.Parent).Cells[0].Text;
-                Business.Users.Competence qx = new Business.Users.Competence();
-                //删除用户权限
-                if (qx.isCompetence("" + Session["LoginUserXH"] + "", "11") == "")
-                {
-                    Business.Users.User jzuser = new Business.Users.User();
-                    jzuser.JZUser("" + Session["LoginUserXH"] + "");
-                    DataShow();
-                }
-                else
-                {
-                    Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + qx.isCompetence("" + Session["LoginUserXH"] + "", "11") + "');</script>");
-                }
-            }
-            catch
-            {
-                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('操作失败！');</script>");
-            }
-        
-        }
-        /// <summary>
         /// 条件查询
         /// </summary>
         /// <param name="sender"></param>
@@ -118,6 +94,35 @@ namespace UserWeb.Users
             this.LabelInfo.Text = "共有用户数据" + usersj.Rows.Count + "条";
             this.GridView1.DataSource = usersj;
             GridView1.DataBind();
+        }
+        /// <summary>
+        /// 禁止登录
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void LinkButton3_Click1(object sender, EventArgs e)
+        {   
+            try
+            {
+                string xh = ((GridViewRow)((LinkButton)sender).Parent.Parent).Cells[0].Text;
+                Business.Users.Competence qx = new Business.Users.Competence();
+                //删除用户权限
+                if (qx.isCompetence("" + Session["LoginUserXH"] + "", "11") == "")
+                {
+                    Business.Users.User jzuser = new Business.Users.User();
+                    jzuser.JZUser("" + Session["LoginUserXH"] + "");
+                    DataShow();
+                }
+                else
+                {
+                    Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + qx.isCompetence("" + Session["LoginUserXH"] + "", "11") + "');</script>");
+                }
+            }
+            catch
+            {
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('操作失败！');</script>");
+            }
+
         }
     }
 }
