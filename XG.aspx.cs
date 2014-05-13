@@ -16,7 +16,7 @@ namespace KQ
         {
             if (!IsPostBack)
             {
-                SqlDataAdapter sa = new SqlDataAdapter("select Sno,Name from Student", cn);
+                SqlDataAdapter sa = new SqlDataAdapter("select Sno,Name from Student where sno like '20110103%'", cn);
                 DataTable table = new DataTable();
                 sa.Fill(table);
                 this.GridView1.DataSource = table;
@@ -43,19 +43,19 @@ namespace KQ
                         int val = cmd.ExecuteNonQuery();
                         cn.Close();
                         if (val <= 0)
-                            ClientScript.RegisterStartupScript(this.GetType(), "", "alert('插入数据失败!')");
+                            ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('修改数据失败!')</script>");
                         else
-                            ClientScript.RegisterStartupScript(this.GetType(), "", "alert('插入数据成功!')");
+                            ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('修改数据成功!')</script>");
                 }
                 catch (Exception exp)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "", "alert('插入数据失败! 详情:" + exp.Message + "')");
+                    ClientScript.RegisterStartupScript(this.GetType(),"alert", "<script>window.alert('插入数据失败! 详情:" + exp.Message + "')</script>");
                 }
                 
             }
             SqlCommand SJ = new SqlCommand();
             SJ.Connection = cn;
-            SJ.CommandText = "update sj set time='" + System.DateTime.Now + "' where id='" + id + "'";
+            SJ.CommandText = "update sj set time='" + System.DateTime.Now.ToLocalTime() + "' where id='" + id + "'";
             cn.Open();
             SJ.ExecuteNonQuery();
             cn.Close();

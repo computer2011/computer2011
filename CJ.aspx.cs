@@ -17,7 +17,7 @@ namespace KQ
         {
             if (!IsPostBack)
             {
-                SqlDataAdapter sa = new SqlDataAdapter("select Sno,Name from Student", cn);
+                SqlDataAdapter sa = new SqlDataAdapter("select Sno,Name from Student where sno like '20110103%'", cn);
                 DataTable table = new DataTable();
                 sa.Fill(table);
                 this.GridView1.DataSource = table;
@@ -38,7 +38,7 @@ namespace KQ
                 ClientScript.RegisterStartupScript(this.GetType(), "", "alert('TextBox2不可为空!')");
                 return;
             }
-            string sql = "INSERT INTO sj (IDname,introduce,time) VALUES ('" + TextBox1.Text.Trim() + "','" + TextBox2.Text.Trim() + "','"+System.DateTime.Now+"')";
+            string sql = "INSERT INTO sj (IDname,introduce,time) VALUES ('" + TextBox1.Text.Trim() + "','" + TextBox2.Text.Trim() + "','"+System.DateTime.Now.ToLocalTime()+"')";
             try
             {
                 using (SqlConnection cn = new SqlConnection(new computer2011.ConnectDatabase().conn))
@@ -50,14 +50,14 @@ namespace KQ
                     int val = cmd.ExecuteNonQuery();
                     cn.Close();
                     if (val <= 0)
-                        ClientScript.RegisterStartupScript(this.GetType(), "", "alert('插入数据失败!')");
+                        ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('插入数据失败!')</script>");
                     else
-                        ClientScript.RegisterStartupScript(this.GetType(), "", "alert('插入事件成功!')");
+                        ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('插入数据成功!')</script>");
                 }
             }
             catch (Exception exp)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "alert('插入数据失败! 详情:" + exp.Message + "')");
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('插入数据失败! 详情:" + exp.Message + "')</script>");
             }
             this.GridView1.Visible = true;
             this.Button2.Visible = true;
