@@ -22,7 +22,7 @@ namespace computer2011
                 da.Fill(table);
                 this.Label1.Text ="/ "+ table.Rows[0][0].ToString().Trim()+"/ ";
                 this.Label2.Text = table.Rows[0][1].ToString().Trim();
-                this.text1.Value =  table.Rows[0][2].ToString().Trim();
+                this.text1.Value = "    "+table.Rows[0][2].ToString().Trim();
                 this.Label3.Text = "发布时间："+table.Rows[0][3].ToString().Trim();
             }
         }

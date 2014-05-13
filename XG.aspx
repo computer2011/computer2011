@@ -10,13 +10,16 @@
 <body>
     <form id="form1" runat="server">
     <div class="form-group">
-        <asp:LinkButton ID="LinkButtonTJ" runat="server" onclick="LinkButtonTJ_Click" class="btn btn-primary">考勤首页</asp:LinkButton>
-        &nbsp;<asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" class="btn btn-success">个人查询</asp:LinkButton>
-        &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" onclick="LinkButton2_Click" class="btn btn-info">统计查询</asp:LinkButton>
-        &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" onclick="LinkButton3_Click" class="btn btn-danger">新建查询</asp:LinkButton></div>
+        <asp:LinkButton ID="LinkButtonTJ" runat="server" OnClick="LinkButtonTJ_Click" class="btn btn-primary">考勤首页</asp:LinkButton>
+        &nbsp;<asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click"
+            class="btn btn-success">个人查询</asp:LinkButton>
+        &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click"
+            class="btn btn-info">统计查询</asp:LinkButton>
+        &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click"
+            class="btn btn-danger">新建查询</asp:LinkButton></div>
     <div class="form-group">
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False"
-            Width="500px" CssClass="table">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="500px"
+            CssClass="table">
             <AlternatingRowStyle CssClass="success" />
             <Columns>
                 <asp:BoundField DataField="Sno" HeaderText="学号" />
@@ -32,11 +35,13 @@
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
-            <HeaderStyle CssClass="danger" />
+            <HeaderStyle CssClass="danger" Font-Names="微软雅黑" />
+            <RowStyle Font-Names="微软雅黑" />
         </asp:GridView>
     </div>
     <div class="form-group">
-        <asp:Button ID="ButtonUpdate" runat="server" Text="修改" OnClick="ButtonUpdate_Click"  class="btn btn-primary"/></div>
+        <asp:Button ID="ButtonUpdate" runat="server" Text="修改" OnClick="ButtonUpdate_Click"
+            class="btn btn-primary" /></div>
     </form>
 </body>
 </html>

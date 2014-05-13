@@ -39,14 +39,34 @@ namespace KQ
 
         protected void LinkButton3_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CJ.aspx");
+            Business.Users.Competence thecom = new Business.Users.Competence();
+            string qx = thecom.isCompetence("" + Session["LoginStudentXH"] + "", "62");
+            if (qx == "")
+            {
+                Response.Redirect("CJ.aspx");
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + qx + "');</script>");
+            }
+            
         }
 
         protected void LinkButton5_Click(object sender, EventArgs e)
         {
-            string id = ((Label)((LinkButton)sender).Parent.Parent.Controls[0].FindControl("Label1")).Text;
-            Session["id"] = id;
-            Response.Redirect("XG.aspx");
+            Business.Users.Competence thecom = new Business.Users.Competence();
+            string qx = thecom.isCompetence("" + Session["LoginStudentXH"] + "", "61");
+            if (qx == "")
+            {
+                string id = ((Label)((LinkButton)sender).Parent.Parent.Controls[0].FindControl("Label1")).Text;
+                Session["id"] = id;
+                Response.Redirect("XG.aspx");
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + qx + "');</script>");
+            }
+            
         }
 
         protected void LinkButton6_Click(object sender, EventArgs e)

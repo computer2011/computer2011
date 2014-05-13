@@ -70,7 +70,16 @@ namespace KQ
 
         protected void LinkButton3_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CJ.aspx");
+            Business.Users.Competence thecom = new Business.Users.Competence();
+            string qx = thecom.isCompetence("" + Session["LoginStudentXH"] + "", "62");
+            if (qx == "")
+            {
+                Response.Redirect("CJ.aspx");
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + qx + "');</script>");
+            }
         }
     }
 }
