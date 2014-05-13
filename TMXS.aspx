@@ -8,24 +8,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>问卷调查——问卷</title>
+    
    
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-     <table align="center" width="1000">
-       <tr>
-           <%--<td>
-        <asp:LinkButton ID="LinkButton7" runat="server" onclick="LinkButton7_Click">问卷主页</asp:LinkButton></td>
-         <td>
-        <asp:LinkButton ID="LinkButton8" runat="server" onclick="LinkButton8_Click">问卷录入</asp:LinkButton></td>       
-        <td>
-        <asp:LinkButton ID="LinkButton9" runat="server" onclick="LinkButton9_Click">问卷删除</asp:LinkButton></td>--%>
-         <td align="left">
-             <asp:Button ID="Button1" runat="server" Text="退出" onclick="Button1_Click" 
-                 Height="29px" Width="87px" /></td>
-        </tr>
-        </table>
+    <div >
+             <asp:Button ID="Button1" runat="server" Text="退出" onclick="Button1_Click" Width="58px" Height="27px"/>
+        
     </div>
     <br>
     <br>
@@ -51,10 +41,9 @@
             onclick="tjButton_Click" Width="58px" /></td>
     </tr>
     </table>
-   
-        
-   
-   
+   <hr />
+   <br />
+   <br />
     </form>
 </body>
 </html>
