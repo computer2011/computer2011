@@ -23,13 +23,23 @@ namespace KQ
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
-            string id = ((Label)((LinkButton)sender).Parent.Parent.Controls[0].FindControl("Label1")).Text;
-            DataTable table = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("select kq.Sno,name ,kqlb from kq,Student,kqlb where kq.Sno=Student.Sno and kq.kqID=kqlb.kqID and kq.ID='" + id + "' order by kq.sno", cn);
-            da.Fill(table);
-            this.GridViewXQ.DataSource = table;
-            this.GridViewXQ.DataBind();
-            this.GridViewXQ.Visible = true;
+            Business.Users.Competence thecom = new Business.Users.Competence();
+            string qx = thecom.isCompetence("" + Session["LoginStudentXH"] + "", "60");
+            if (qx == "")
+            {
+                string id = ((Label)((LinkButton)sender).Parent.Parent.Controls[0].FindControl("Label1")).Text;
+                DataTable table = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter("select kq.Sno,name ,kqlb from kq,Student,kqlb where kq.Sno=Student.Sno and kq.kqID=kqlb.kqID and kq.ID='" + id + "' order by kq.sno", cn);
+                da.Fill(table);
+                this.GridViewXQ.DataSource = table;
+                this.GridViewXQ.DataBind();
+                this.GridViewXQ.Visible = true;
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + qx + "');</script>");
+            }
+            
         }
 
         protected void LinkButton2_Click(object sender, EventArgs e)
@@ -71,7 +81,17 @@ namespace KQ
 
         protected void LinkButton6_Click(object sender, EventArgs e)
         {
-            Response.Redirect("TimeTJ.aspx");
+            Business.Users.Competence thecom = new Business.Users.Competence();
+            string qx = thecom.isCompetence("" + Session["LoginStudentXH"] + "", "63");
+            if (qx == "")
+            {
+                Response.Redirect("TimeTJ.aspx");
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + qx + "');</script>");
+            }
+            
         }
 
     }

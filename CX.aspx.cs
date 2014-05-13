@@ -80,7 +80,16 @@ namespace KQ
 
         protected void LinkButton3_Click(object sender, EventArgs e)
         {
-            Response.Redirect("TimeTJ.aspx");
+            Business.Users.Competence thecom = new Business.Users.Competence();
+            string qx = thecom.isCompetence("" + Session["LoginStudentXH"] + "", "63");
+            if (qx == "")
+            {
+                Response.Redirect("TimeTJ.aspx");
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + qx + "');</script>");
+            }
         }
     }
 }

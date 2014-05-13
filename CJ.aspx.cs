@@ -17,7 +17,7 @@ namespace KQ
         {
             if (!IsPostBack)
             {
-                SqlDataAdapter sa = new SqlDataAdapter("select Sno,Name from Student where sno like '20110103%'", cn);
+                SqlDataAdapter sa = new SqlDataAdapter("select Sno,Name from Student where sno like '201101%'", cn);
                 DataTable table = new DataTable();
                 sa.Fill(table);
                 this.GridView1.DataSource = table;
@@ -38,7 +38,11 @@ namespace KQ
                 ClientScript.RegisterStartupScript(this.GetType(), "", "alert('TextBox2不可为空!')");
                 return;
             }
-            string sql = "INSERT INTO sj (IDname,introduce,time) VALUES ('" + TextBox1.Text.Trim() + "','" + TextBox2.Text.Trim() + "','"+System.DateTime.Now.ToLocalTime()+"')";
+            TimeZoneInfo bjTimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("China Standard Time");
+            DateTime Time = DateTime.Now;
+            DateTime Ctime = TimeZoneInfo.ConvertTime(Time, bjTimeZoneInfo);
+
+            string sql = "INSERT INTO sj (IDname,introduce,time) VALUES ('" + TextBox1.Text.Trim() + "','" + TextBox2.Text.Trim() + "','" + Ctime + "')";
             try
             {
                 using (SqlConnection cn = new SqlConnection(new computer2011.ConnectDatabase().conn))
@@ -108,7 +112,16 @@ namespace KQ
 
         protected void LinkButton2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("TimeTJ.aspx");
+            Business.Users.Competence thecom = new Business.Users.Competence();
+            string qx = thecom.isCompetence("" + Session["LoginStudentXH"] + "", "63");
+            if (qx == "")
+            {
+                Response.Redirect("TimeTJ.aspx");
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + qx + "');</script>");
+            }
         }
 
     }
