@@ -73,7 +73,7 @@
                                     font-size: 15pt">主页管理</a>
                             </td>
                             <td id="td1" runat="server" class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
-                                <a href="Users/Login.aspx" target="content1" style="color: White; font-family: 华文行楷;
+                                <a href="Users/Login.aspx"  style="color: White; font-family: 华文行楷;
                                     font-size: 15pt">系统管理</a>
                             </td>
                         </tr>

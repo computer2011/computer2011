@@ -9,7 +9,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <div class="jumbotron" style="background-color: #9999FF">
+        <div class="jumbotron" 
+            style="height:800px; background-image: url('img/t.jpg');">
             <h1 style="font-family: 华文行楷; font-size: 60px">
                 欢迎使用</h1>
             <h1 style="font-family: 华文行楷; font-size: 60px">

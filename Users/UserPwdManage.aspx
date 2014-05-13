@@ -8,8 +8,8 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
+    <form id="form1" runat="server" style="background-color: #FFFFFF; background-image: url('img/t.jpg');">
+    <div align=center>
      <table cellpadding="0" cellspacing="0" width="420" align="center">
      <tr height="50"><td></td></tr>
         <tr>
