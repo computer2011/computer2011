@@ -12,8 +12,10 @@
     <div>
         <div class="form-group">
             <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" class="btn btn-primary">个人查询</asp:LinkButton>
-            &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click" class="btn btn-success">新建考勤</asp:LinkButton>
-            &nbsp;<asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click" class="btn btn-warning">统计查询</asp:LinkButton></div>
+            &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click"
+                class="btn btn-success">新建考勤</asp:LinkButton>
+            &nbsp;<asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click"
+                class="btn btn-warning">统计查询</asp:LinkButton></div>
         <div class="form-group">
             <asp:Label ID="LabelTJ" runat="server" Text="考勤统计"></asp:Label></div>
         <div class="form-group">
@@ -45,7 +47,8 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
-                <HeaderStyle CssClass="danger" />
+                <HeaderStyle CssClass="danger" Font-Names="微软雅黑" />
+                <RowStyle Font-Names="微软雅黑" />
             </asp:GridView>
         </div>
         <div class="form-group">
@@ -57,7 +60,8 @@
                     <asp:BoundField DataField="name" HeaderText="姓名" />
                     <asp:BoundField DataField="kqlb" HeaderText="出勤情况" />
                 </Columns>
-                <HeaderStyle CssClass="danger" />
+                <<HeaderStyle CssClass="danger" Font-Names="微软雅黑" />
+                <RowStyle Font-Names="微软雅黑" />
             </asp:GridView>
         </div>
     </div>

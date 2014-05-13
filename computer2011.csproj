@@ -383,36 +383,42 @@
     </Compile>
     <Compile Include="上传.aspx.cs">
       <DependentUpon>上传.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="上传.aspx.designer.cs">
       <DependentUpon>上传.aspx</DependentUpon>
     </Compile>
     <Compile Include="个人风采.aspx.cs">
       <DependentUpon>个人风采.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="个人风采.aspx.designer.cs">
       <DependentUpon>个人风采.aspx</DependentUpon>
     </Compile>
     <Compile Include="班级相册.aspx.cs">
       <DependentUpon>班级相册.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="班级相册.aspx.designer.cs">
       <DependentUpon>班级相册.aspx</DependentUpon>
     </Compile>
     <Compile Include="班级相册.Master.cs">
       <DependentUpon>班级相册.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="班级相册.Master.designer.cs">
       <DependentUpon>班级相册.Master</DependentUpon>
     </Compile>
     <Compile Include="班级风采.aspx.cs">
       <DependentUpon>班级风采.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="班级风采.aspx.designer.cs">
       <DependentUpon>班级风采.aspx</DependentUpon>
     </Compile>
     <Compile Include="相册管理.aspx.cs">
       <DependentUpon>相册管理.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="相册管理.aspx.designer.cs">
       <DependentUpon>相册管理.aspx</DependentUpon>
