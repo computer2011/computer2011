@@ -65,7 +65,8 @@
                                     考勤</a>
                             </td>
                             <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
-                                <a target="content1" style="color: White; font-family: 华文行楷; font-size: 15pt">综合量化</a>
+                                <a href="shixiantongji.aspx" target="content1" style="color: White; font-family: 华文行楷;
+                                    font-size: 15pt">综合量化</a>
                             </td>
                             <td id="tdzy" runat="server" class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
                                 <a href="Main_Manage.aspx" target="content1" style="color: White; font-family: 华文行楷;
@@ -80,11 +81,11 @@
                 </td>
             </tr>
             <tr>
-                <td >
+                <td>
                     <iframe id="content1" src="IndexPage.aspx" name="content1" height="100%" onload="Javascript:SetWinHeight(this)"
                         width="1000px" frameborder="0" style="border-color: #F0F0F0; overflow-y: visible;
-                      border-left-width: 1px; border-left-style: solid; border-top-width: 1px; border-right-style: solid;" scrolling="no" bordercolor="#CCCCFF">
-                    </iframe>
+                        border-left-width: 1px; border-left-style: solid; border-top-width: 1px; border-right-style: solid;"
+                        scrolling="no" bordercolor="#CCCCFF"></iframe>
                 </td>
             </tr>
             <tr>

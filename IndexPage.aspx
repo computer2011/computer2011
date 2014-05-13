@@ -13,6 +13,15 @@
     <%-- <script id="1">
         if (window != top) top.location.href = window.location.href;
     </script>--%>
+    <script language="javascript" type="text/javascript">
+<!--
+
+        function Button3_onclick() {
+
+        }
+
+// -->
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -127,36 +136,38 @@
                                                 Height="71px" Width="89px" />
                                         </td>
                                     </tr>
-                                    <div id="div1" runat="server">
-                                        <tr height="30px" align="center">
-                                            <td>
+                                    <tr height="30px" align="center">
+                                        <td>
+                                            <div id="divuser" runat="server">
                                                 <asp:Label ID="Label1" runat="server" Text="用户:"></asp:Label>
-                                                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                                            </td>
-                                        </tr>
-                                        <tr height="30px" align="center">
-                                            <td>
+                                                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></div>
+                                        </td>
+                                    </tr>
+                                    <tr height="30px" align="center">
+                                        <td>
+                                            <div id="divpwd" runat="server">
                                                 <asp:Label ID="Label2" runat="server" Text="密码:"></asp:Label>
                                                 <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
-                                            </td>
-                                        </tr>
-                                        <tr height="30px" align="center">
-                                            <td>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr height="30px" align="center">
+                                        <td>
+                                            <div id="divlogin" runat="server">
                                                 <asp:Button ID="Button1" CssClass="btn btn-info btn-xs" runat="server" Text="登录"
                                                     OnClick="Button1_Click" />
                                                 &nbsp;
-                                                <asp:Button ID="Button2" CssClass="btn btn-info btn-xs" runat="server" Text="重置" />
-                                            </td>
-                                        </tr>
-                                    </div>
-                                    <%--  <tr height="30px" align="center">
-                                        <td>
-                                            <asp:LinkButton ID="LinkButton1" runat="server">新用户注册</asp:LinkButton>
-                                            &nbsp;&nbsp;&nbsp;
-                                            <asp:LinkButton ID="LinkButton2" runat="server">忘记密码？</asp:LinkButton>
+                                                <asp:Button ID="Button2" CssClass="btn btn-info btn-xs" runat="server" Text="重置"
+                                                    OnClick="Button2_Click" />
+                                            </div>
                                         </td>
-                                    </tr>--%>
-
+                                    </tr>
+                                    <tr height="30px" align="center">
+                                        <td>
+                                            <input id="Button3" runat="server" class="btn btn-info btn-xs" type="button" value="修改密码"
+                                                onserverclick="Button3_onclick" />
+                                        </td>
+                                    </tr>
                                     <tr>
                                         <td>
                                         </td>

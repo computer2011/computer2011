@@ -151,9 +151,24 @@ namespace computer2011
             }
             else
             {
-                this.div1.Visible = false;
+                Session["LoginStudentXH"] = this.TextBox1.Text;
+                this.divuser.InnerHtml = "2011级计算机科学与技术班";
+                this.divpwd.InnerHtml = "欢迎你" + this.TextBox1.Text + "用户";
+                this.divlogin.InnerHtml = "<>";
             }
 
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)//重置
+        {
+            this.TextBox1.Text = "";
+            this.TextBox2.Text = "";
+        }
+
+        public void Button3_onclick(object sender, EventArgs e)
+        {
+            Response.Redirect("CJ.aspx");
+        
         }
 
     }
