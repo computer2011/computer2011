@@ -64,8 +64,10 @@
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\jquery-2.1.0.min.js" />
     <Content Include="CJ.aspx" />
+    <Content Include="CJstudent.aspx" />
     <Content Include="classfc.aspx" />
     <Content Include="classxc.aspx" />
+    <Content Include="clsaaxcgl.aspx" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
@@ -91,7 +93,9 @@
     <Content Include="img\LYB.jpg" />
     <Content Include="img\34.jpg" />
     <Content Include="img\879.jpg" />
+    <Content Include="img\gere.jpg" />
     <Content Include="img\Q.jpg" />
+    <Content Include="img\saipao.jpg" />
     <Content Include="IndexPage.aspx" />
     <Content Include="Info.aspx" />
     <Content Include="js\bootstrap.js" />
@@ -198,6 +202,13 @@
     <Compile Include="CJ.aspx.designer.cs">
       <DependentUpon>CJ.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CJstudent.aspx.cs">
+      <DependentUpon>CJstudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CJstudent.aspx.designer.cs">
+      <DependentUpon>CJstudent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="classfc.aspx.cs">
       <DependentUpon>classfc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -211,6 +222,13 @@
     </Compile>
     <Compile Include="classxc.aspx.designer.cs">
       <DependentUpon>classxc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clsaaxcgl.aspx.cs">
+      <DependentUpon>clsaaxcgl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clsaaxcgl.aspx.designer.cs">
+      <DependentUpon>clsaaxcgl.aspx</DependentUpon>
     </Compile>
     <Compile Include="ConnectDatabase.cs" />
     <Compile Include="CX.aspx.cs">

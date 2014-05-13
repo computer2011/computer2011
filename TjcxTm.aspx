@@ -18,7 +18,8 @@
         <asp:LinkButton ID="MclrLinkButton" runat="server" onclick="MclrLinkButton_Click">问卷录入</asp:LinkButton></td>       
         <td width="80">
         <asp:LinkButton ID="delLinkButton" runat="server" onclick="delLinkButton_Click">问卷删除</asp:LinkButton></td>
-        <td width="80">
+        <td width="160">
+        <asp:LinkButton ID="CJLinkButton" runat="server" onclick="CJLinkButton_Click" >学生参加情况统计</asp:LinkButton>
         </td>
         <td></td>
         </tr>
