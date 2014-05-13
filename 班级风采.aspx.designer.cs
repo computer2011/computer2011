@@ -7,10 +7,10 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace computer2011 {
+namespace photo {
     
     
-    public partial class Main_Manage {
+    public partial class 班级风采 {
         
         /// <summary>
         /// form1 控件。
@@ -22,13 +22,22 @@ namespace computer2011 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// DropDownList1 控件。
+        /// Label1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
+        /// Label2 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
         /// TextBox1 控件。
@@ -40,31 +49,58 @@ namespace computer2011 {
         protected global::System.Web.UI.WebControls.TextBox TextBox1;
         
         /// <summary>
-        /// TextArea1 控件。
+        /// Label7 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea TextArea1;
+        protected global::System.Web.UI.WebControls.Label Label7;
         
         /// <summary>
-        /// RegularExpressionValidator1 控件。
+        /// TextBox5 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+        protected global::System.Web.UI.WebControls.TextBox TextBox5;
         
         /// <summary>
-        /// ValidationSummary1 控件。
+        /// Label8 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+        protected global::System.Web.UI.WebControls.Label Label8;
+        
+        /// <summary>
+        /// TextBox6 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        
+        /// <summary>
+        /// Button3 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button3;
+        
+        /// <summary>
+        /// Button4 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button4;
         
         /// <summary>
         /// Button1 控件。

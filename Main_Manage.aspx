@@ -37,13 +37,20 @@
                 </td>
                 <td>
                     <textarea runat="server" class="form-control" rows="20" id="TextArea1" name="S1"></textarea>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" Enabled="false"
+                        ControlToValidate="TextArea1" ValidationExpression=" 
+^[a-zA-z]+://(\w+(-\w+)*)(\.(\w+(-\w+)*))*(\?\s*)?$ 
+ " runat="server" ValidationGroup="checkText" ForeColor="Red" ErrorMessage="网址格式不正确"></asp:RegularExpressionValidator>
+                    <asp:ValidationSummary ID="ValidationSummary1" ValidationGroup="checkText" Enabled="false"
+                        ShowMessageBox="true" ShowSummary="false" runat="server" />
                 </td>
             </tr>
             <tr>
                 <td>
                 </td>
                 <td align="center">
-                    <asp:Button ID="Button1" CssClass="btn btn-info" runat="server" Text="发布内容" OnClick="Button1_Click" />
+                    <asp:Button ID="Button1" CssClass="btn btn-info" runat="server" Text="发布内容" OnClick="Button1_Click"
+                        ValidationGroup="checkText" />
                 </td>
             </tr>
         </table>
