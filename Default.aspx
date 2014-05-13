@@ -41,7 +41,7 @@
                                     font-size: 15pt">首页</a>
                             </td>
                             <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
-                                <a href="classfc.aspx" target="content1" style="color: White; font-family: 华文行楷; font-size: 15pt">
+                                <a href="classxc.aspx" target="content1" style="color: White; font-family: 华文行楷; font-size: 15pt">
                                     相册</a>
                             </td>
                             <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
