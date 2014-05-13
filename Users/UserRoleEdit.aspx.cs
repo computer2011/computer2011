@@ -13,6 +13,10 @@ namespace UserWeb.Users
         DataAccess.GetData GD = new DataAccess.GetData();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["LoginUserXH"].ToString() == "")
+            {
+                Response.Redirect("Login.aspx");
+            }
             if (IsPostBack == false)
             {
                 Business.Users.Role therole = new Business.Users.Role();

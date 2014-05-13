@@ -153,8 +153,10 @@
     <Content Include="TJ.aspx" />
     <Content Include="TjcxTm.aspx" />
     <Content Include="TMXS.aspx" />
+    <Content Include="Users\HY.aspx" />
     <Content Include="Users\Login.aspx" />
     <Content Include="Users\RoleCompetenceEdit.aspx" />
+    <Content Include="Users\UserMain.aspx" />
     <Content Include="Users\UserManage.aspx" />
     <Content Include="Users\UserPwdManage.aspx" />
     <Content Include="Users\UserRoleEdit.aspx" />
@@ -307,6 +309,13 @@
     <Compile Include="TMXS.aspx.designer.cs">
       <DependentUpon>TMXS.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Users\HY.aspx.cs">
+      <DependentUpon>HY.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\HY.aspx.designer.cs">
+      <DependentUpon>HY.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Users\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -320,6 +329,13 @@
     </Compile>
     <Compile Include="Users\RoleCompetenceEdit.aspx.designer.cs">
       <DependentUpon>RoleCompetenceEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UserMain.aspx.cs">
+      <DependentUpon>UserMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\UserMain.aspx.designer.cs">
+      <DependentUpon>UserMain.aspx</DependentUpon>
     </Compile>
     <Compile Include="Users\UserManage.aspx.cs">
       <DependentUpon>UserManage.aspx</DependentUpon>
@@ -393,6 +409,7 @@
       <Name>DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

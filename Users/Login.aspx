@@ -1,20 +1,26 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="UserWeb.Users.Login" %>
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+<link href="../bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../script/js/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <title></title>
     <style type="text/css">
         .Button_Common
-        {}
+        {
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <div align="center">
+        
         <table cellpadding="0" cellspacing="0" width="320">
-            <tr height="200">
-                <td colspan=2>
+            <tr height="100">
+                <td colspan="2">
                 </td>
             </tr>
             <tr>
@@ -42,10 +48,8 @@
             </tr>
             <tr height="50">
                 <td colspan="2" align="center">
-                    <asp:LinkButton ID="LinkButton1" CssClass="Button_Common" runat="server" OnClick="Button1_Click"
-                        Width="67px" Height="26px" TabIndex="3" BackColor="#CC0000" 
-                        BorderColor="Black" BorderWidth="1px"
-                        ForeColor="Black">登录</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton1" class="btn btn-primary"
+                        runat="server" OnClick="Button1_Click">登录</asp:LinkButton>
                 </td>
             </tr>
         </table>

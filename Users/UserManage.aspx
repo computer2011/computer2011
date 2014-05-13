@@ -3,12 +3,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link href="../script/js/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../script/js/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
         <table>
+            <tr height="50">
+                <td>
+                </td>
+            </tr>
             <tr>
                 <td>
                     <asp:Label ID="Label1" runat="server" Text="学号："></asp:Label>
@@ -27,10 +33,11 @@
                 <td width="50">
                 </td>
                 <td>
-                    <asp:Button ID="Button1" runat="server" Text="查询" Width="80px" OnClick="Button1_Click" />
+                    <asp:Button ID="Button1" class="btn btn-primary" runat="server" Text="查询" Width="80px"
+                        OnClick="Button1_Click" />
                 </td>
             </tr>
-            <tr>
+            <tr height="20">
                 <td>
                 </td>
             </tr>
@@ -41,10 +48,16 @@
             <div class="Div_Title_Small">
                 <asp:Label ID="LabelInfo" runat="server" Text=" "></asp:Label>
             </div>
+            <table>
+                <tr height="20">
+                    <td>
+                    </td>
+                </tr>
+            </table>
         </div>
         <div>
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4"
-                ForeColor="#333333" GridLines="None" Width="1000">
+                GridLines="None" Width="100%" class="table table-striped">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
                     <asp:BoundField DataField="Sno" HeaderText="学号">
@@ -64,13 +77,11 @@
                     </asp:BoundField>
                     <asp:TemplateField HeaderText="选择情况">
                         <ItemTemplate>
-                            <asp:LinkButton ID="LinkButton2" runat="server" Width="70" Height="22px" Text='分配角色'
-                                CommandName="EditCommand" CommandArgument='<%# Eval("Sno") %>' OnClick="LinkButton2_Click"
-                                BackColor="#CC0000" BorderColor="Black" BorderWidth="1px" ForeColor="Black"></asp:LinkButton>
-                            <asp:LinkButton ID="LinkButton3" runat="server" Width="40" CssClass="ItemButton_Red"
-                                Height="22px" Text='删除' Visible="true" CommandName="DeleteCommand" CommandArgument='<%# Eval("Sno") %>'
-                                OnClick="LinkButton3_Click" BackColor="#CC0000" BorderColor="Black" BorderWidth="1px"
-                                ForeColor="Black"></asp:LinkButton>
+                            <asp:LinkButton ID="LinkButton2" class="btn btn-primary" runat="server" Text='分配角色'
+                                CommandName="EditCommand" CommandArgument='<%# Eval("Sno") %>' OnClick="LinkButton2_Click"></asp:LinkButton>
+                            <asp:LinkButton ID="LinkButton3" class="btn btn-primary" runat="server" Text='禁止登录'
+                                Visible="true" CommandName="DeleteCommand" 
+                                CommandArgument='<%# Eval("Sno") %>' onclick="LinkButton3_Click1"></asp:LinkButton>
                         </ItemTemplate>
                         <ItemStyle Width="200px" />
                     </asp:TemplateField>

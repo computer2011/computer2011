@@ -3,6 +3,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link href="../script/js/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../script/js/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <title></title>
 </head>
 <body>
@@ -14,7 +16,7 @@
                 </td>
             </tr>
         </table>
-        <table style="left: 20px; top: 30px" border="1" width="300">
+        <table  class="table table-striped" style=" width:400px">
             <asp:ListView ID="ListView2" runat="server">
                 <ItemTemplate>
                     <tr>
@@ -24,7 +26,7 @@
                             <asp:Label ID="Label1" runat="server" Text='<%# Eval("RoleID") %>' Style="visibility: hidden;"></asp:Label>
                         </td>
                         <td>
-                            <asp:Button ID="Button3" runat="server" Text="分配权限" OnClick="Button3_Click" />
+                            <asp:Button ID="Button3" class="btn btn-primary" style=" width:100px; height:30px" runat="server" Text="分配权限" OnClick="Button3_Click" />
                         </td>
                     </tr>
                 </ItemTemplate>
@@ -37,7 +39,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:Button ID="Button1" runat="server" Text="提交" Width="80px" OnClick="Button1_Click" />
+                    <asp:Button ID="Button1" class="btn btn-primary" runat="server" Text="提交" Width="80px" OnClick="Button1_Click" />
                 </td>
                 <td>
                     &nbsp;</td>

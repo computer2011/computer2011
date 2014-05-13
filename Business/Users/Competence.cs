@@ -28,16 +28,6 @@ namespace Business.Users
             get;
             set;
         }
-
-        /// <summary>
-        /// 
-        /// 备注
-        /// </summary>
-        public string Remark
-        {
-            get;
-            set;
-        }
         #endregion
         /// <summary>
         /// 获取权限列表
