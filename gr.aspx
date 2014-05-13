@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>个人风采</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -35,16 +36,16 @@
    <div align="center">
    <table>
    <tr>
-   <td><asp:Button ID="Button1" runat="server" Text="上传" onclick="Button1_Click" 
-           BackColor="#339933" />  </td>
+   <td><asp:Button type="button" class="btn btn-primary" ID="Button1" runat="server" 
+           Text="上传" onclick="Button1_Click" />  </td>
    <td width="60"></td>
    <td>
-       <asp:Button ID="Button2" runat="server" Text="取消" onclick="Button2_Click1" 
-           BackColor="#666699" /></td>
+       <asp:Button type="button" class="btn btn-info" ID="Button2" runat="server" 
+           Text="取消" onclick="Button2_Click1" /></td>
         <td width="60"></td>
         <td> 
-            <asp:Button ID="Button3" runat="server" Text="返回" onclick="Button3_Click" 
-                BackColor="#CC00CC" />  </td>
+            <asp:Button  type="button" class="btn btn-link" ID="Button3" runat="server" 
+                Text="返回" onclick="Button3_Click" />  </td>
   </tr>
    
    </table>
@@ -53,5 +54,6 @@
 
    </html>
     </form>
+    </html>
 </body>
-</html>
+
