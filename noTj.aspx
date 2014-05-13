@@ -22,7 +22,7 @@
       <table align="center" width="1000">      
       <tr>
        <td width="80">
-        <asp:LinkButton ID="LinkButton1" runat="server" onclick="homeLinkButton_Click">问卷主页</asp:LinkButton></td>
+        <asp:LinkButton ID="LinkButton1" runat="server" onclick="homeLinkButton_Click" type="button" class="btn btn-primary">问卷主页</asp:LinkButton></td>
          <td width="80">
         <asp:LinkButton ID="LinkButton2" runat="server" onclick="MclrLinkButton_Click">问卷录入</asp:LinkButton></td>       
         <td width="80">
