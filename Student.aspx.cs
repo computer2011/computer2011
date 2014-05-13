@@ -16,11 +16,11 @@ namespace computer2011
         {
             if (!IsPostBack)
             {
-                if (Session["LoginStudentXH"].ToString() != "")
+                if (Session["LoginStudentXH"].ToString() != null)
                 {
                     Business.Users.Competence thecom = new Business.Users.Competence();
-                    string qx = thecom.isCompetence("" + Session["LoginStudentXH"].ToString() + "", "62");
-                    if (qx != "")
+                    string qx = thecom.isCompetence("" + Session["LoginStudentXH"].ToString() + "", "50");//查看学生信息权限
+                    if (qx == "")
                     {
                         DataTable table = new DataTable();
                         SqlCommand cmd = new SqlCommand("select sno,name,(select MC from DM_Sex where DM=sex) as sex,(select MC from DM_MZ where DM= mz) as mz,P_Self_Num,QQ,SS_Address from student", cn);
