@@ -127,33 +127,36 @@
                                                 Height="71px" Width="89px" />
                                         </td>
                                     </tr>
-                                    <tr height="30px" align="center">
-                                        <td>
-                                            <asp:Label ID="Label1" runat="server" Text="用户:"></asp:Label>
-                                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                                        </td>
-                                    </tr>
-                                    <tr height="30px" align="center">
-                                        <td>
-                                            <asp:Label ID="Label2" runat="server" Text="密码:"></asp:Label>
-                                            <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
-                                        </td>
-                                    </tr>
-                                    <tr height="30px" align="center">
-                                        <td>
-                                            <asp:Button ID="Button1" CssClass="btn btn-info btn-xs" runat="server" Text="登录"
-                                                OnClick="Button1_Click" />
-                                            &nbsp;
-                                            <asp:Button ID="Button2" CssClass="btn btn-info btn-xs" runat="server" Text="重置" />
-                                        </td>
-                                    </tr>
-                                    <tr height="30px" align="center">
+                                    <div id="div1" runat="server">
+                                        <tr height="30px" align="center">
+                                            <td>
+                                                <asp:Label ID="Label1" runat="server" Text="用户:"></asp:Label>
+                                                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr height="30px" align="center">
+                                            <td>
+                                                <asp:Label ID="Label2" runat="server" Text="密码:"></asp:Label>
+                                                <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr height="30px" align="center">
+                                            <td>
+                                                <asp:Button ID="Button1" CssClass="btn btn-info btn-xs" runat="server" Text="登录"
+                                                    OnClick="Button1_Click" />
+                                                &nbsp;
+                                                <asp:Button ID="Button2" CssClass="btn btn-info btn-xs" runat="server" Text="重置" />
+                                            </td>
+                                        </tr>
+                                    </div>
+                                    <%--  <tr height="30px" align="center">
                                         <td>
                                             <asp:LinkButton ID="LinkButton1" runat="server">新用户注册</asp:LinkButton>
                                             &nbsp;&nbsp;&nbsp;
                                             <asp:LinkButton ID="LinkButton2" runat="server">忘记密码？</asp:LinkButton>
                                         </td>
-                                    </tr>
+                                    </tr>--%>
+
                                     <tr>
                                         <td>
                                         </td>
@@ -319,7 +322,6 @@
                                                                     <ItemTemplate>
                                                                         <asp:HyperLink ID="HyperLink1" Target="_blank" NavigateUrl='<%# Eval("text") %>'
                                                                             runat="server" Text='<%# Eval("Title") %>'></asp:HyperLink>
-                                                                        
                                                                     </ItemTemplate>
                                                                     <ItemStyle Font-Names="楷体" Font-Size="12pt" ForeColor="#006699" />
                                                                 </asp:TemplateField>

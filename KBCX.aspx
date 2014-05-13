@@ -11,8 +11,7 @@
 <body style="width: 900px">
     <form id="form1" runat="server">
     <div>
-        <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" 
-            Font-Size="15pt">查询并统计课表</asp:LinkButton></div>
+        </div>
     <div>
         <asp:Label ID="Label15" runat="server"></asp:Label>
     </div>

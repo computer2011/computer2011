@@ -16,16 +16,31 @@ namespace computer2011
         {
             if (!IsPostBack)
             {
-                SqlDataAdapter da = new SqlDataAdapter("select * from DM_LB", cn);
-                DataSet ds = new DataSet();
-                cn.Open();
-                da.Fill(ds, "TitleType");
-                cn.Close();
-                this.DropDownList1.DataSource = ds.Tables["TitleType"].DefaultView;
-                this.DropDownList1.DataValueField = ds.Tables["TitleType"].Columns[0].ColumnName;
-                this.DropDownList1.DataTextField = ds.Tables["TitleType"].Columns[1].ColumnName;
-                this.DropDownList1.DataBind();
-
+                if (Session["LoginStudentXH"] != "")
+                {
+                    Business.Users.Competence thecom = new Business.Users.Competence();
+                    string qx = thecom.isCompetence("" + Session["LoginStudentXH"] + "", "62");
+                    if (qx != "")
+                    {
+                        SqlDataAdapter da = new SqlDataAdapter("select * from DM_LB", cn);
+                        DataSet ds = new DataSet();
+                        cn.Open();
+                        da.Fill(ds, "TitleType");
+                        cn.Close();
+                        this.DropDownList1.DataSource = ds.Tables["TitleType"].DefaultView;
+                        this.DropDownList1.DataValueField = ds.Tables["TitleType"].Columns[0].ColumnName;
+                        this.DropDownList1.DataTextField = ds.Tables["TitleType"].Columns[1].ColumnName;
+                        this.DropDownList1.DataBind();
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('你没有发布权限，如有疑问请与管理员联系!');window.location.href ='http://computer2011.apphb.com'</script>");
+                    }
+                }
+                else
+                {
+                    Response.Write("<script>alert('请先登录!');window.location.href ='http://computer2011.apphb.com'</script>");
+                }
             }
         }
 
@@ -61,7 +76,7 @@ namespace computer2011
                     cn.Open();
                     cmd.ExecuteNonQuery();
                     Response.Write("<script>alert('发布成功!');window.location.href ='http://computer2011.apphb.com'</script>");
- 
+
                 }
                 catch
                 {

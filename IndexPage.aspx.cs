@@ -97,8 +97,8 @@ namespace computer2011
                 Response.Redirect("Main_Content.aspx?ID=" + ID + "");
             }
             catch
-            { 
-            
+            {
+
             }
         }
 
@@ -126,7 +126,7 @@ namespace computer2011
 
         protected void LinkButton7_Click(object sender, EventArgs e)
         {
-            
+
             string ID = ((Label)((LinkButton)sender).Parent.Parent.Controls[0].FindControl("Label16")).Text;
             SqlCommand cmd = new SqlCommand("select text  from MainPage where id=" + ID + "", cn);
             cn.Open();
@@ -134,7 +134,7 @@ namespace computer2011
             {
                 Response.Redirect("" + cmd.ExecuteScalar() + "");
             }
-            catch 
+            catch
             {
                 Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('无法打开网页，请检查网络，如有疑问请与系统管理员联系！');</script>");
             }
@@ -143,6 +143,16 @@ namespace computer2011
 
         protected void Button1_Click(object sender, EventArgs e)//登录
         {
+            Business.Users.User loginnuer = new Business.Users.User();
+            Business.Users.User theuser = loginnuer.Login("" + this.TextBox1.Text + "", "" + this.TextBox2.Text + "");
+            if (theuser == null)
+            {
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('登录失败，学号或密码错误！');</script>");
+            }
+            else
+            {
+                this.div1.Visible = false;
+            }
 
         }
 

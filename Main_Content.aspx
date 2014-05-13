@@ -10,6 +10,10 @@
     <form id="form1" runat="server" style="width: 1000px;">
     <div style="background-color: #FFFFFF;">
         <table width="1000px">
+            <tr height="10px">
+                <td>
+                </td>
+            </tr>
             <tr>
                 <td>
                     <table width="1000px">
@@ -26,15 +30,16 @@
                     </table>
                 </td>
             </tr>
-            <tr height="5px">
+            <tr height="5px" valign="middle">
                 <td>
-                    <hr style="width: 987px; text-align: left" color="#CCCCFF" />
+                    <hr style="width: 996px; text-align: left; vertical-align: top; font-size: xx-small"
+                        color="#CCCCFF" />
                 </td>
             </tr>
             <tr>
                 <td align="center">
-                    <textarea id="text1" name="S1" runat="server" class="form-control"
-                        rows="30" disabled="disabled" style="background-color: #FFFFFF"></textarea>
+                    <textarea id="text1" name="S1" runat="server" class="form-control" rows="30" disabled="disabled"
+                        style="background-color: #FFFFFF"></textarea>
                 </td>
             </tr>
         </table>

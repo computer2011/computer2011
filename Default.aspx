@@ -41,8 +41,8 @@
                                     font-size: 15pt">首页</a>
                             </td>
                             <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
-                                <a href="classxc.aspx" target="content1" style="color: White; font-family: 华文行楷; font-size: 15pt">
-                                    相册</a>
+                                <a href="classxc.aspx" target="content1" style="color: White; font-family: 华文行楷;
+                                    font-size: 15pt">相册</a>
                             </td>
                             <td class="td" onmouseover="this.bgColor='#006666'" onmouseout="this.bgColor=''">
                                 <a href="Guest.aspx" target="content1" style="color: White; font-family: 华文行楷; font-size: 15pt">
@@ -80,9 +80,10 @@
                 </td>
             </tr>
             <tr>
-                <td>
+                <td >
                     <iframe id="content1" src="IndexPage.aspx" name="content1" height="100%" onload="Javascript:SetWinHeight(this)"
-                        width="1000px" frameborder="0" style="overflow-y: visible" scrolling="no" bordercolor="#CCCCFF">
+                        width="1000px" frameborder="0" style="border-color: #F0F0F0; overflow-y: visible;
+                      border-left-width: 1px; border-left-style: solid; border-top-width: 1px; border-right-style: solid;" scrolling="no" bordercolor="#CCCCFF">
                     </iframe>
                 </td>
             </tr>

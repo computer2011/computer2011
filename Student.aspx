@@ -11,7 +11,8 @@
         <table width="1000px">
             <tr>
                 <td align="center">
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="988px">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+                        Width="988px" BackColor="#99CCFF">
                         <Columns>
                             <asp:TemplateField HeaderText="学号">
                                 <ItemTemplate>

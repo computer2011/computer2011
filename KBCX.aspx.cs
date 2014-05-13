@@ -23,6 +23,86 @@ namespace computer2011
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                if (Session["LoginStudentXH"] != "")
+                {
+                    this.div1.Visible = true;
+                    this.UTC_LinkButton1.The_Text = SKCount("周一", "第1,2节");
+
+                    this.UTC_LinkButton2.The_Text = SKCount("周二", "第1,2节");
+
+                    this.UTC_LinkButton3.The_Text = SKCount("周三", "第1,2节");
+
+                    this.UTC_LinkButton4.The_Text = SKCount("周四", "第1,2节");
+
+                    this.UTC_LinkButton5.The_Text = SKCount("周五", "第1,2节");
+
+                    this.UTC_LinkButton6.The_Text = SKCount("周一", "第3,4节");
+
+                    this.UTC_LinkButton7.The_Text = SKCount("周二", "第3,4节");
+
+                    this.UTC_LinkButton8.The_Text = SKCount("周三", "第3,4节");
+
+                    this.UTC_LinkButton9.The_Text = SKCount("周四", "第3,4节");
+
+                    this.UTC_LinkButton10.The_Text = SKCount("周五", "第3,4节");
+
+                    this.UTC_LinkButton11.The_Text = SKCount("周一", "第5节");
+
+                    this.UTC_LinkButton12.The_Text = SKCount("周二", "第5节");
+
+                    this.UTC_LinkButton13.The_Text = SKCount("周三", "第5节");
+
+                    this.UTC_LinkButton14.The_Text = SKCount("周四", "第5节");
+
+                    this.UTC_LinkButton15.The_Text = SKCount("周五", "第5节");
+
+                    this.UTC_LinkButton16.The_Text = SKCount("周一", "第6,7节");
+
+                    this.UTC_LinkButton17.The_Text = SKCount("周二", "第6,7节");
+
+                    this.UTC_LinkButton18.The_Text = SKCount("周三", "第6,7节");
+
+                    this.UTC_LinkButton19.The_Text = SKCount("周四", "第6,7节");
+
+                    this.UTC_LinkButton20.The_Text = SKCount("周五", "第6,7节");
+
+                    this.UTC_LinkButton21.The_Text = SKCount("周一", "第8,9节");
+
+                    this.UTC_LinkButton22.The_Text = SKCount("周二", "第8,9节");
+
+                    this.UTC_LinkButton23.The_Text = SKCount("周三", "第8,9节");
+
+                    this.UTC_LinkButton24.The_Text = SKCount("周四", "第8,9节");
+
+                    this.UTC_LinkButton25.The_Text = SKCount("周五", "第8,9节");
+
+                    this.UTC_LinkButton26.The_Text = SKCount("周一", "第10,11节");
+
+                    this.UTC_LinkButton27.The_Text = SKCount("周二", "第10,11节");
+
+                    this.UTC_LinkButton28.The_Text = SKCount("周三", "第10,11节");
+
+                    this.UTC_LinkButton29.The_Text = SKCount("周四", "第10,11节");
+
+                    this.UTC_LinkButton30.The_Text = SKCount("周五", "第10,11节");
+
+                    this.UTC_LinkButton31.The_Text = SKCount("周一", "第12节");
+
+                    this.UTC_LinkButton32.The_Text = SKCount("周二", "第12节");
+
+                    this.UTC_LinkButton33.The_Text = SKCount("周三", "第12节");
+
+                    this.UTC_LinkButton34.The_Text = SKCount("周四", "第12节");
+
+                    this.UTC_LinkButton35.The_Text = SKCount("周五", "第12节");
+                }
+                else
+                {
+                    Response.Write("<script>alert('请先登录!');window.location.href ='http://computer2011.apphb.com'</script>");
+                }
+            }
             this.UTC_LinkButton1.L_Click += LinkButton1_Click;
             this.UTC_LinkButton2.L_Click += LinkButton2_Click;
             this.UTC_LinkButton3.L_Click += LinkButton3_Click;
@@ -195,7 +275,7 @@ namespace computer2011
         {
 
             string count = "0";
-             cmd = new SqlCommand("TJ_KB", cn);
+            cmd = new SqlCommand("TJ_KB", cn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandTimeout = 200;
             cmd.Parameters.Add("@XQ", SqlDbType.NVarChar, 3).Value = XQ;
@@ -215,7 +295,7 @@ namespace computer2011
             {
                 cn.Close();
             }
-            
+
             return count;
         }
         /// <summary>
@@ -240,87 +320,7 @@ namespace computer2011
             this.GridView1.DataBind();
 
         }
-        /// <summary>
-        /// 统计课表
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        protected void LinkButton2_Click(object sender, EventArgs e)
-        {
-
-            this.div1.Visible = true;
-            this.UTC_LinkButton1.The_Text = SKCount("周一", "第1,2节");
-
-            this.UTC_LinkButton2.The_Text = SKCount("周二", "第1,2节");
-
-            this.UTC_LinkButton3.The_Text = SKCount("周三", "第1,2节");
-
-            this.UTC_LinkButton4.The_Text = SKCount("周四", "第1,2节");
-
-            this.UTC_LinkButton5.The_Text = SKCount("周五", "第1,2节");
-
-            this.UTC_LinkButton6.The_Text = SKCount("周一", "第3,4节");
-
-            this.UTC_LinkButton7.The_Text = SKCount("周二", "第3,4节");
-
-            this.UTC_LinkButton8.The_Text = SKCount("周三", "第3,4节");
-
-            this.UTC_LinkButton9.The_Text = SKCount("周四", "第3,4节");
-
-            this.UTC_LinkButton10.The_Text = SKCount("周五", "第3,4节");
-
-            this.UTC_LinkButton11.The_Text = SKCount("周一", "第5节");
-
-            this.UTC_LinkButton12.The_Text = SKCount("周二", "第5节");
-
-            this.UTC_LinkButton13.The_Text = SKCount("周三", "第5节");
-
-            this.UTC_LinkButton14.The_Text = SKCount("周四", "第5节");
-
-            this.UTC_LinkButton15.The_Text = SKCount("周五", "第5节");
-
-            this.UTC_LinkButton16.The_Text = SKCount("周一", "第6,7节");
-
-            this.UTC_LinkButton17.The_Text = SKCount("周二", "第6,7节");
-
-            this.UTC_LinkButton18.The_Text = SKCount("周三", "第6,7节");
-
-            this.UTC_LinkButton19.The_Text = SKCount("周四", "第6,7节");
-
-            this.UTC_LinkButton20.The_Text = SKCount("周五", "第6,7节");
-
-            this.UTC_LinkButton21.The_Text = SKCount("周一", "第8,9节");
-
-            this.UTC_LinkButton22.The_Text = SKCount("周二", "第8,9节");
-
-            this.UTC_LinkButton23.The_Text = SKCount("周三", "第8,9节");
-
-            this.UTC_LinkButton24.The_Text = SKCount("周四", "第8,9节");
-
-            this.UTC_LinkButton25.The_Text = SKCount("周五", "第8,9节");
-
-            this.UTC_LinkButton26.The_Text = SKCount("周一", "第10,11节");
-
-            this.UTC_LinkButton27.The_Text = SKCount("周二", "第10,11节");
-
-            this.UTC_LinkButton28.The_Text = SKCount("周三", "第10,11节");
-
-            this.UTC_LinkButton29.The_Text = SKCount("周四", "第10,11节");
-
-            this.UTC_LinkButton30.The_Text = SKCount("周五", "第10,11节");
-
-            this.UTC_LinkButton31.The_Text = SKCount("周一", "第12节");
-
-            this.UTC_LinkButton32.The_Text = SKCount("周二", "第12节");
-
-            this.UTC_LinkButton33.The_Text = SKCount("周三", "第12节");
-
-            this.UTC_LinkButton34.The_Text = SKCount("周四", "第12节");
-
-            this.UTC_LinkButton35.The_Text = SKCount("周五", "第12节");
-
-
-        }
+        
         /// <summary>
         /// 查询指定人课表
         /// </summary>

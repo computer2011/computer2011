@@ -10,8 +10,8 @@
     </script>
 </head>
 <body>
-    <form id="form1" runat="server" style=" text-align: center">
-    <div>
+    <form id="form1" runat="server" style="text-align: center">
+    <div align="center">
         <table width="1000px">
             <tr height="50px">
                 <td width="80px" align="right">
@@ -19,7 +19,8 @@
                         选择栏目：</p>
                 </td>
                 <td>
-                    <asp:DropDownList ID="DropDownList1" CssClass ="form-control" runat="server" Height="40px" Width="165px">
+                    <asp:DropDownList ID="DropDownList1" CssClass="form-control" runat="server" Height="40px"
+                        Width="165px">
                     </asp:DropDownList>
                 </td>
             </tr>
