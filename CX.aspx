@@ -15,9 +15,9 @@
             class="btn btn-success">统计查询</asp:LinkButton>
         &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click"
             class="btn btn-info">新建考勤</asp:LinkButton></div>
-    <div class="form-group">
-        查询</div>
-    <div class="form-group">
+    <div class="form-group" align="center">
+        个人课表查询</div>
+    <div class="form-group" align="center">
         <asp:Label ID="Label5" runat="server" Text="学号："></asp:Label>
         <asp:TextBox ID="TextBoxSno" runat="server"></asp:TextBox>
         <asp:Label ID="Label6" runat="server" Text="或姓名：">
@@ -25,9 +25,9 @@
         <asp:Button ID="Button1" runat="server" Text="查询" OnClick="Button1_Click" class="btn btn-primary btn-lg active" />
         <br />
     </div>
-    <div class="form-group">
+    <div class="form-group" align="center">
         <asp:Label ID="Labelone" runat="server" Text="Label" Visible="False"></asp:Label></div>
-    <div class="form-group">
+    <div class="form-group" align="center">
         <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" Visible="False"
             Width="800px" CssClass="table">
             <AlternatingRowStyle CssClass="success" />

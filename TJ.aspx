@@ -16,10 +16,10 @@
                 class="btn btn-success">新建考勤</asp:LinkButton>
             &nbsp;<asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click"
                 class="btn btn-warning">统计查询</asp:LinkButton></div>
-        <div class="form-group">
-            <asp:Label ID="LabelTJ" runat="server" Text="考勤统计"></asp:Label></div>
-        <div class="form-group">
-            <asp:GridView ID="GridViewTJ" runat="server" AutoGenerateColumns="False" Width="600px"
+        <div class="form-group" align="center">
+            <asp:Label ID="LabelTJ" runat="server" Text="考勤统计" class="btn btn-success"></asp:Label></div>
+        <div class="form-group" align="center">
+            <asp:GridView ID="GridViewTJ" runat="server" AutoGenerateColumns="False" Width="739px"
                 CssClass="table">
                 <AlternatingRowStyle CssClass="success" />
                 <Columns>
@@ -51,8 +51,8 @@
                 <RowStyle Font-Names="微软雅黑" />
             </asp:GridView>
         </div>
-        <div class="form-group">
-            <asp:GridView ID="GridViewXQ" runat="server" AutoGenerateColumns="False" Width="500px"
+        <div class="form-group" align="center">
+            <asp:GridView ID="GridViewXQ" runat="server" AutoGenerateColumns="False" Width="557px"
                 AllowSorting="True" CssClass="table" Visible="False">
                 <AlternatingRowStyle CssClass="success" />
                 <Columns>

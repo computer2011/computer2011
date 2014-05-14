@@ -88,15 +88,16 @@ namespace KQ
                           int val = cm.ExecuteNonQuery();
                           cn.Close();
                           if (val <= 0)
-                          ClientScript.RegisterStartupScript(this.GetType(), "", "alert('插入数据失败!')");
+                              ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('插入数据失败!')</script>");
                           else
-                          ClientScript.RegisterStartupScript(this.GetType(), "", "alert('插入数据成功!')");
+                              ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('插入数据成功!')</script>");
                 }
                 catch (Exception exp)
                {
                    ClientScript.RegisterStartupScript(this.GetType(), "", "alert('插入数据失败! 详情:" + exp.Message + "')");
                }
            }
+            Response.Redirect("TJ.aspx");
 
         }
 

@@ -16,16 +16,16 @@
                 class="btn btn-success">个人查询</asp:LinkButton>
             &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click"
                 class="btn btn-info">新建考勤</asp:LinkButton></div>
-        <div>
-            <asp:Label ID="Label1" runat="server" Text="开始时间"></asp:Label>
+        <div align="center">
+            <asp:Label ID="Label1" runat="server" Text="开始时间："></asp:Label>
             <asp:TextBox ID="TextBoxBeginTime" runat="server" class="CanLoginBeginTime"></asp:TextBox>
-            <asp:Label ID="Label2" runat="server" Text="结束时间"></asp:Label>
+            <asp:Label ID="Label2" runat="server" Text="结束时间："></asp:Label>
             <asp:TextBox ID="TextBoxEndTime" runat="server" class="CanLoginBeginTime"></asp:TextBox>
             <asp:Button ID="ButtonTime" runat="server" Text="查询" OnClick="ButtonTime_Click" class="btn btn-primary btn-lg active" />
         </div>
-        <div class="form-group">
+        <div class="form-group" align="center">
             <asp:GridView ID="GridViewTime" runat="server" AutoGenerateColumns="False" Visible="False"
-                Width="800px" CssClass="table">
+                Width="810px" CssClass="table">
                 <AlternatingRowStyle CssClass="success" />
                 <Columns>
                     <asp:BoundField DataField="Sno" HeaderText="学号" />

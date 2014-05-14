@@ -17,7 +17,7 @@
             class="btn btn-info">统计查询</asp:LinkButton></div>
     <div class="form-group">
         <asp:Label ID="Label1" runat="server" Text="考勤名称："></asp:Label>
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox1" runat="server" Width="202px"></asp:TextBox>
     </div>
     <div class="form-group">
         <asp:Label ID="Label2" runat="server" Text="考勤介绍："></asp:Label>
@@ -26,9 +26,9 @@
         <div class="form-group">
             <asp:Button ID="Button1" runat="server" Text="确认" OnClick="Button1_Click" class="btn btn-primary" /></div>
     </div>
-    <div class="form-group">
+    <div class="form-group" align="center">
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Style="margin-top: 1px"
-            Width="500px" Visible="False" CssClass="table">
+            Width="601px" Visible="False" CssClass="table">
             <AlternatingRowStyle CssClass="success" />
             <Columns>
                 <asp:BoundField DataField="sno" HeaderText="学号" />
@@ -48,7 +48,7 @@
             <RowStyle Font-Names="微软雅黑" />
         </asp:GridView>
     </div>
-    <div class="form-group">
+    <div class="form-group" align="center">
         <asp:Button ID="Button2" runat="server" Text="完成" Visible="False" OnClick="Button2_Click"
             class="btn btn-primary" /></div>
     </form>

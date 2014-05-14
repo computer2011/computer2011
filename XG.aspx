@@ -17,8 +17,8 @@
             class="btn btn-info">统计查询</asp:LinkButton>
         &nbsp;<asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click"
             class="btn btn-danger">新建查询</asp:LinkButton></div>
-    <div class="form-group">
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="500px"
+    <div class="form-group" align="center">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="598px"
             CssClass="table">
             <AlternatingRowStyle CssClass="success" />
             <Columns>
@@ -39,7 +39,7 @@
             <RowStyle Font-Names="微软雅黑" />
         </asp:GridView>
     </div>
-    <div class="form-group">
+    <div class="form-group" align="center">
         <asp:Button ID="ButtonUpdate" runat="server" Text="修改" OnClick="ButtonUpdate_Click"
             class="btn btn-primary" /></div>
     </form>

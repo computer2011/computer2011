@@ -69,6 +69,7 @@ namespace KQ
             cn.Open();
             SJ.ExecuteNonQuery();
             cn.Close();
+            Response.Redirect("TJ.aspx");
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)
