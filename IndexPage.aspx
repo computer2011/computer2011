@@ -185,7 +185,7 @@
                                                 <tr height="35px">
                                                     <td>
                                                         <asp:Label Style="color: #006699; font-family: 楷体; font-size: 14pt; font-weight: bold"
-                                                            ID="Label8" runat="server" Text="班级新闻"></asp:Label>
+                                                            ID="Label8" runat="server" Text="班级公告"></asp:Label>
                                                     </td>
                                                 </tr>
                                                 <tr height="146px">
