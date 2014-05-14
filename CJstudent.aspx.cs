@@ -44,7 +44,7 @@ namespace computer2011
         protected void CJstuNumbtn_Click(object sender, EventArgs e)
         {
             string CJsno = DropDownList1.SelectedValue.ToString();
-            SqlCommand cmd = new SqlCommand("select count(sno) from tongji where tongji.sno='"+CJsno+"'",cn);
+            SqlCommand cmd = new SqlCommand("select count(sno) from tongji where tongji.wjh='" + CJsno + "'", cn);
             DataTable table = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;

@@ -82,9 +82,9 @@ namespace WJDC
                 cmd.Connection = cn;
                 cmd.CommandText = "Select sno,wjh from Tongji where sno='" + Session["LoginStudentXH"] .ToString()+ "' and wjh=@wjh";
                 cmd.CommandType = System.Data.CommandType.Text;
-                //cmd.Parameters.Add("@sno", SqlDbType.NVarChar, 12);
+                cmd.Parameters.Add("@sno", SqlDbType.NVarChar, 12);
                 cmd.Parameters.Add("@wjh", SqlDbType.NChar, 12);
-                //cmd.Parameters["@sno"].Value = Session["LoginStudentXH"];
+                cmd.Parameters["@sno"].Value = Session["LoginStudentXH"];
                 cmd.Parameters["@wjh"].Value = id;
                 try
                 {
@@ -128,17 +128,19 @@ namespace WJDC
                                 {
                                     SqlCommand com = new SqlCommand("update choice set Number = Number + 1 where ID = " + xxid, cn);
                                     com.ExecuteNonQuery();
-                                    cn.Close();
+                                    
                                 }
                             }
+
                         }
+                        Response.Redirect("/successTj.aspx");
                     }
 
                 }
                 finally
                 {
                     cn.Close();
-                    Response.Redirect("/successTj.aspx");
+                    
                 }
             }
             else
