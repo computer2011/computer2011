@@ -56,8 +56,8 @@
             <asp:RequiredFieldValidator ID="RequiredFieldValidator10" ControlToValidate="TextBox3"
                 CssClass="col-sm-3 control-label" ForeColor="Red" runat="server" ErrorMessage="出生日期不能为空"></asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox3"
-                CssClass="col-sm-2 control-label" ValidationExpression="^((\d{4})-(0\d{1}|1[0-2])-(0\d{1}|[12]\d{1}|3[01]))|((\d{4})/(0\d{1}|1[0-2])/(0\d{1}|[12]\d{1}|3[01]))$"
-                ForeColor="Blue" ErrorMessage="格式为2014-03-01或2014/03/01"></asp:RegularExpressionValidator>
+                CssClass="col-sm-2 control-label" ValidationExpression="^(\d{4})/(0\d{1}|1[0-2])/(0\d{1}|[12]\d{1}|3[01])$"
+                ForeColor="Blue" ErrorMessage="格式为2014/03/01"></asp:RegularExpressionValidator>
         </div>
         <%--  <asp:RequiredFieldValidator ID="RequiredFieldValidator10" ControlToValidate="TextBox3"
                                     ForeColor="Red" runat="server" Width="10px" ErrorMessage="*"></asp:RequiredFieldValidator>
