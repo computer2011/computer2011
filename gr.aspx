@@ -22,8 +22,8 @@
    <div align="center">
        <asp:Label ID="Label5" runat="server" Text="图片路径："></asp:Label>
        <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
-       <br />
-       <br />
+       
+       
    </div>
    <div align="center" style="margin-bottom: 0px">
        <asp:Label ID="Label6" runat="server" Text="图片描述："></asp:Label>
@@ -44,7 +44,7 @@
            Text="取消" onclick="Button2_Click1" /></td>
         <td width="60"></td>
         <td> 
-            <asp:Button  type="button" class="btn btn-link" ID="Button3" runat="server" 
+            <asp:Button  type="button" class="btn btn-info" ID="Button3" runat="server" 
                 Text="返回" onclick="Button3_Click" />  </td>
   </tr>
    

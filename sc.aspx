@@ -19,14 +19,23 @@
     <tr height="10px">
     <td bgcolor="#0099CC" class="style2">  请选择您要上传到的相册</td>
     </tr>
+    <tr height=100px><td></td></tr>
     </table>
    <div style="text-align: center">
 
-        <asp:Button type="button" class="btn btn-primary" ID="Button1" runat="server" Text="上传到班级风采" 
-            onclick="Button1_Click" />
-
-        <asp:Button  type="button" class="btn btn-primary" ID="Button2"
-            runat="server" Text="上传到个人风采" onclick="Button2_Click" />
+        
+    <table align="center">
+    <tr>
+    <td> <asp:Button type="button" class="btn btn-primary" ID="Button1" runat="server" Text="上传到班级风采" 
+            onclick="Button1_Click" /> </td>
+    <td width=50></td>
+    <td>
+    <asp:Button  type="button" class="btn btn-primary" ID="Button2"
+            runat="server" Text="上传到个人风采" onclick="Button2_Click" /> 
+    </td>
+    </tr>
+    </table>
+        
     </div>
     </form>
 </body>

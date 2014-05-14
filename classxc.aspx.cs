@@ -32,7 +32,7 @@ namespace classphoto
 
             if (thecom.isCompetence("" + Session["LoginStudentXH"] + "", "71") == "")
             {
-                Response.Redirect("~/classxcgl.aspx");
+                Response.Redirect("~/clsaaxcgl.aspx");
             }
             else
             {

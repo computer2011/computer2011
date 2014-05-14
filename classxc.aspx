@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="classxc.aspx.cs" Inherits="classphoto.classxc" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>班级相册</title>
@@ -21,25 +20,26 @@
     <form id="form1" runat="server">
     <table align="center">
         <tr>
-            <td colspan="2" class="style5" align="center" bgcolor="#99CCFF">
+            <td colspan="3" class="style5" align="center" bgcolor="#99CCFF">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="style2">班级相册</span>
             </td>
         </tr>
         <tr>
-            <td class="style1">
-                <asp:Button type="button" class="btn btn-info"  ID="Button1" runat="server" 
-                    Text="上传" OnClick="Button1_Click" />
-                <asp:Button type="button" class="btn btn-link" ID="Button3" runat="server" 
-                    Height="37px" OnClick="Button3_Click" Text="相册管理"
-                    Width="84px" />
+            <td>
+                <asp:Button type="button" class="btn btn-info" ID="Button1" runat="server" Text="上传"
+                    OnClick="Button1_Click" Width="106px" />
+            </td>
+            <td>
+                <asp:Button type="button" class="btn btn-info" ID="Button3" runat="server" Height="37px"
+                    OnClick="Button3_Click" Text="相册管理" Width="108px" />
             </td>
             <td class="style1">
-                <asp:Button  type="button" class="btn btn-info" ID="Button2" runat="server" 
-                    Text="个人风采" OnClick="Button2_Click" />
+                <asp:Button type="button" class="btn btn-info" ID="Button2" runat="server" Text="个人风采"
+                    OnClick="Button2_Click" Width="110px" />
             </td>
         </tr>
         <tr>
-            <td class="style4">
+            <td class="style4" colspan=3>
                 <table>
                     <table>
                         <tr>
@@ -81,22 +81,16 @@
         </tr>
         <tr height="150">
             <td width="150">
-                <asp:Image ID="Image3" runat="server" ImageUrl="~/Images/bahe.jpg" 
-                    Width="794px" />
+                <asp:Image ID="Image3" runat="server" ImageUrl="~/Images/bahe.jpg" Width="794px" />
             </td>
         </tr>
         <tr height="150">
-        <td whight="150">
-        
-            <asp:Image ID="Image4" runat="server" ImageUrl="~/Images/banjihuodong.jpg" 
-                Width="794px" />
-        </td>
+            <td whight="150">
+                <asp:Image ID="Image4" runat="server" ImageUrl="~/Images/banjihuodong.jpg" Width="794px" />
+            </td>
         </tr>
     </table>
-    </td>
-     </tr> 
-     </table> 
-     </table>
+    </td> </tr> </table> </table>
     </form>
 </body>
 </html>

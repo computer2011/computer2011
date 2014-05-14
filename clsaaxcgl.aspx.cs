@@ -28,8 +28,20 @@ namespace computer2011
             cn.Close();
         }
 
-        protected void GridView1_RowDeleting1(object sender, GridViewDeleteEventArgs e)
+       
+
+        protected void GridView1_RowDataBound1(object sender, GridViewRowEventArgs e)
         {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                ((LinkButton)e.Row.Cells[0].Controls[0]).Attributes.Add("onclick", "return confirm('确定要删除吗？')");
+            }
+        }
+
+        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
+
             int photoID = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value.ToString());
             string sqlStr = "delete from classfc where photoID=" + photoID;
             //SqlConnection myconn = new SqlConnection("Data Source=.;Initial Catalog=photo;Integrated Security=True");

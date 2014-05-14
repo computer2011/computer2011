@@ -56,10 +56,10 @@ namespace classphoto
                     //关闭数据库连接; 用了using 这一句可以省略 
                     cn.Close();
                     if (val <= 0)
-                        Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('抱歉，插入数据失败!');</script>");
+                        Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('抱歉，上传图片失败!');</script>");
                         //ClientScript.RegisterStartupScript(this.GetType(), "", "alert('抱歉，插入数据失败!')");
                     else
-                        Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('恭喜你！插入数据成功!');</script>");
+                        Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('恭喜你！上传图片成功!');</script>");
                         
                         //ClientScript.RegisterStartupScript(this.GetType(), "", "alert('恭喜你！图片上传成功!')");
                 }

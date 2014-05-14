@@ -30,26 +30,26 @@
     <form id="form1" runat="server">
     <table align="center">
         <tr>
-            <td colspan="2" class="style5" align="center" bgcolor="#66CCFF">
+            <td colspan="3" class="style5" align="center" bgcolor="#66CCFF">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="style3">&nbsp; 班级相册 </span>
             </td>
         </tr>
         <tr>
-            <td class="style1">
+            <td>
                 <asp:Button type="button" class="btn btn-info" ID="Button1" runat="server" 
-                    Text="上传" OnClick="Button1_Click"
-                    Width="63px" />
-                <asp:Button type="button" class="btn btn-link" ID="Button3" runat="server" 
-                    Height="32px" onclick="Button3_Click" 
-                    Text="相册管理" Width="116px" />
+                    Text="上传" OnClick="Button1_Click" Width="118px"/>
+                    </td>
+                    <td>
+                <asp:Button type="button" class="btn btn-info" ID="Button3" runat="server" 
+                     onclick="Button3_Click"  Text="相册管理" Width="119px" />
             </td>
             <td>
                 <asp:Button type="button" class="btn btn-info" ID="Button2" runat="server" 
-                    Text="班级风采" OnClick="Button2_Click" />
+                    Text="班级风采" OnClick="Button2_Click" Width="117px" />
             </td>
         </tr>
         <tr>
-            <td class="style1">
+            <td class="style1" colspan=3>
                 <table>
                     <table>
                         <tr>
