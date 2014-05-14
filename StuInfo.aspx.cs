@@ -24,7 +24,7 @@ namespace computer2011
 
                     this.TextBox1.Text = table.Rows[0][1].ToString().Trim();
                     this.TextBox2.Text = table.Rows[0][0].ToString().Trim();
-                    this.TextBox3.Text = table.Rows[0][4].ToString().Trim();//出生日期
+                    this.TextBox3.Text =table.Rows[0][4].ToString().Trim();//出生日期
                     this.TextBox4.Text = table.Rows[0][5].ToString().Trim();//政治面貌
                     this.TextBox5.Text = table.Rows[0][6].ToString().Trim();
                     this.TextBox6.Text = table.Rows[0][7].ToString().Trim();
