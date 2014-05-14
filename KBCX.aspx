@@ -8,14 +8,14 @@
     <link href="Table.css" rel="stylesheet" type="text/css" />
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 </head>
-<body style="width: 900px">
-    <form id="form1" runat="server">
-    <div id="divkb" runat="server">
+<body style="width: 1000px">
+    <form id="form1" runat="server" style="text-align: center">
+    <div id="divkb" runat="server" align="center" >
         <div>
             <asp:Label ID="Label15" runat="server"></asp:Label>
         </div>
         <div id="div1" runat="server" visible="false">
-            <table class="table table-hover" width="900px" border="1" style="text-align: center">
+            <table class="table table-hover" width="900px" border="1" align="center" style="text-align: center">
                 <tr height="20px" bgcolor="#99ccff">
                     <td class="TD">
                         时间
@@ -260,7 +260,6 @@
                 <RowStyle BorderStyle="None" Font-Names="微软雅黑" HorizontalAlign="Center" Height="40px" />
             </asp:GridView>
         </div>
-
         <div style="height: 10px; background-color: #FFFFFF;">
         </div>
     </div>

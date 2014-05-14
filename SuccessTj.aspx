@@ -31,12 +31,18 @@
         <td width="80"></td>
         <td></td>
         </tr>
+        <tr height="300">
+            <td width="300" colspan=3>
+            </td>
+            <td><p>你已成功提交了本次问卷调查！谢谢你的参与！<br/>请返回<asp:LinkButton ID="LinkButton" runat="server" 
+                onclick="LinkButton_Click">问卷主页</asp:LinkButton>或是你需要的功能！</p>
+                </td>
+            </tr>
         </table>
     
     <br><br>
     <div class="div1">
-        <p>你已成功提交了本次问卷调查！谢谢你的参与！<br/>请返回<asp:LinkButton ID="LinkButton" runat="server" 
-                onclick="LinkButton_Click">问卷主页</asp:LinkButton>或是你需要的功能！</p>
+        
     </div>
     
     <br><br>

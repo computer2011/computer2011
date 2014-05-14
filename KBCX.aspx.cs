@@ -25,8 +25,20 @@ namespace computer2011
         {
             if (!IsPostBack)
             {
-                if (Session["LoginStudentXH"].ToString() != "")
+                string a = null;
+                try
                 {
+                    a = Session["LoginStudentXH"].ToString();
+                }
+                catch
+                {
+                    this.divkb.Visible = false;
+                    Response.Write("<script>alert('请先登录!');window.location.href ='IndexPage.aspx'</script>");
+                    //Response.Write("<script>alert('请先登录!');window.location.href ='http://computer2011.apphb.com/default.aspx'</script>");
+                   // return;
+                }
+                //if (a != null)
+                //{
                     this.div1.Visible = true;
                     this.UTC_LinkButton1.The_Text = SKCount("周一", "第1,2节");
 
@@ -97,12 +109,12 @@ namespace computer2011
                     this.UTC_LinkButton34.The_Text = SKCount("周四", "第12节");
 
                     this.UTC_LinkButton35.The_Text = SKCount("周五", "第12节");
-                }
-                else
-                {
-                    this.divkb.Visible = false;
-                    Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('请先登录！');</script>");
-                }
+                //}
+                //else
+                //{
+                //    this.divkb.Visible = false;
+                //    Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('请先登录！');</script>");
+                //}
             }
             this.UTC_LinkButton1.L_Click += LinkButton1_Click;
             this.UTC_LinkButton2.L_Click += LinkButton2_Click;

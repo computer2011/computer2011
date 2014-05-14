@@ -6,6 +6,7 @@
 <head runat="server">
     <title></title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="script/js/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -14,6 +15,7 @@
         <br />
         <br />
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" >
+            <AlternatingRowStyle CssClass ="success" />
             <Columns>
                 <asp:TemplateField HeaderText="项目名称">
                     <ItemTemplate>
@@ -33,6 +35,7 @@
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
+            <HeaderStyle CssClass ="denger" />
         </asp:GridView>
         
         <br />

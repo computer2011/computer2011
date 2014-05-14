@@ -11,7 +11,7 @@ namespace ZHLH
 {
     public partial class shixiantongji : System.Web.UI.Page
     {
-        //SqlConnection cn = new SqlConnection(new ConnectDatabase().conn);
+        SqlConnection cn = new SqlConnection(new computer2011.ConnectDatabase().conn);
         protected void Page_Load(object sender, EventArgs e)
         {
                    
@@ -30,10 +30,8 @@ namespace ZHLH
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string xn = DropDownList1.SelectedValue;
-            Session["MXN"] = xn;
-            SqlConnection con = new SqlConnection("Data Source=HCW4GXJWFCWVBJ9\\SQLEXPRESS;Initial Catalog=ZHLH;Integrated Security=True");
-            SqlCommand com = new SqlCommand("select p.Sno, s.Name, p.df, P.XN, P.PM,P.JZXJ from PFTJ p join Student s on p.Sno = s.Sno where xn = '" + xn + "'ORDER BY DF", con);
+            Session["MXN"] =  DropDownList1.SelectedValue;
+            SqlCommand com = new SqlCommand("select p.Sno, s.Name, p.df, P.XN, P.PM,P.JZXJ from Student_PFTJ p join Student s on p.Sno = s.Sno where xn = '" + DropDownList1.SelectedValue + "' ORDER BY DF", cn);
             DataTable table = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = com;
@@ -41,10 +39,81 @@ namespace ZHLH
             this.GridView1.DataSource = table;
             this.GridView1.DataBind();
         }
-
+        /// <summary>
+        /// 填写综合量化
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("zonghelianghua.aspx");
+            Business.Users.Competence thecom = new Business.Users.Competence();
+            if (thecom.isCompetence("" + Session["LoginStudentXH"] + "", "21") == "")
+            {
+                Response.Redirect("zitian.aspx");
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + thecom.isCompetence("" + Session["LoginStudentXH"] + "", "21") + "');</script>");
+
+            }
         }
+        /// <summary>
+        /// 项目管理
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Business.Users.Competence thecom = new Business.Users.Competence();
+            if (thecom.isCompetence("" + Session["LoginStudentXH"] + "", "22") == "")
+            {
+               Response.Redirect("Xmpfb.aspx");
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + thecom.isCompetence("" + Session["LoginStudentXH"] + "", "22") + "');</script>");
+
+            }
+            
+        }
+        /// <summary>
+        /// 分类管理
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Business.Users.Competence thecom = new Business.Users.Competence();
+            if (thecom.isCompetence("" + Session["LoginStudentXH"] + "", "22") == "")
+            { 
+               Response.Redirect("FLGLB.aspx");
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + thecom.isCompetence("" + Session["LoginStudentXH"] + "", "22") + "');</script>");
+
+            }
+           
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Business.Users.Competence thecom = new Business.Users.Competence();
+            if (thecom.isCompetence("" + Session["LoginStudentXH"] + "", "22") == "")
+            {
+               Response.Redirect("ZHLH.aspx");;
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + thecom.isCompetence("" + Session["LoginStudentXH"] + "", "22") + "');</script>");
+
+            }
+            
+        }
+
+        //protected void Button2_Click(object sender, EventArgs e)
+        //{
+        //    Response.Redirect("zonghelianghua.aspx");
+        //}
     }
 }

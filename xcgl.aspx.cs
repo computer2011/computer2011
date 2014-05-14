@@ -11,12 +11,12 @@ namespace classphoto
 {
     public partial class xcgl : System.Web.UI.Page
     {
+        SqlConnection cn = new SqlConnection(new computer2011.ConnectDatabase().conn);
         protected void Page_Load(object sender, EventArgs e)
-        {
-            SqlConnection myConn = new SqlConnection("Data Source=.;Initial Catalog=photo;Integrated Security=True");
-            myConn.Open();
+        { //SqlConnection myConn = new SqlConnection("Data Source=.;Initial Catalog=photo;Integrated Security=True");
+            //myConn.Open();
             string sqlStr = "select * from grfc";
-            SqlDataAdapter myDa = new SqlDataAdapter(sqlStr, myConn);
+            SqlDataAdapter myDa = new SqlDataAdapter(sqlStr, cn);
             DataSet myDs = new DataSet();
             myDa.Fill(myDs);
             GridView1.DataSource = myDs;
@@ -24,7 +24,7 @@ namespace classphoto
             GridView1.DataBind();
             myDs.Dispose();
             myDs.Dispose();
-            myConn.Close();
+            cn.Close();
         
             
 
@@ -39,12 +39,12 @@ namespace classphoto
         {
             int photoID = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value.ToString());
             string sqlStr = "delete from grfc where photoID=" + photoID;
-            SqlConnection myconn = new SqlConnection("Data Source=.;Initial Catalog=photo;Integrated Security=True");
-            myconn.Open();
-            SqlCommand myCmd = new SqlCommand(sqlStr, myconn);
+            //SqlConnection myconn = new SqlConnection("Data Source=.;Initial Catalog=photo;Integrated Security=True");
+            cn.Open();
+            SqlCommand myCmd = new SqlCommand(sqlStr, cn);
             myCmd.ExecuteNonQuery();
             myCmd.Dispose();
-            myconn.Close();
+            cn.Close();
             GridView1.EditIndex = -1;
             this.GridView1.DataBind();
         }

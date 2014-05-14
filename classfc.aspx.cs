@@ -11,6 +11,7 @@ namespace classphoto
 {
     public partial class classfc : System.Web.UI.Page
     {
+        SqlConnection cn = new SqlConnection(new computer2011.ConnectDatabase().conn);
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -20,41 +21,47 @@ namespace classphoto
         {
             if (string.IsNullOrEmpty(TextBox1.Text))
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "alert('图片名称不可为空!')");
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('图片名称不可为空!');</script>");
+                //ClientScript.RegisterStartupScript(this.GetType(), "", "alert('图片名称不可为空!')");
                 return;
             }
 
             if (string.IsNullOrEmpty(TextBox5.Text))
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "alert('图片的路径不可为空!')");
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('图片路径不可为空!');</script>");
+                //ClientScript.RegisterStartupScript(this.GetType(), "", "alert('图片的路径不可为空!')");
                 return;
             }
             if (string.IsNullOrEmpty(TextBox6.Text))
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "", "alert('图片描述不可为空!')");
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('图片描述不可为空!');</script>");
+                //ClientScript.RegisterStartupScript(this.GetType(), "", "alert('图片描述不可为空!')");
                 return;
             }
             //连接数据库字符串 
-            string dbConnString = "Data Source=QH-20140307WHVM;Initial Catalog=photo;Integrated Security=True";
+            //string dbConnString = "Data Source=QH-20140307WHVM;Initial Catalog=photo;Integrated Security=True";
             //不知道你的材料编号是什麽类型,默认为 varchar,r如果是int怎去掉''号就行了 
             string sql = "INSERT INTO classfc (图片名称,图片的路径,图片描述) VALUES ('" + TextBox1.Text.Trim() + "','" + TextBox5.Text.Trim() + "','" + TextBox6.Text.Trim() + "')";
             //可以会发生异常的语句都放在这里 
             try
             {
                 //using 是系统关键字, 作用是自动释放资源,详情请百度百科 
-                using (SqlConnection conn = new SqlConnection(dbConnString))
+                using (cn)
                 {
-                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    SqlCommand cmd = new SqlCommand(sql, cn);
                     //打开数据库连接 
-                    conn.Open();
+                    cn.Open();
                     //对数据进行插入操作, 返回影响行数 
                     int val = cmd.ExecuteNonQuery();
                     //关闭数据库连接; 用了using 这一句可以省略 
-                    conn.Close();
+                    cn.Close();
                     if (val <= 0)
-                        ClientScript.RegisterStartupScript(this.GetType(), "", "alert('抱歉，插入数据失败!')");
+                        Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('抱歉，图片上传失败!');</script>");
+                    //ClientScript.RegisterStartupScript(this.GetType(), "", "alert('抱歉，插入数据失败!')");
                     else
-                        ClientScript.RegisterStartupScript(this.GetType(), "", "alert('恭喜你！图片上传成功!')");
+                        Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('恭喜你！图片上传据成功!');</script>");
+
+                    //ClientScript.RegisterStartupScript(this.GetType(), "", "alert('恭喜你！图片上传成功!')");
                 }
             }
             //捕获异常 

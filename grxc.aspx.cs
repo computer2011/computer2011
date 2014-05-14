@@ -23,5 +23,20 @@ namespace classphoto
         {
             Response.Redirect("~/classxc.aspx");
         }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Business.Users.Competence thecom = new Business.Users.Competence();
+
+
+            if (thecom.isCompetence("" + Session["LoginStudentXH"] + "", "71") == "")
+            {
+                Response.Redirect("~/xcgl.aspx");
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + thecom.isCompetence("" + Session["LoginStudentXH"] + "", "71") + "');</script>");
+            }
+        }
     }
 }

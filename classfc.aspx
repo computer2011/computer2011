@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>班级风采</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -21,8 +22,8 @@
     <div align="center">
         <asp:Label ID="Label7" runat="server" Text="图片路径："></asp:Label>
         <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
-        <br />
-        <br />
+       
+        
     </div>
     <div align="center" style="margin-bottom: 0px">
         <asp:Label ID="Label8" runat="server" Text="图片描述："></asp:Label>
@@ -35,21 +36,21 @@
             <tr>
                 <td>
 
-                    <asp:Button ID="Button3" runat="server" Text="上传" onclick="Button3_Click" 
-                        BackColor="#66FF99" />
+                    <asp:Button type="button" class="btn btn-primary" ID="Button3" runat="server" 
+                        Text="上传" onclick="Button3_Click" />
                
                 </td>
                 <td width="60">
                 </td>
                 <td>
-                    <asp:Button ID="Button4" runat="server" Text="取消" onclick="Button4_Click" 
-                        BackColor="#666699" />
+                    <asp:Button type="button" class="btn btn-info" ID="Button4" runat="server" 
+                        Text="取消" onclick="Button4_Click" />
                 </td>
                  <td width="60">
                 </td>
                 <td> 
-                    <asp:Button ID="Button1" runat="server" Text="返回" onclick="Button1_Click" 
-                        BackColor="#FF3399" />  </td>
+                    <asp:Button type="button" class="btn btn-info" ID="Button1" runat="server" 
+                        Text="返回" onclick="Button1_Click" />  </td>
             </tr>
         </table>
     </div>

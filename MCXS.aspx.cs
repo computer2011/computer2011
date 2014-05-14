@@ -88,10 +88,8 @@ namespace WJDC
            
         }
 
-        //protected void TJLinkButton_Click(object sender, EventArgs e)
-        //{
-        //    Response.Redirect("/tjcx.aspx");
-        //}
+
+        
 
         protected void TJbtn_Click(object sender, EventArgs e)
         {
@@ -104,7 +102,12 @@ namespace WJDC
         {
             string id = ((Label)((LinkButton)sender).Parent.Parent.Controls[0].FindControl("Label1")).Text;
             Session["id"] = id;
-            Response.Redirect("TMXS.aspx");
+            Response.Redirect("/TMXS.aspx");
+        }
+
+        protected void CJLinkButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/CJstudent.aspx");
         }
     }
 }

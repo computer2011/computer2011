@@ -4,22 +4,24 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title></title>   
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
     <senter>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" >
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" class="active" >
             <Columns>               
                 <asp:BoundField DataField="XMMC" HeaderText="项目名称" />
                 <asp:BoundField DataField="CSF" HeaderText="得分" />
                 <asp:BoundField DataField="DFYJ" HeaderText="得分依据" />
             </Columns>
+            <HeaderStyle BackColor="#FFCCFF" />
         </asp:GridView>
         <br />
-        <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="放回" type="button" class="btn btn-info" />
+        <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="关闭" 
+            type="button" class="btn btn-info" />
        </senter>
     </div>
     </form>

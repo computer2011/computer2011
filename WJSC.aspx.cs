@@ -28,17 +28,27 @@ namespace WJDC
         }
         protected void delLinkButton_Click(object sender, EventArgs e)
         {
-            string id = ((Label)((LinkButton)sender).Parent.Parent.Controls[0].FindControl("Label1")).Text;
-            Session["id"] = id;
-            
-            cmd = new SqlCommand();
-            cmd.Connection = cn;
-            cmd.CommandText = "EXEC DELETE_wj  '" + id + "'";
-            cn.Open();
-            cmd.ExecuteNonQuery();
-            cn.Close();
 
-            Response.Redirect("/WJSC.aspx");
+            Business.Users.Competence thecom = new Business.Users.Competence();
+            string qx = thecom.isCompetence("" + Session["LoginStudentXH"] + "", "30");
+            if (qx == "")
+            {
+                string id = ((Label)((LinkButton)sender).Parent.Parent.Controls[0].FindControl("Label1")).Text;
+                Session["id"] = id;
+
+                cmd = new SqlCommand();
+                cmd.Connection = cn;
+                cmd.CommandText = "EXEC DELETE_wj  '" + id + "'";
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                cn.Close();
+                Response.Redirect("/WJSC.aspx");
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + qx + "');</script>");
+            }
+           
         }
 
         protected void homeLinkButton3_Click(object sender, EventArgs e)

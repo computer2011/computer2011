@@ -13,17 +13,23 @@ namespace liuyanban
 
     public partial class Guest : System.Web.UI.Page
     {
-        SqlConnection cn = new SqlConnection(new computer2011.ConnectDatabase().conn);
+        SqlConnection cn = new SqlConnection(new computer2011.ConnectDatabase().conn);//连接数据库的字段
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
+        /// <summary>
+        /// 插入留言
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Button1_Click(object sender, EventArgs e)
         {
             this.btnINSER();
         }
-
+        /// <summary>
+        /// 插入留言
+        /// </summary>
         private void btnINSER()
         {
             if (string.IsNullOrEmpty(Contents.Text))
@@ -31,11 +37,12 @@ namespace liuyanban
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('请输入留言内容!')</script>");
                 return;
             }
-            //连接数据库字符串 
-            string sql = " INSERT INTO Guest (Contents,Time) VALUES ('" + Contents.Text.Trim() + "','" + System.DateTime.Now + "')";
+            TimeZoneInfo bjTimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("China Standard Time");//转换北京时间
+            DateTime t = DateTime.Now;
+            DateTime t2 = TimeZoneInfo.ConvertTime(t, bjTimeZoneInfo);
+            string sql = " INSERT INTO Guest (Contents,Time,XH) VALUES ('" + Contents.Text.Trim() + "','" + t2 + "','" + Session["LoginStudentXH"] + "')";
             try
             {
-                //using 是系统关键字, 作用是自动释放资源。
                 using (cn)
                 {
                     SqlCommand cmd = new SqlCommand(sql, cn);
@@ -48,7 +55,8 @@ namespace liuyanban
                     if (val <= 0)
                         ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('对不起，留言失败!')</script>");
                     else
-                        ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('恭喜，留言成功!')</script>");
+                        Response.Write("<script>alert('成功喽!');window.location.href ='Info.aspx'</script>");
+                    //ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('恭喜，留言成功!')</script>");
                 }
             }
             //捕获异常 
@@ -58,14 +66,14 @@ namespace liuyanban
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('留言失败！详情：" + exp.Message + "')</script>");
             }
         }
+        /// <summary>
+        /// 浏览留言
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Button2_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Info.aspx");
-        }
-
-        protected void LinkButton1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

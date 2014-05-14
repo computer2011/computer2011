@@ -20,7 +20,7 @@ namespace computer2011
             string RetString = theuser.StudentChangePassword("" + Session["LoginStudentXH"] + "", "" + this.TextBoxOld.Text + "", "" + this.TextBoxNew.Text + "", "" + this.TextBoxReNew.Text + "");
             if (RetString == "密码修改成功")
             {
-                Response.Write("<script>alert('修改成功，请重新登录!');window.location.href ='http://computer2011.apphb.com'</script>");
+                Response.Write("<script>alert('修改成功，请重新登录!');window.location.href ='http://computer2011.apphb.com/default.aspx'</script>");
             }
             else
             {

@@ -14,23 +14,22 @@ namespace WJDC
         SqlConnection cn = new SqlConnection(new computer2011.ConnectDatabase().conn);
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
-
+        
         protected void Mcbtn_Click(object sender, EventArgs e)
         {
+            TimeZoneInfo bjTimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("China Standard Time");
+            DateTime t = DateTime.Now;
+            DateTime t2 = TimeZoneInfo.ConvertTime(t, bjTimeZoneInfo);
+
             if (string.IsNullOrEmpty(Mctxt.Text))
             {
                 ClientScript.RegisterStartupScript(this.GetType(), "", "alert('Mctxt不可为空!')");
                 return;
             }
-            //if (string.IsNullOrEmpty(snotxt.Text))
-            //{
-            //    ClientScript.RegisterStartupScript(this.GetType(), "", "alert('snotxt不可为空!')");
-            //    return;
-            //}
-        
-            SqlCommand cmd = new SqlCommand("INSERT INTO Wj (Wjm,Sno,wjTime) VALUES ('" + Mctxt.Text.Trim() + "','" + Session["UserLoginXH"] + "','"+System.DateTime.Now+"')", cn);
+
+            SqlCommand cmd = new SqlCommand("INSERT INTO Wj (Wjm,Sno,wjTime) VALUES ('" + Mctxt.Text.Trim() + "','" + Session["LoginStudentXH"] + "','" + t2 + "')", cn);
             try
             {
                 cn.Open();
@@ -122,7 +121,17 @@ namespace WJDC
 
         protected void delLinkButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/WJSC.aspx");
+
+            Business.Users.Competence thecom = new Business.Users.Competence();
+            string qx = thecom.isCompetence("" + Session["LoginStudentXH"] + "", "32");
+            if (qx == "")
+            {
+                Response.Redirect("/WJSC.aspx");
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('" + qx + "');</script>");
+            }
         }
 
         

@@ -80,11 +80,11 @@ namespace WJDC
                 string id = Session["id"].ToString();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cn;
-                cmd.CommandText = "Select sno,wjh from Tongji where sno=@sno and wjh=@wjh";
+                cmd.CommandText = "Select sno,wjh from Tongji where sno='" + Session["LoginStudentXH"] .ToString()+ "' and wjh=@wjh";
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.Parameters.Add("@sno", SqlDbType.NVarChar, 12);
                 cmd.Parameters.Add("@wjh", SqlDbType.NChar, 12);
-                cmd.Parameters["@sno"].Value = Session["UserLoginXH"];
+                cmd.Parameters["@sno"].Value = Session["LoginStudentXH"];
                 cmd.Parameters["@wjh"].Value = id;
                 try
                 {
@@ -99,7 +99,7 @@ namespace WJDC
                     }
                     else
                     {
-                        SqlCommand cmd1 = new SqlCommand("INSERT INTO TongJi(sno,Wjh) VALUES ('" + Session["UserLoginXH"] + "','" + id + "')", cn);
+                        SqlCommand cmd1 = new SqlCommand("INSERT INTO TongJi(sno,Wjh) VALUES ('" + Session["LoginStudentXH"] + "','" + id + "')", cn);
                         cmd1.ExecuteNonQuery();
                         DataTable table = new DataTable();
                         SqlDataAdapter da = new SqlDataAdapter("select tm,th from Tm where wjh='" + id + "'", cn);
@@ -128,17 +128,19 @@ namespace WJDC
                                 {
                                     SqlCommand com = new SqlCommand("update choice set Number = Number + 1 where ID = " + xxid, cn);
                                     com.ExecuteNonQuery();
-                                    cn.Close();
+                                    
                                 }
                             }
+
                         }
+                        Response.Redirect("/successTj.aspx");
                     }
 
                 }
                 finally
                 {
                     cn.Close();
-                    Response.Redirect("/successTj.aspx");
+                    
                 }
             }
             else
