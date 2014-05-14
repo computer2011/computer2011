@@ -24,7 +24,8 @@ namespace computer2011
 
                     this.TextBox1.Text = table.Rows[0][1].ToString().Trim();
                     this.TextBox2.Text = table.Rows[0][0].ToString().Trim();
-                    this.TextBox3.Text =table.Rows[0][4].ToString().Trim();//出生日期
+                    this.TextBox3.Text = Convert.ToDateTime(table.Rows[0][4].ToString().Trim()).ToShortDateString(); 
+                   // this.TextBox3.Text =Convert.ToDateTime(table.Rows[0][4].ToString().Trim());//出生日期
                     this.TextBox4.Text = table.Rows[0][5].ToString().Trim();//政治面貌
                     this.TextBox5.Text = table.Rows[0][6].ToString().Trim();
                     this.TextBox6.Text = table.Rows[0][7].ToString().Trim();
@@ -72,7 +73,7 @@ namespace computer2011
         protected void Button1_Click(object sender, EventArgs e)
         {
 
-              SqlCommand cmd=new SqlCommand("update Student set [MZ]=(select DM from DM_MZ where MC= '"+this.TextBox19.Text+"') ,[Birthday]='"+this.TextBox3.Text+"' ,[ZZMM]=(select DM from DM_ZZMM where MC='"+this.TextBox4.Text+"') ,[SFZH]='"+this.TextBox5.Text+"',[P_Self_Num]='"+this.TextBox6.Text+"',[QQ]='"+this.TextBox7.Text+"' ,[SS_Address]='"+this.TextBox8.Text+"' ,[ZhiWu]='"+this.TextBox9.Text+"' ,[F_Address]='"+this.TextBox10.Text+"' ,[YouBian]='"+this.TextBox11.Text+"' ,[F_PhoneName]='"+this.TextBox12.Text+"' ,[F_PhoneNum]='"+this.TextBox13.Text+"'  ,[CommitteeName]='"+this.TextBox14.Text+"' ,[CommitteePhone]='"+this.TextBox15.Text+"' ,[FMDWFZRXM]='"+this.TextBox16.Text+"' ,[FMDWFZRDH]='"+this.TextBox17.Text+"' ,[BZ]='"+this.TextBox18.Text+"'  where Sno='"+this.TextBox2.Text+"'",cn);
+            SqlCommand cmd = new SqlCommand("update Student set [MZ]=(select DM from DM_MZ where MC= '" + this.TextBox19.Text + "') ,[Birthday]='" + Convert.ToDateTime(this.TextBox3.Text).ToShortDateString() + "' ,[ZZMM]=(select DM from DM_ZZMM where MC='" + this.TextBox4.Text + "') ,[SFZH]='" + this.TextBox5.Text + "',[P_Self_Num]='" + this.TextBox6.Text + "',[QQ]='" + this.TextBox7.Text + "' ,[SS_Address]='" + this.TextBox8.Text + "' ,[ZhiWu]='" + this.TextBox9.Text + "' ,[F_Address]='" + this.TextBox10.Text + "' ,[YouBian]='" + this.TextBox11.Text + "' ,[F_PhoneName]='" + this.TextBox12.Text + "' ,[F_PhoneNum]='" + this.TextBox13.Text + "'  ,[CommitteeName]='" + this.TextBox14.Text + "' ,[CommitteePhone]='" + this.TextBox15.Text + "' ,[FMDWFZRXM]='" + this.TextBox16.Text + "' ,[FMDWFZRDH]='" + this.TextBox17.Text + "' ,[BZ]='" + this.TextBox18.Text + "'  where Sno='" + this.TextBox2.Text + "'", cn);
               try
               {
                   cn.Open();

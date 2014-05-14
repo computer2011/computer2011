@@ -36,9 +36,9 @@
             <div class="col-sm-4">
                 <asp:TextBox ID="TextBox19" CssClass="form-control" runat="server"></asp:TextBox>
             </div>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator9" ControlToValidate="TextBox19" ValidationGroup="Group2"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator9" SetFocusOnError="true" ControlToValidate="TextBox19" ValidationGroup="Group2"
                 CssClass="col-sm-3 control-label" ForeColor="Red" runat="server" ErrorMessage="民族不能为空"></asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" CssClass="col-sm-3 control-label" ValidationGroup="Group2"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" SetFocusOnError="true" runat="server" CssClass="col-sm-3 control-label" ValidationGroup="Group2"
                 ControlToValidate="TextBox19" ValidationExpression="^.{0,4}$" ForeColor="Blue"
                 ErrorMessage="不能超过10字符"></asp:RegularExpressionValidator>
         </div>
@@ -53,9 +53,9 @@
             <div class="col-sm-5">
                 <asp:TextBox ID="TextBox3" CssClass="form-control" runat="server"></asp:TextBox>
             </div>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator10" ControlToValidate="TextBox3" ValidationGroup="Group2"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator10" SetFocusOnError="true" ControlToValidate="TextBox3" ValidationGroup="Group2"
                 CssClass="col-sm-3 control-label" ForeColor="Red" runat="server" ErrorMessage="出生日期不能为空"></asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox3" ValidationGroup="Group2"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" SetFocusOnError="true" runat="server" ControlToValidate="TextBox3" ValidationGroup="Group2"
                 CssClass="col-sm-2 control-label" ValidationExpression="^(?:(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00)))(\/|-|\.)(?:0?2\1(?:29))$)|(?:(?:1[6-9]|[2-9]\d)?\d)(\/|-|\.)(?:(?:(?:0?[13578]|1[02])\2(?:31))|(?:(?:0?[1,3-9]|1[0-2])\2(29|30))|(?:(?:0?[1-9])|(?:1[0-2]))\2(?:0?[1-9]|1\d|2[0-8]))$"
                 ForeColor="Blue" ErrorMessage="格式为2014/03/01"></asp:RegularExpressionValidator>
         </div>
@@ -70,7 +70,7 @@
             <div class="col-sm-7">
                 <asp:TextBox ID="TextBox4" CssClass="form-control" runat="server"></asp:TextBox>
             </div>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator11" ControlToValidate="TextBox4" ValidationGroup="Group2"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator11" SetFocusOnError="true" ControlToValidate="TextBox4" ValidationGroup="Group2"
                 CssClass="col-sm-3 control-label" ForeColor="Red" runat="server" ErrorMessage="政治面貌不能为空"></asp:RequiredFieldValidator>
         </div>
         <%--   <asp:RequiredFieldValidator ID="RequiredFieldValidator11" ControlToValidate="TextBox4"
@@ -84,9 +84,9 @@
             <div class="col-sm-5">
                 <asp:TextBox ID="TextBox5" CssClass="form-control" runat="server"></asp:TextBox>
             </div>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="TextBox5" ValidationGroup="Group2"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" SetFocusOnError="true" ControlToValidate="TextBox5" ValidationGroup="Group2"
                 CssClass="col-sm-3 control-label" ForeColor="Red" runat="server" ErrorMessage="身份证号不能为空"></asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" CssClass="col-sm-2 control-label" ValidationGroup="Group2"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator4" SetFocusOnError="true" runat="server" CssClass="col-sm-2 control-label" ValidationGroup="Group2"
                 ControlToValidate="TextBox5" ValidationExpression="^.{18}$" ForeColor="Blue"
                 ErrorMessage="身份证号长度错误"></asp:RegularExpressionValidator>
         </div>
@@ -101,9 +101,9 @@
             <div class="col-sm-5">
                 <asp:TextBox ID="TextBox6" CssClass="form-control" runat="server"></asp:TextBox>
             </div>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="TextBox6" ValidationGroup="Group2"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" SetFocusOnError="true" ControlToValidate="TextBox6" ValidationGroup="Group2"
                 CssClass="col-sm-3 control-label" ForeColor="Red" runat="server" ErrorMessage="联系电话不能为空"></asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" CssClass="col-sm-2 control-label" ValidationGroup="Group2"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator5" SetFocusOnError=true runat="server" CssClass="col-sm-2 control-label" ValidationGroup="Group2"
                 ControlToValidate="TextBox6" ValidationExpression="^.{0,15}$" ForeColor="Blue"
                 ErrorMessage="不能超过15个字符"></asp:RegularExpressionValidator>
         </div>
@@ -118,10 +118,10 @@
             <div class="col-sm-5">
                 <asp:TextBox ID="TextBox8" CssClass="form-control" runat="server"></asp:TextBox>
             </div>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="TextBox8" ValidationGroup="Group2"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" SetFocusOnError="true" ControlToValidate="TextBox8" ValidationGroup="Group2"
                 CssClass="col-sm-3 control-label" ForeColor="Red" runat="server" ErrorMessage="宿舍地址不能为空"
                 Height="20px"></asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server"  ValidationGroup="Group2"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator6" SetFocusOnError="true" runat="server"  ValidationGroup="Group2"
                 CssClass="col-sm-2 control-label" ControlToValidate="TextBox8" ValidationExpression="^.{0,20}$"
                 ForeColor="Blue" ErrorMessage="不能超过20个字符"></asp:RegularExpressionValidator>
         </div>
@@ -136,7 +136,7 @@
             <div class="col-sm-8">
                 <asp:TextBox ID="TextBox9" CssClass="form-control" runat="server"></asp:TextBox>
             </div>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" CssClass="col-sm-2 control-label"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator7" SetFocusOnError="true" runat="server" CssClass="col-sm-2 control-label"
                 ControlToValidate="TextBox9" ValidationExpression="^.{0,20}$" ForeColor="Blue" ValidationGroup="Group2"
                 ErrorMessage="不超过20个字符"></asp:RegularExpressionValidator>
         </div>
@@ -149,9 +149,9 @@
             <div class="col-sm-5">
                 <asp:TextBox ID="TextBox7" CssClass="form-control" runat="server"></asp:TextBox>
             </div>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="TextBox7" ValidationGroup="Group2"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" SetFocusOnError="true" ControlToValidate="TextBox7" ValidationGroup="Group2"
                 CssClass="col-sm-3 control-label" ForeColor="Red" runat="server" ErrorMessage="QQ号不能为空"></asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator8" runat="server" CssClass="col-sm-2 control-label"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator8" SetFocusOnError="true" runat="server" CssClass="col-sm-2 control-label"
                 ControlToValidate="TextBox7" ValidationExpression="^.{0,15}$" ForeColor="Blue" ValidationGroup="Group2"
                 ErrorMessage="不超过15个字符"></asp:RegularExpressionValidator>
         </div>
@@ -162,9 +162,9 @@
             <div class="col-sm-4">
                 <asp:TextBox ID="TextBox12" CssClass="form-control" runat="server"></asp:TextBox>
             </div>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="TextBox12" ValidationGroup="Group2"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" SetFocusOnError="true" ControlToValidate="TextBox12" ValidationGroup="Group2"
                 CssClass="col-sm-4 control-label" ForeColor="Red" runat="server" ErrorMessage="家庭联系人姓名不能为空"></asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator9" runat="server" CssClass="col-sm-2 control-label" ValidationGroup="Group2"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator9" SetFocusOnError="true" runat="server" CssClass="col-sm-2 control-label" ValidationGroup="Group2"
                 ControlToValidate="TextBox12" ValidationExpression="^.{0,10}$" ForeColor="Blue"
                 ErrorMessage="不超过10个字符"></asp:RegularExpressionValidator>
         </div>
@@ -179,9 +179,9 @@
             <div class="col-sm-4">
                 <asp:TextBox ID="TextBox13" CssClass="form-control" runat="server"></asp:TextBox>
             </div>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ControlToValidate="TextBox13" ValidationGroup="Group2"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" SetFocusOnError="true" ControlToValidate="TextBox13" ValidationGroup="Group2"
                 CssClass="col-sm-4 control-label" ForeColor="Red" runat="server" ErrorMessage="家庭联系人电话不能为空"></asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator10" runat="server" ValidationGroup="Group2"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator10" SetFocusOnError="true" runat="server" ValidationGroup="Group2"
                 CssClass="col-sm-2 control-label" ControlToValidate="TextBox13" ValidationExpression="^.{0,15}$"
                 ForeColor="Blue" ErrorMessage="不能超过15个字符"></asp:RegularExpressionValidator>
         </div>
@@ -196,9 +196,9 @@
             <div class="col-sm-5">
                 <asp:TextBox ID="TextBox10" CssClass="form-control" runat="server" Width="497px"></asp:TextBox>
             </div>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" ControlToValidate="TextBox10" ValidationGroup="Group2"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" SetFocusOnError="true" ControlToValidate="TextBox10" ValidationGroup="Group2"
                 CssClass="col-sm-3 control-label" ForeColor="Red" runat="server" ErrorMessage="家庭住址不能为空"></asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator11" runat="server" ValidationGroup="Group2"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator11" SetFocusOnError="true" runat="server" ValidationGroup="Group2"
                 CssClass="col-sm-2 control-label" ControlToValidate="TextBox10" ValidationExpression="^.{0,80}$"
                 ForeColor="Blue" ErrorMessage="不超过20个字符"></asp:RegularExpressionValidator>
         </div>
@@ -213,7 +213,7 @@
             <div class="col-sm-8">
                 <asp:TextBox ID="TextBox15" CssClass="form-control" runat="server"></asp:TextBox>
             </div>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator13" runat="server" ValidationGroup="Group2"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator13" SetFocusOnError="true" runat="server" ValidationGroup="Group2"
                 CssClass="col-sm-2 control-label" ControlToValidate="TextBox15" ValidationExpression="^.{0,15}$"
                 ForeColor="Blue" ErrorMessage="不超过15个字符"></asp:RegularExpressionValidator>
         </div>
@@ -226,7 +226,7 @@
             <div class="col-sm-8">
                 <asp:TextBox ID="TextBox14" CssClass="form-control" runat="server"></asp:TextBox>
             </div>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator12" runat="server" ValidationGroup="Group2"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator12" SetFocusOnError="true" runat="server" ValidationGroup="Group2"
                 CssClass="col-sm-2 control-label" ControlToValidate="TextBox14" ValidationExpression="^.{0,10}$"
                 ForeColor="Blue" ErrorMessage="不超过10个字符"></asp:RegularExpressionValidator>
         </div>
@@ -239,9 +239,9 @@
             <div class="col-sm-5">
                 <asp:TextBox ID="TextBox11" CssClass="form-control" runat="server"></asp:TextBox>
             </div>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" ControlToValidate="TextBox11" ValidationGroup="Group2"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" SetFocusOnError="true" ControlToValidate="TextBox11" ValidationGroup="Group2"
                 CssClass="col-sm-3 control-label" ForeColor="Red" runat="server" ErrorMessage="邮政编码不能为空"></asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator14" runat="server" CssClass="col-sm-2 control-label"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator14" SetFocusOnError="true" runat="server" CssClass="col-sm-2 control-label"
                 ControlToValidate="TextBox11" ValidationExpression="^.{6}$" ForeColor="Blue" ValidationGroup="Group2"
                 ErrorMessage="只能为6位数"></asp:RegularExpressionValidator>
         </div>
@@ -256,7 +256,7 @@
             <div class="col-sm-8">
                 <asp:TextBox ID="TextBox16" CssClass="form-control" runat="server"></asp:TextBox>
             </div>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator15" runat="server" CssClass="col-sm-2 control-label" ValidationGroup="Group2"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator15" SetFocusOnError="true" runat="server" CssClass="col-sm-2 control-label" ValidationGroup="Group2"
                                     ControlToValidate="TextBox16" ValidationExpression="^.{0,10}$" ForeColor="Blue"
                                     ErrorMessage="不能超过10个字符"></asp:RegularExpressionValidator>
         </div>
@@ -269,7 +269,7 @@
             <div class="col-sm-8">
                 <asp:TextBox ID="TextBox17" CssClass="form-control" runat="server"></asp:TextBox>
             </div>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator16" runat="server" CssClass="col-sm-2 control-label"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator16" SetFocusOnError="true" runat="server" CssClass="col-sm-2 control-label"
                                      ControlToValidate="TextBox17" ValidationExpression="^.{0,15}$" ForeColor="Blue" ValidationGroup="Group2"
                                     ErrorMessage="不超过15个字符"></asp:RegularExpressionValidator>
         </div>
