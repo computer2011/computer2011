@@ -56,7 +56,7 @@
             <asp:RequiredFieldValidator ID="RequiredFieldValidator10" ControlToValidate="TextBox3" ValidationGroup="Group2"
                 CssClass="col-sm-3 control-label" ForeColor="Red" runat="server" ErrorMessage="出生日期不能为空"></asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox3" ValidationGroup="Group2"
-                CssClass="col-sm-2 control-label" ValidationExpression="^(\d{4})/(0\d{1}|1[0-2])/(0\d{1}|[12]\d{1}|3[01])$"
+                CssClass="col-sm-2 control-label" ValidationExpression="^(?:(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00)))(\/|-|\.)(?:0?2\1(?:29))$)|(?:(?:1[6-9]|[2-9]\d)?\d)(\/|-|\.)(?:(?:(?:0?[13578]|1[02])\2(?:31))|(?:(?:0?[1,3-9]|1[0-2])\2(29|30))|(?:(?:0?[1-9])|(?:1[0-2]))\2(?:0?[1-9]|1\d|2[0-8]))$"
                 ForeColor="Blue" ErrorMessage="格式为2014/03/01"></asp:RegularExpressionValidator>
         </div>
         <%--  <asp:RequiredFieldValidator ID="RequiredFieldValidator10" ControlToValidate="TextBox3"
@@ -199,7 +199,7 @@
             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" ControlToValidate="TextBox10" ValidationGroup="Group2"
                 CssClass="col-sm-3 control-label" ForeColor="Red" runat="server" ErrorMessage="家庭住址不能为空"></asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator11" runat="server" ValidationGroup="Group2"
-                CssClass="col-sm-2 control-label" ControlToValidate="TextBox10" ValidationExpression="^.{0,20}$"
+                CssClass="col-sm-2 control-label" ControlToValidate="TextBox10" ValidationExpression="^.{0,80}$"
                 ForeColor="Blue" ErrorMessage="不超过20个字符"></asp:RegularExpressionValidator>
         </div>
         <%--  <asp:RequiredFieldValidator ID="RequiredFieldValidator7" ControlToValidate="TextBox10"
