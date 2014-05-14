@@ -35,8 +35,7 @@
         <tr>
             <td>
                 <asp:Button type="button" class="btn btn-primary" ID="Button1" runat="server" Text="&lt;&lt;返回留言列表"
-                    OnClick="Button1_Click" Height="30px" Width="150px" 
-                    Style="font-family: 宋体;" />
+                    OnClick="Button1_Click" Height="30px" Width="150px" Style="font-family: 宋体;" />
             </td>
         </tr>
         <tr>
@@ -55,9 +54,9 @@
         </tr>
         <tr>
             <td colspan="2" align="center">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-                    Width="880px" DataKeyNames="ID" AllowPaging="True" PageSize="5"
-                    OnPageIndexChanging="GridView1_PageIndexChanging">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="880px"
+                    DataKeyNames="ID" AllowPaging="True" PageSize="8" OnPageIndexChanging="GridView1_PageIndexChanging"
+                    EnableModelValidation="False" Height="80px" HorizontalAlign="Left">
                     <Columns>
                         <asp:TemplateField>
                             <EditItemTemplate>
@@ -68,14 +67,14 @@
                             </ItemTemplate>
                             <ItemStyle Width="30px" />
                         </asp:TemplateField>
-                        <asp:BoundField DataField="Name" HeaderText="回复者姓名：" >
-                        <ItemStyle Width="150px" HorizontalAlign="Left" />
+                        <asp:BoundField DataField="Name" HeaderText="回复者姓名：">
+                            <ItemStyle Width="150px" HorizontalAlign="Left" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="Rely" HeaderText="回复内容" >
-                        <ItemStyle HorizontalAlign="Left" />
+                        <asp:BoundField DataField="Rely" HeaderText="回复内容">
+                            <ItemStyle HorizontalAlign="Left" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="Time" HeaderText="回复时间" >
-                        <ItemStyle Width="200px" HorizontalAlign="Right" />
+                        <asp:BoundField DataField="Time" HeaderText="回复时间">
+                            <ItemStyle Width="200px" HorizontalAlign="Right" />
                         </asp:BoundField>
                     </Columns>
                 </asp:GridView>
@@ -83,25 +82,25 @@
         </tr>
         <tr>
             <td align="left">
-                <asp:Label ID="Label2" runat="server" Text="请   输  入  姓  名 ：" Style="font-size: large"
-                    CssClass="style2"></asp:Label>
-                &nbsp;&nbsp;
-                <asp:TextBox ID="TextBox1" runat="server" Height="26px" 
-                    Style="margin-top: 20px;" Width="130px"></asp:TextBox>
+                <asp:Label ID="Label2" runat="server" Text="请输入姓名或昵称：" Style="font-size: large" CssClass="style2"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="TextBox1" runat="server" Height="26px" Style="margin-top: 20px;"
+                    Width="130px"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td>
-                <asp:Label ID="Label3" runat="server" Font-Size="X-Large" Text="请输入回复内容：" Style="font-size: large;
+                <asp:Label ID="Label3" runat="server" Font-Size="X-Large" Text="请 输 入 回 复 内 容：" Style="font-size: large;
                     font-family: 华文行楷;"></asp:Label>
-                <asp:TextBox ID="txtRely" runat="server" Columns="50" TextMode="MultiLine" Height="160px"
-                    Width="340px"></asp:TextBox>
-                <asp:LinkButton class="btn btn-danger" ID="LinkButton1" runat="server" 
-                    OnClick="LinkButton1_Click" Height="30px">回复</asp:LinkButton>
+                &nbsp;<asp:TextBox ID="txtRely" runat="server" Columns="50" TextMode="MultiLine"
+                    Height="160px" Width="340px"></asp:TextBox>
+                <asp:LinkButton class="btn btn-danger" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click"
+                    Height="30px">回复</asp:LinkButton>
             </td>
         </tr>
     </table>
-    <p></p>
+    <p>
+    </p>
     </form>
 </body>
 </html>

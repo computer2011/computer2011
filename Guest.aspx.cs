@@ -40,7 +40,7 @@ namespace liuyanban
             TimeZoneInfo bjTimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("China Standard Time");//转换北京时间
             DateTime t = DateTime.Now;
             DateTime t2 = TimeZoneInfo.ConvertTime(t, bjTimeZoneInfo);
-            string sql = " INSERT INTO Guest (Contents,Time) VALUES ('" + Contents.Text.Trim() + "','" + t2 + "')";
+            string sql = " INSERT INTO Guest (Contents,Time,XH) VALUES ('" + Contents.Text.Trim() + "','" + t2 + "','" + Session["LoginStudentXH"] + "')";
             try
             {
                 using (cn)

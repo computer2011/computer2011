@@ -34,7 +34,7 @@ namespace liuyanban
             da.Fill(tt);
             if (tt.Rows.Count > 0)
             {
-                this.Label1.Text = "留言内容：" + tt.Rows[0][1].ToString();
+                this.Label1.Text = "留言内容：" + tt.Rows[0][2].ToString();
             }
             
         }
@@ -81,7 +81,7 @@ namespace liuyanban
             TimeZoneInfo bjTimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("China Standard Time");//转换北京时间
             DateTime t = DateTime.Now;
             DateTime t2 = TimeZoneInfo.ConvertTime(t, bjTimeZoneInfo);
-            string sql = "INSERT INTO Rely(Name,Rely,Guestid,Time) VALUES ('" + TextBox1.Text.Trim() + "','" + txtRely.Text.Trim() + "','" + Session["ID"].ToString() + "','" + t2 + "')";
+            string sql = "INSERT INTO Rely(Name,Rely,Guestid,Time,XH) VALUES ('" + TextBox1.Text.Trim() + "','" + txtRely.Text.Trim() + "','" + Session["ID"].ToString() + "','" + t2 + "','" + Session["LoginStudentXH"] + "')";
             try
             {
                 //using 是系统关键字, 作用是自动释放资源。
