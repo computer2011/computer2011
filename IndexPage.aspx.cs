@@ -16,7 +16,7 @@ namespace computer2011
         {
             if (!IsPostBack)
             {
-                if (Session["LoginStudentXH"] != null)
+                if (Session["LoginStudentXM"] != null)
                 {
                     this.divuser.InnerHtml = "2011级计算机科学与技术班";
                     this.divpwd.InnerHtml = "欢迎你 " + Session["LoginStudentXM"].ToString() + " ";
@@ -187,7 +187,7 @@ namespace computer2011
             {
                 Session["LoginStudentXH"] = this.TextBox1.Text;
 
-                SqlCommand cmd2 = new SqlCommand("select name from student where sno='" + this.TextBox1.Text + "'", cn);
+                SqlCommand cmd2 = new SqlCommand("select name from student where sno='" + Session["LoginStudentXH"].ToString() + "'", cn);
                 try
                 {
                     cn.Open();

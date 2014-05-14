@@ -53,7 +53,7 @@
             <label for="TextBox3" class="col-sm-2 control-label">
                 出生日期</label>
             <div class="col-sm-5">
-                <asp:TextBox ID="TextBox3"  class="CanLoginBeginTime" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBox3" CssClass="form-control"  runat="server"></asp:TextBox>
             </div>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator10" SetFocusOnError="true"
                 ControlToValidate="TextBox3" ValidationGroup="Group2" CssClass="col-sm-3 control-label"
@@ -300,7 +300,7 @@
             </div>
         </div>
     </fieldset>
-     <script src="script/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+  <%--   <script src="script/js/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="script/js/bootstrap-datetimepicker.js" type="text/javascript"></script>
     <script src="script/js/bootstrap-datetimepicker.zh-CN.js" type="text/javascript"></script>
     <script type="text/jscript">
@@ -313,7 +313,7 @@
                     language: 'zh-CN',
                     format: 'yyyy-m-d hh:ii:ss'
                 });
-    </script>
+    </script>--%>
     </form>
 </body>
 </html>
