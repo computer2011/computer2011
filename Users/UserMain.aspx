@@ -34,7 +34,7 @@
                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">网站管理
                             <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="../Default.aspx" target="UserMain">网站首页</a></li>
+                                <li><a href="../Default.aspx" >网站首页</a></li>
                             </ul>
                         </li>
                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">系统管理

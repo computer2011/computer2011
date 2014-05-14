@@ -24,8 +24,8 @@ namespace computer2011
                 catch 
                 {
                     this.divstu.Visible = false;
-                    Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('请先登录!');</script>");
-                    //Response.Write("<script>alert('请先登录!');window.location.href ='http://computer2011.apphb.com/default.aspx'</script>");
+                   // Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('请先登录!');</script>");
+                    Response.Write("<script>alert('请先登录!');window.location.href ='IndexPage.aspx'</script>");
                    // return;
                 }
                 //if (a != null)
