@@ -44,7 +44,7 @@ namespace liuyanban
         private void RelyInfo()
         {
             SqlCommand com = new SqlCommand();
-            com.CommandText="select * from Rely where Guestid=@ID";
+            com.CommandText = "select * from Rely where Guestid=@ID order by ID desc";
             com.Connection = new SqlConnection(new computer2011.ConnectDatabase().conn); //cn;
             com.Parameters.Add("@ID", SqlDbType.Int).Value = Convert.ToInt32(Session["ID"]);
             SqlDataAdapter da = new SqlDataAdapter();
@@ -64,21 +64,20 @@ namespace liuyanban
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
+        
         protected void LinkButton1_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtRely.Text))
+        {            
+            if (string.IsNullOrEmpty(TextBox1.Text))
             {
-
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('请输入姓名!')</script>");
                 return;
             }
             if (string.IsNullOrEmpty(txtRely.Text))
             {
-
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('请输入回复内容!')</script>");
                 return;
             }
-           
+
             TimeZoneInfo bjTimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("China Standard Time");//转换北京时间
             DateTime t = DateTime.Now;
             DateTime t2 = TimeZoneInfo.ConvertTime(t, bjTimeZoneInfo);
@@ -107,7 +106,7 @@ namespace liuyanban
                 //处理异常....... 
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('回复失败！详情：" + exp.Message + "')</script>");
             }
-            this.RelyInfo();
+            
             Response.Redirect("~/Rely.aspx");
         }
 

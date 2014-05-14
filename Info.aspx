@@ -39,18 +39,18 @@
         <tr>
             <td>
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Height="80px"
-                    Width="1000px" CellPadding="4" ForeColor="#333333" DataKeyNames="ID" AllowPaging="True"
-                    OnPageIndexChanging="GridView1_PageIndexChanging" HorizontalAlign="Left" ShowFooter="True"
-                    GridLines="None">
-                    <AlternatingRowStyle BackColor="White" />
+                    Width="1000px" DataKeyNames="ID" AllowPaging="True"
+                    OnPageIndexChanging="GridView1_PageIndexChanging" HorizontalAlign="Left" 
+                    ShowFooter="True">
                     <Columns>
                         <asp:TemplateField>
                             <ItemTemplate>
                                 <asp:CheckBox ID="CheckBox1" runat="server" />
                             </ItemTemplate>
+                            <HeaderStyle BorderColor="#9999FF" />
                             <ItemStyle HorizontalAlign="Center" Width="50px" />
                         </asp:TemplateField>
-                        <asp:TemplateField HeaderText="留言内容(需查看回复，请点击内容)">
+                        <asp:TemplateField HeaderText="留言内容(需查看最新回复，请点击留言内容)">
                             <EditItemTemplate>
                                 <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Contents") %>'></asp:TextBox>
                             </EditItemTemplate>
@@ -65,16 +65,7 @@
                             <ItemStyle HorizontalAlign="Right" Width="200px" />
                         </asp:BoundField>
                     </Columns>
-                    <EditRowStyle BackColor="#2461BF" />
-                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                    <RowStyle BackColor="#EFF3FB" HorizontalAlign="Left" />
-                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                    <SortedAscendingCellStyle BackColor="#F5F7FB"></SortedAscendingCellStyle>
-                    <SortedAscendingHeaderStyle BackColor="#6D95E1"></SortedAscendingHeaderStyle>
-                    <SortedDescendingCellStyle BackColor="#E9EBEF"></SortedDescendingCellStyle>
-                    <SortedDescendingHeaderStyle BackColor="#4870BE"></SortedDescendingHeaderStyle>
+                    <RowStyle HorizontalAlign="Left" />
                 </asp:GridView>
             </td>
         </tr>

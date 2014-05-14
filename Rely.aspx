@@ -20,7 +20,7 @@
         .style3
         {
             font-family: 华文行楷;
-            color: #6699FF;
+            color: #6666FF;
         }
     </style>
 </head>
@@ -41,7 +41,7 @@
         </tr>
         <tr>
             <td>
-                <asp:Label ID="Label1" runat="server" Text="Label" Style="color: #6699FF; font-size: x-large;
+                <asp:Label ID="Label1" runat="server" Text="Label" Style="color: #6666FF; font-size: x-large;
                     font-weight: 700; text-decoration: underline; font-family: 华文行楷;"></asp:Label>
             </td>
         </tr>
@@ -56,10 +56,8 @@
         <tr>
             <td colspan="2" align="center">
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-                    CellPadding="3" Width="880px" DataKeyNames="ID" BackColor="White" BorderColor="White"
-                    BorderStyle="Ridge" BorderWidth="2px" CellSpacing="1" AllowPaging="True" PageSize="5"
-                    OnPageIndexChanging="GridView1_PageIndexChanging" GridLines="None" 
-                    HorizontalAlign="Left">
+                    Width="880px" DataKeyNames="ID" AllowPaging="True" PageSize="5"
+                    OnPageIndexChanging="GridView1_PageIndexChanging">
                     <Columns>
                         <asp:TemplateField>
                             <EditItemTemplate>
@@ -71,22 +69,15 @@
                             <ItemStyle Width="30px" />
                         </asp:TemplateField>
                         <asp:BoundField DataField="Name" HeaderText="回复者姓名：" >
-                        <ItemStyle Width="150px" />
+                        <ItemStyle Width="150px" HorizontalAlign="Left" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="Rely" HeaderText="回复内容" />
+                        <asp:BoundField DataField="Rely" HeaderText="回复内容" >
+                        <ItemStyle HorizontalAlign="Left" />
+                        </asp:BoundField>
                         <asp:BoundField DataField="Time" HeaderText="回复时间" >
-                        <ItemStyle Width="200px" />
+                        <ItemStyle Width="200px" HorizontalAlign="Right" />
                         </asp:BoundField>
                     </Columns>
-                    <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
-                    <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
-                    <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Right" />
-                    <RowStyle BackColor="#DEDFDE" ForeColor="Black" />
-                    <SelectedRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
-                    <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                    <SortedAscendingHeaderStyle BackColor="#594B9C" />
-                    <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                    <SortedDescendingHeaderStyle BackColor="#33276A" />
                 </asp:GridView>
             </td>
         </tr>
