@@ -19,7 +19,7 @@ namespace computer2011
                 string act = null;
                 try
                 {
-                    act = Session["LoginStudentXH"].ToString();
+                    act = Session["LoginStudentXM"].ToString();
                 }
                 catch
                 {
