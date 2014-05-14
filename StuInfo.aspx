@@ -56,8 +56,8 @@
             <asp:RequiredFieldValidator ID="RequiredFieldValidator10" SetFocusOnError="true" ControlToValidate="TextBox3" ValidationGroup="Group2"
                 CssClass="col-sm-3 control-label" ForeColor="Red" runat="server" ErrorMessage="出生日期不能为空"></asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" SetFocusOnError="true" runat="server" ControlToValidate="TextBox3" ValidationGroup="Group2"
-                CssClass="col-sm-2 control-label" ValidationExpression="^(?:(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00)))(\/|-|\.)(?:0?2\1(?:29))$)|(?:(?:1[6-9]|[2-9]\d)?\d)(\/|-|\.)(?:(?:(?:0?[13578]|1[02])\2(?:31))|(?:(?:0?[1,3-9]|1[0-2])\2(29|30))|(?:(?:0?[1-9])|(?:1[0-2]))\2(?:0?[1-9]|1\d|2[0-8]))$"
-                ForeColor="Blue" ErrorMessage="格式为2014/03/01"></asp:RegularExpressionValidator>
+                CssClass="col-sm-2 control-label" ValidationExpression="^((((1[6-9]|[2-9]\d)\d{2})-(0?[13578]|1[02])-(0?[1-9]|[12]\d|3[01]))|(((1[6-9]|[2-9]\d)\d{2})-(0?[13456789]|1[012])-(0?[1-9]|[12]\d|30))|(((1[6-9]|[2-9]\d)\d{2})-0?2-(0?[1-9]|1\d|2[0-8]))|(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))-0?2-29-))$"
+                ForeColor="Blue" ErrorMessage="格式为2014-03-01"></asp:RegularExpressionValidator>
         </div>
         <%--  <asp:RequiredFieldValidator ID="RequiredFieldValidator10" ControlToValidate="TextBox3"
                                     ForeColor="Red" runat="server" Width="10px" ErrorMessage="*"></asp:RequiredFieldValidator>
