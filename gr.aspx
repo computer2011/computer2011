@@ -10,7 +10,8 @@
 <body>
     <form id="form1" runat="server">
    <div style="color:#F00"  align="center">
- 注意：由于服务器内存不足，请将照片发到这里：http://friends.fotki.com  账号和密码为：computer2011  务必把得到的照片外链地址填到图片路径中，否则您上传的照片将无法上传
+ 注意：由于服务器内存不足，请将照片发到这里：<a href="http://www.poco.cn/">http://www.poco.cn/</a>账号和密码为：1078182117@qq.com&nbsp;&nbsp;&nbsp; 
+       wdmms1991090931务必把得到的照片外链地址填到图片路径中，否则您上传的照片将无法上传
     </div>
     <div align="center">
         <asp:Label ID="Label1" runat="server" Text="个人风采："></asp:Label>

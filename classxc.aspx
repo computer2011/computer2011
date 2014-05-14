@@ -51,6 +51,17 @@
         <tr height="150">
             <td width="150px">
                 <asp:Image ID="Image1" runat="server" ImageUrl="~/img/Q.jpg" />
+                </td>
+                </tr>
+                 <tr height="150">
+            <td width="150">
+                <asp:DataList ID="DataList1" runat="server">
+                    <ItemTemplate>
+                        <asp:Image ID="Image5" runat="server"  ImageUrl='<%#Eval("图片的路径")%>'/>
+                    </ItemTemplate>
+                    
+                </asp:DataList>
+            
                 <%--<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" EnableTheming="True"
                     AllowPaging="True" OnPageIndexChanging="GridView1_PageIndexChanging"
                     Width="152px" CellPadding="4" ForeColor="#333333" GridLines="None">

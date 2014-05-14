@@ -89,6 +89,16 @@
                 <asp:Image ID="Image2" runat="server" ImageUrl="~/img/879.jpg" />
             </td>
         </tr>
+        <tr>
+        <td>
+            <asp:DataList ID="DataList1" runat="server">
+                <ItemTemplate>
+                    <asp:Image ID="Image5" runat="server" 
+    ImageUrl='<%# Eval("图片路径") %>' />
+                </ItemTemplate>
+            </asp:DataList>
+        </td>
+        </tr>
         <tr height="150">
         <td width="150">
             <asp:Image ID="Image3" runat="server" ImageUrl="~/img/gere.jpg" />

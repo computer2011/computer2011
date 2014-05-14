@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 namespace classphoto
 {
@@ -11,7 +12,10 @@ namespace classphoto
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            DataAccess.GetData GD = new DataAccess.GetData();
+            DataTable xx = GD.GetDataTable("select * from grfc");
+            this.DataList1.DataSource = xx;
+            this.DataList1.DataBind();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
