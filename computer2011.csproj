@@ -75,6 +75,7 @@
     <Content Include="CX.aspx" />
     <Content Include="dafenfenlei.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="FLGLB.aspx" />
     <Content Include="Global.asax" />
     <Content Include="gr.aspx" />
     <Content Include="grxc.aspx" />
@@ -102,11 +103,13 @@
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-2.1.1.js" />
     <Content Include="KBCX.aspx" />
+    <Content Include="MainContentSelect.aspx" />
     <Content Include="Main_Content.aspx" />
     <Content Include="Main_Manage.aspx" />
     <Content Include="MCList.aspx" />
     <Content Include="MCXS.aspx" />
     <Content Include="noTj.aspx" />
+    <Content Include="pftj.aspx" />
     <Content Include="pingfentongji.aspx" />
     <Content Include="Rely.aspx" />
     <Content Include="sc.aspx" />
@@ -191,6 +194,8 @@
     <Content Include="XG.aspx" />
     <Content Include="xiangxixinxi.aspx" />
     <Content Include="xingmubiao.aspx" />
+    <Content Include="Xmpfb.aspx" />
+    <Content Include="ZHLH.aspx" />
     <Content Include="zitian.aspx" />
     <Content Include="zonghelianghua.aspx" />
   </ItemGroup>
@@ -252,6 +257,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FLGLB.aspx.cs">
+      <DependentUpon>FLGLB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FLGLB.aspx.designer.cs">
+      <DependentUpon>FLGLB.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -298,6 +310,13 @@
       <DependentUpon>KBCX.aspx</DependentUpon>
     </Compile>
     <Compile Include="LHPF.cs" />
+    <Compile Include="MainContentSelect.aspx.cs">
+      <DependentUpon>MainContentSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainContentSelect.aspx.designer.cs">
+      <DependentUpon>MainContentSelect.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Main_Content.aspx.cs">
       <DependentUpon>Main_Content.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -334,6 +353,13 @@
     </Compile>
     <Compile Include="noTj.aspx.designer.cs">
       <DependentUpon>noTj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pftj.aspx.cs">
+      <DependentUpon>pftj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pftj.aspx.designer.cs">
+      <DependentUpon>pftj.aspx</DependentUpon>
     </Compile>
     <Compile Include="pingfentongji.aspx.cs">
       <DependentUpon>pingfentongji.aspx</DependentUpon>
@@ -517,6 +543,20 @@
     </Compile>
     <Compile Include="xingmubiao.aspx.designer.cs">
       <DependentUpon>xingmubiao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Xmpfb.aspx.cs">
+      <DependentUpon>Xmpfb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xmpfb.aspx.designer.cs">
+      <DependentUpon>Xmpfb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZHLH.aspx.cs">
+      <DependentUpon>ZHLH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZHLH.aspx.designer.cs">
+      <DependentUpon>ZHLH.aspx</DependentUpon>
     </Compile>
     <Compile Include="zitian.aspx.cs">
       <DependentUpon>zitian.aspx</DependentUpon>

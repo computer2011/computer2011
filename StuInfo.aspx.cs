@@ -78,7 +78,8 @@ namespace computer2011
               {
                   cn.Open();
                   cmd.ExecuteNonQuery();
-                  Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('提交成功！');</script>");
+                  //Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('提交成功！');</script>");
+                  Response.Write("<script>alert('修改成功!');window.location.href ='Student.aspx'</script>");
 
               }
               catch

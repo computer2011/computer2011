@@ -55,8 +55,9 @@
                 <td align="center">
                     <asp:Button ID="Button1" CssClass="btn btn-info" runat="server" Text="发布内容" OnClick="Button1_Click"
                         ValidationGroup="checkText" />
-                 <%--   &nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="Button2" CssClass="btn btn-info" runat="server" Text="返回主页" OnClick="Button2_Click" />--%>
+                    &nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="Button2" CssClass="btn btn-info" runat="server" Text="内容管理" 
+                        onclick="Button2_Click"  />
                 </td>
             </tr>
         </table>

@@ -91,7 +91,7 @@ namespace computer2011
             DateTime Time = DateTime.Now;
             DateTime Ctime = TimeZoneInfo.ConvertTime(Time, bjTimeZoneInfo);
 
-            SqlCommand cmd = new SqlCommand("insert into MainPage(LBID,Title,Text,FBTime)values(" + this.DropDownList1.SelectedValue + ",'" + this.TextBox1.Text + "','" + this.TextArea1.Value + "','" + Ctime + "')", cn);
+            SqlCommand cmd = new SqlCommand("insert into MainPage(LBID,Title,Text,FBTime,Author)values(" + this.DropDownList1.SelectedValue + ",'" + this.TextBox1.Text + "','" + this.TextArea1.Value + "','" + Ctime + "','" + Session["LoginStudentXM"].ToString() + "')", cn);
             if (yz == true)
             {
                 try
@@ -100,6 +100,7 @@ namespace computer2011
                     cn.Open();
                     cmd.ExecuteNonQuery();
                     Page.ClientScript.RegisterStartupScript(Page.GetType(), "message", @"<script>alert('发布成功！');</script>");
+                    this.Button1.Enabled = true;
 
                 }
                 catch
@@ -117,6 +118,20 @@ namespace computer2011
                 this.Button1.Enabled = true;
             }
 
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Business.Users.Competence thecom = new Business.Users.Competence();
+            string qx = thecom.isCompetence("" + Session["LoginStudentXH"].ToString() + "", "17");
+            if (qx == "")
+            {
+                Response.Redirect("MainContentSelect.aspx");
+            }
+            else
+            {
+                Response.Write("<script>alert('你没有权限，如有疑问请与管理员联系!');window.location.href ='Main_Manage.aspx'</script>");
+            }
         }
 
         //protected void Button2_Click(object sender, EventArgs e)
